@@ -28,5 +28,6 @@ post "users/save_register"
 post "users/save_edit"
 get "edit" => "users#register"
 get "reports/export"
+get "users/show"
 end
 

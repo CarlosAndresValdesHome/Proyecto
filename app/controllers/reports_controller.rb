@@ -19,6 +19,9 @@ class ReportsController < ApplicationController
         @fechaRetiro = session[:datos]["fecha_retiro"]
         @cargo = session[:datos]["cargo"]
         @nombreUs = session[:datos]["nombre"]
+        @tipoContrato = session[:datos]["tipo_contrato"]
+        @idEmpresa = session[:datos]["C.id"]
+        
 
       
         

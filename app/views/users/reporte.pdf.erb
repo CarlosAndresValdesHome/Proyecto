@@ -1,20 +1,73 @@
+<%=Time.new.strftime"%b  %d, %Y"%>
+<!DOCTYPE html>
+<html lang="en">
 
-<%=  Time.new.strftime("%d-%m-2018") %>
+<head>
+<title>Certificado Laboral</title>
+</head>
 
-
+<body>
 <br/>
 <br/>
 <br/>
 
-El señor <%= @nombre %> con numero de cedula <%= @id %>
+<div class="container">
+    <div class="card mx-auto mt-5">
+     <div class="card-header"><h1 /><center />Certificado Laboral</div>
+       <div class="card-body">
+          <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                    <h1><center><b><%= @nombreUs %></b></center> </h1>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
 
-<h1><%= @salario %></h1>
-<h1><%= @fechaIngreso %></h1>
-<h1><%= @fechaRetiro %></h1>
-<h1><%= @cargo %></h1>
-<h1><%= @nombreUs %></h1>
+Que el Sr. <b><%= @nombre %> </b> identificado con el documento No. <b><%= @id %></b>, laboro en nuestra  compañia a través de un contrato a Término <b><%= @tipoContrato %></b> con fecha de inicio <b><%= @fechaIngreso %> </b>y fecha de terminación <b><%= @fechaRetiro %></b>.
+Durante su vinculación desempeñó el cargo <b><%= @cargo %></b> como empleado de Planta.  <br/><br/>
+
+Su último salario básico mensual fue la suma de: <b>$<%= @salario %></b>. El ingreso promedio mensual fue la suma de <b>$<%= @salario %></b>. 
+<br/>
+<br/>
+
+Para Constancia de lo anterior, se firma en la ciudad de Santiago de Cali, a los  <b><%=  Time.new.strftime("%d") %></b>  días del mes de   <b><%=  Time.new.strftime("%m") %> </b>   de <b><%=  Time.new.strftime("%Y") %></b>.
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+Atentamente,
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Carlos Andres Valdes Home <p>
+Gerente General  <b><%= @nombreUs %></b>  NIT:  <b><%= @idEmpresa%></b>
 
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
+  
+  
+  </body>
+
+</html>
 
 
 
