@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @contract.id %>
+</p>
+
+<p>
+  <strong>Salario:</strong>
+  <%= @contract.salario %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @contract.cargo %>
+</p>
+
+<p>
+  <strong>Id empresa:</strong>
+  <%= @contract.id_empresa %>
+</p>
+
+<p>
+  <strong>Tipo contrato:</strong>
+  <%= @contract.tipo_contrato %>
+</p>
+
+<p>
+  <strong>Fecha ingreso:</strong>
+  <%= @contract.fecha_ingreso %>
+</p>
+
+<p>
+  <strong>Fecha retiro:</strong>
+  <%= @contract.fecha_retiro %>
+</p>
+
+<%= link_to 'Edit', edit_contract_path(@contract) %> |
+<%= link_to 'Back', contracts_path %>

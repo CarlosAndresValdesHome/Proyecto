@@ -1,0 +1,42 @@
+<%= form_with(model: paysheet, local: true) do |form| %>
+  <% if paysheet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paysheet.errors.count, "error") %> prohibited this paysheet from being saved:</h2>
+
+      <ul>
+      <% paysheet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dias_laborados %>
+    <%= form.number_field :dias_laborados, id: :paysheet_dias_laborados %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor_devengado %>
+    <%= form.text_field :valor_devengado, id: :paysheet_valor_devengado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deducciones %>
+    <%= form.number_field :deducciones, id: :paysheet_deducciones %>
+  </div>
+
+  <div class="field">
+    <%= form.label :neto_pagado %>
+    <%= form.number_field :neto_pagado, id: :paysheet_neto_pagado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.number_field :id, id: :paysheet_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

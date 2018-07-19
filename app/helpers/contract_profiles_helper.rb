@@ -1,0 +1,2 @@
+module ContractProfilesHelper
+end

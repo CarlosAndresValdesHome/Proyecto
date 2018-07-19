@@ -1,97 +1,74 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-    def index
-        render "index"
+  # GET /users
+  # GET /users.json
+  def index
+    @users = User.all
+  end
+
+  # GET /users/1
+  # GET /users/1.json
+  def show
+  end
+
+  # GET /users/new
+  def new
+    @user = User.new
+  end
+
+  # GET /users/1/edit
+  def edit
+  end
+
+  # POST /users
+  # POST /users.json
+  def create
+    @user = User.new(user_params)
+
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.json { render :show, status: :created, location: @user }
+      else
+        format.html { render :new }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /users/1
+  # PATCH/PUT /users/1.json
+  def update
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.json { render :show, status: :ok, location: @user }
+      else
+        format.html { render :edit }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /users/1
+  # DELETE /users/1.json
+  def destroy
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_user
+      @user = User.find(params[:id])
     end
 
-    def employee
-        render "employee"
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def user_params
+      params.require(:user).permit(:id, :nombre, :apellido, :direccion, :telefono, :email, :id_empresa, :id_perfi, :id_perfil_cargo, :id_nomina)
     end
-
-
-    def Login
-            redirect_to :controller => 'users', :action => 'login' 
-     end
-    
-    def login
-        
-     if User.exists?(:email=>params[:txtUser],:id=>params[:txtPassword])
-       
-        
-       render 'employee'
-       
-      else 
-        @mensaje = 'usuario y contraseña incorrecta'
-        @tipo ='error'
-        render 'index'
-       end
-
-     end
-
-      def loginEmpresa
-        
-                if User.exists?(:email=>params[:txtUser],:id=>params[:txtPassword])
-                user = User.select('id_perfi').where(:email=>params[:txtUser],:id=>params[:txtPassword])
-                if user.id_perfi == 1
-                    render 'company'
-
-                    elsif user == 2
-                        render 'employee'
-                    end
-
-                    else 
-                        @mensaje = 'usuario y contraseña incorrecta'
-                        @tipo ='error'
-                        render 'indexcompany'
-                    end
-              end
-            
-   
-      def indexcompany
-        render "indexcompany"
-      end
-
-      def home 
-        render 'homes' 
-        
-      end
-
-     def Index
-       
-        render 'index'
-     end
-     
-     def loan
-       
-        render 'loan'
-     end
-
-    # def register
-    #     @perfiles = Profile.all
-    #     render 'register'
-    # end
-    # def save_register
-    #     mensaje = ""
-    #     if !params.presence?(params[:txtLogin]) mensaje += "Ingrese Login \n,"
-    #     if params[:txtLogin].eql?("") mensaje += "Ingrese Login,"
-    #     if params[:ddlPerfil].eql?("") mensaje += "Seleccione Perfil,"
-    #     if params[:txtPassword].eql?("") mensaje += "Ingrese Password,"
-    #     if !params[:txtPassword].eql?(params[:txtConfirmarPassword]) mensaje += "Password no coincide"
-
-    #     user_search = user.order_by("id").last
-    #     id = user_search.id + 1
-
-    #     user = User.new
-    #     user.id = id
-    #     user.Login = params[:txtLogin]
-    #     user.Password = params[:txtPassword]
-    #     user.pelfil_id = params[:ddlPerfil]
-    #     if user.save?
-            
-    #     else
-        
-    #     end
-    #end
-    #end
 end
-

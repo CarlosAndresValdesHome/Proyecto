@@ -1,36 +1,45 @@
-<% if @mensaje != nil %>
-  <input type="text" id="txtMensaje" hidden="" value="<%= @mensaje %>"/>
-  <input type="text" id="txtTipo" hidden="" value="<%= @tipo %>"/>
-    <script>
-        swal("Mensaje",document.getElementById("txtMensaje").value,
-        document.getElementById("txtTipo").value);
-    </script>
-<% end %>
-<div class="row text-center">
-<div class="col-md-12">
-  <span class="fa-stack fa-4x">
-    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-  </span>
- </div>
-<div class="container">
+<p id="notice"><%= notice %></p>
 
-<div class="card card-login mx-auto mt-5">
-  <div class="card-header">Login</div>
-  <div class="card-body">
-    <%= form_tag(:controller => "users", :action => "Login" ) do |f| %>
-      <div class="form-group">
-        <label for="lblUser">Correo Electronico</label>
-        <input class="form-control" id="txtUser" name="txtUser" type="text" aria-describedby="emailHelp" placeholder="Enter user">
-      </div>
-      <div class="form-group">
-        <label for="lblPassword">Password</label>
-        <input class="form-control" id="txtPassword" name="txtPassword" type="password" placeholder="Password">
-      </div>
-      <input type="submit" class="btn btn-primary btn-block" value="Ingreso" />
-     
-    </div>
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Email</th>
+      <th>Id empresa</th>
+      <th>Id perfi</th>
+      <th>Id perfil cargo</th>
+      <th>Id nomina</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.nombre %></td>
+        <td><%= user.apellido %></td>
+        <td><%= user.direccion %></td>
+        <td><%= user.telefono %></td>
+        <td><%= user.email %></td>
+        <td><%= user.id_empresa %></td>
+        <td><%= user.id_perfi %></td>
+        <td><%= user.id_perfil_cargo %></td>
+        <td><%= user.id_nomina %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
     <% end %>
-  </div>
-</div>
-</div>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

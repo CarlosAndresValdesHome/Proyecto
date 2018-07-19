@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dias laborados:</strong>
+  <%= @paysheet.dias_laborados %>
+</p>
+
+<p>
+  <strong>Valor devengado:</strong>
+  <%= @paysheet.valor_devengado %>
+</p>
+
+<p>
+  <strong>Deducciones:</strong>
+  <%= @paysheet.deducciones %>
+</p>
+
+<p>
+  <strong>Neto pagado:</strong>
+  <%= @paysheet.neto_pagado %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @paysheet.id %>
+</p>
+
+<%= link_to 'Edit', edit_paysheet_path(@paysheet) %> |
+<%= link_to 'Back', paysheets_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @contract_profile.id %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @contract_profile.descripcion %>
+</p>
+
+<p>
+  <strong>Id contratos:</strong>
+  <%= @contract_profile.id_contratos %>
+</p>
+
+<%= link_to 'Edit', edit_contract_profile_path(@contract_profile) %> |
+<%= link_to 'Back', contract_profiles_path %>

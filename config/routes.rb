@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :paysheets
+  resources :contract_profiles
+  resources :contracts
+  resources :users
+  resources :companies
+  resources :charge_profiles
   resources :profiles
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
