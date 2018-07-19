@@ -1,0 +1,287 @@
+Recurso:    https://www.guiasrails.co/
+            http://guides.rubyonrails.org/active_record_querying.html
+
+Crear todos los modelos de las tablas que se tienen en base de datos con su
+respectivo esquema, para ello ejecutar el siguiente comando:
+
+rails g model nombre_singular_tabla
+
+Nota: el nombre del modelo debe ir en singular, ingles y la primera en mayuscula.
+
+Ej - PostgreSQL
+
+CREATE TABLE "Empresa"."Empleado"
+(
+    id integer NOT NULL,
+    primer_nombre character varying(100) COLLATE pg_catalog."default",
+    segundo_nombre character varying(100) COLLATE pg_catalog."default",
+    primer_apellido character varying(100) COLLATE pg_catalog."default",
+    segundo_apellido character varying(100) COLLATE pg_catalog."default",
+    CONSTRAINT "Empleado_pkey" PRIMARY KEY (id)
+)
+
+Rails
+
+$ rails g model Employee
+
+En la ruta app/models/employee.rb
+Borramos la migración
+
+class Employee < ApplicationRecord
+	def self.table_name
+        "Empresa.Empleado"    
+    end  
+end
+
+Nota: se debe especificar la tabla a la que hace referencia con su respectivo esquema.
+
+Para probar la conexion a la base de datos y el modelo realizar lo siguiente:
+
+Configurar la base de datos en el archivo config/database.yml
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: 123456
+  host: localhost  
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: bdProyecto
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: bdProyecto
+
+production:
+  <<: *default
+  database: bdProyecto
+
+Ejecutar en consola: rails c
+
+Nota: si se presenta algun error durante la ejecucion realizar lo siguiente en el archivo Gemfile
+
+gem 'pg', '~> 0.21'
+
+Y en coonsola ejecutar el comando bundle install, luego correr nuevamente el comando rails c
+
+$ Employee.all
+
+En consola deberan ver el comando ejecutado con una sentencia select, para mayor seguridad realizar un insert
+en base de datos y ejecutar el anterior comando visualizando los datos por consola.
+
+Operaciones con modelos y ActiveRecord en Ruby on Rails
+
+1. Ingresando el nombre del modelo veremos la desscripcion de sus campos
+
+$ Employee
+=> Employee(id: integer, primer_nombre: string, segundo_nombre: string, primer_apellido: string, segundo_apellido: string)
+
+2. Creando el model con Create
+
+$ Employee.create(id:1144198887,primer_nombre:'Juan',primer_apellido:'Perez',segundo_apellido:'Lopez')
+ (3.0ms)  BEGIN
+  SQL (8.0ms)  INSERT INTO "Empresa"."Empleado" ("id", "primer_nombre", "primer_apellido", "segundo_apellido") VALUES ($1, $2, $3, $4) RETURNING "id"  [["id", 1144198887], ["primer_nombre", "Juan"], ["primer_apellido", "Perez"], ["segundo_apellido", "Lopez"]]
+   (4.0ms)  COMMIT
+=> #<Employee id: 1144198887, primer_nombre: "Juan", segundo_nombre: nil, primer_apellido: "Perez", segundo_apellido: "Lopez">
+
+Otro ejemplo 
+
+user = User.create(name: "David", occupation: "Developer")
+
+Nota: si los campos no se envian dentro del comando create los deja por defecto en nil
+
+3. Creando otro model utilizando el método new, un objeto puede ser instanciado sin haber sido guardado:
+irb(main):002:0> obj = Employee.new
+=> #<Employee id: nil, primer_nombre: nil, segundo_nombre: nil, primer_apellido: nil, segundo_apellido: nil>
+irb(main):003:0> obj.id = 1144198888
+=> 1144198888
+irb(main):004:0> obj.primer_nombre = 'Luis'
+=> "Luis"
+irb(main):005:0> obj.primer_apellido = 'Alvarez'
+=> "Alvarez"
+irb(main):006:0> obj.segundo_apellido = 'Mina'
+=> "Mina"
+
+Una llamada a obj.save guardará el registro en la base de datos.
+
+   (1.0ms)  BEGIN
+  SQL (5.0ms)  INSERT INTO "Empresa"."Empleado" ("id", "primer_nombre", "primer_apellido", "segundo_apellido") VALUES ($1, $2, $3, $4) RETURNING "id"  [["id", 1144198888], ["primer_nombre", "Luis"], ["primer_apellido", "Alvarez"], ["segundo_apellido", "Mina"]]
+   (2.0ms)  COMMIT
+=> true
+
+Otro ejemplo
+
+user = User.new
+user.name = "David"
+user.occupation = "Developer"
+
+Una llamada a user.save guardará el registro en la base de datos.
+
+Finalmente, si un bloque es proveído, ambos create y new producirá el nuevo objeto inicializado dentro de un bloque:
+
+user = User.new do |u|
+  u.name = "David"
+  u.occupation = "Developer"
+end
+
+Read
+
+Active Record provee una rica API para acceder a los datos dentro de una base de datos. 
+Debajo hay algunos ejemplos de diferentes métodos provistos por Active Record.
+
+# devuelve una colección de usuarios
+users = User.all
+# devuelve el primer usuario
+user = User.first
+# devuelve el primer usuario llamado David
+david = User.find_by(name: 'David')
+# encontrar todos los usuarios llamados David que tienen de ocupación Developer
+users = User.where(name: 'David', occupation: 'Developer')
+
+4. Seleccionando el primer registro del model con 
+
+$ Employee.first
+ Employee Load (2.0ms)  SELECT  "Empresa"."Empleado".* FROM "Empresa"."Empleado" ORDER BY "Empresa"."Empleado"."id" ASC LIMIT $1  [["LIMIT", 1]]
+=> #<Employee id: 1144198885, primer_nombre: "David", segundo_nombre: nil, primer_apellido: "Santafe", segundo_apellido: "Zorrilla">
+
+5. Seleccionando el ultimo registro del model
+
+$ Employee.last
+ Employee Load (1.0ms)  SELECT  "Empresa"."Empleado".* FROM "Empresa"."Empleado" ORDER BY "Empresa"."Empleado"."id" DESC LIMIT $1  [["LIMIT", 1]]
+=> #<Employee id: 1144198887, primer_nombre: "Juan", segundo_nombre: nil, primer_apellido: "Perez", segundo_apellido: "Lopez">
+
+6. Seleccionando el registro por criterio de busqueda
+irb(main):010:0> employee = Employee.find_by(id:1144198885)
+  Employee Load (4.0ms)  SELECT  "Empresa"."Empleado".* FROM "Empresa"."Empleado" WHERE "Empresa"."Empleado"."id" = $1 LIMIT $2  [["id", 1144198885], ["LIMIT", 1]]
+=> #<Employee id: 1144198885, primer_nombre: "David", segundo_nombre: nil, primer_apellido: "Santafe", segundo_apellido: "Zorrilla">
+irb(main):011:0>
+
+irb(main):015:0> employee = Employee.find_by(primer_nombre:'Luis')
+  Employee Load (1.0ms)  SELECT  "Empresa"."Empleado".* FROM "Empresa"."Empleado" WHERE "Empresa"."Empleado"."primer_nombre" = $1 LIMIT $2  [["primer_nombre", "Luis"], ["LIMIT", 1]]
+=> #<Employee id: 1144198888, primer_nombre: "Luis", segundo_nombre: nil, primer_apellido: "Alvarez", segundo_apellido: "Mina">
+irb(main):016:0>
+
+Update
+
+7. Una vez que un objeto Active Record ha sido recuperado, sus atributos pueden ser modificados y volver a ser guardados en la base de datos.
+
+user = User.find_by(name: 'David')
+user.name = 'Jairo'
+user.save
+
+Otro ejemplo
+
+irb(main):016:0> employee = Employee.find_by(id:1144198885)
+  Employee Load (2.0ms)  SELECT  "Empresa"."Empleado".* FROM "Empresa"."Empleado" WHERE "Empresa"."Empleado"."id" = $1 LIMIT $2  [["id", 1144198885], ["LIMIT", 1]]
+=> #<Employee id: 1144198885, primer_nombre: "David", segundo_nombre: nil, primer_apellido: "Santafe", segundo_apellido: "Zorrilla">
+irb(main):017:0> employee.primer_nombre = 'Sebastian'
+=> "Sebastian"
+irb(main):018:0> employee.save
+   (1.0ms)  BEGIN
+  SQL (5.0ms)  UPDATE "Empresa"."Empleado" SET "primer_nombre" = $1 WHERE "Empresa"."Empleado"."id" = $2  [["primer_nombre", "Sebastian"], ["id", 1144198885]]
+   (1.0ms)  COMMIT
+=> true
+irb(main):019:0>
+irb(main):019:0> employee = Employee.find_by(id:1144198885)
+  Employee Load (1.0ms)  SELECT  "Empresa"."Empleado".* FROM "Empresa"."Empleado" WHERE "Empresa"."Empleado"."id" = $1 LIMIT $2  [["id", 1144198885], ["LIMIT", 1]]
+=> #<Employee id: 1144198885, primer_nombre: "Sebastian", segundo_nombre: nil, primer_apellido: "Santafe", segundo_apellido: "Zorrilla">
+irb(main):020:0>
+
+Un camino corto para este uso es mapear un hash con los nombres de los atributos que se desean modificar y su valor, como por ejemplo:
+
+user = User.find_by(name: 'David')
+user.update(name: 'Jairo')
+
+Esta es la forma más poderosa de actualizar varios atributos a la vez. Si, por otro lado, quieres actualizar varios registros a la vez, 
+encontrarás muy útil el método de clase update_all:
+
+User.update_all "max_login_attempts = 3, must_change_password = 'true'"
+
+Delete
+
+8. Asimismo, una vez que se recupera el objeto Active Record también puede ser destruído, lo cual lo borrará de la base de datos.
+
+user = User.find_by(name: 'David')
+user.destroy
+
+Otro ejemplo
+
+irb(main):020:0> employee = Employee.find_by(id:1144198888)
+  Employee Load (0.0ms)  SELECT  "Empresa"."Empleado".* FROM "Empresa"."Empleado" WHERE "Empresa"."Empleado"."id" = $1 LIMIT $2  [["id", 1144198888], ["LIMIT", 1]]
+=> #<Employee id: 1144198888, primer_nombre: "Luis", segundo_nombre: nil, primer_apellido: "Alvarez", segundo_apellido: "Mina">
+irb(main):021:0> employee.destroy
+   (1.0ms)  BEGIN
+  SQL (2.0ms)  DELETE FROM "Empresa"."Empleado" WHERE "Empresa"."Empleado"."id" = $1  [["id", 1144198888]]
+   (1.0ms)  COMMIT
+=> #<Employee id: 1144198888, primer_nombre: "Luis", segundo_nombre: nil, primer_apellido: "Alvarez", segundo_apellido: "Mina">
+irb(main):022:0> employee = Employee.find_by(id:1144198888)
+  Employee Load (3.0ms)  SELECT  "Empresa"."Empleado".* FROM "Empresa"."Empleado" WHERE "Empresa"."Empleado"."id" = $1 LIMIT $2  [["id", 1144198888], ["LIMIT", 1]]
+=> nil
+irb(main):023:0>
+
+Consulta con joins
+
+PostgreSQL
+
+CREATE TABLE "General"."TipoDocumento"
+(
+    id integer NOT NULL,
+    descripcion character varying(100) COLLATE pg_catalog."default",
+    CONSTRAINT "TipoDocumento_pkey" PRIMARY KEY (id)
+)
+
+Rails
+
+class DocumentType < ApplicationRecord
+	self.table_name = "General.TipoDocumento"        	
+end
+
+$ Employee.select('em.id,td.descripcion').joins('em JOIN "General"."TipoDocumento" td ON td.id = em.tipodocumento_id').order('em.id').first
+
+Profile.select("Descripcion").first
+Profile.select('')
+obj = 
+User.select('tbU."Login", tbP."Descripcion"').joins('tbU JOIN "Seguridad"."tbPerfil" tbP ON tbP.id = tbU."perfil_id"').order('tbU.id'.first)
+
+
+Validaciones
+
+Active Record te permite validar el estado del modelo antes que se escriba en la base de datos. 
+Hay varios métodos que puedes utilizar para comprobar tu modelo y validar que un atributo no está vacío, es único y no está aún en la base de datos, 
+que siga un formato específico, y muchos más. La validación es una tarea muy importante a considerar cuando se guardan datos en una base de datos, 
+entonces los métodos save y update toman esto en cuenta cuando se ejecutan: ellos retornan false cuando una validación falla y no mantuvieron ninguna
+operación en la base de datos. Todos estos tienen una contrapartida bang (esta es , save! y update!), las cuales son estrictas y arrojan una excepción 
+ActiveRecord::RecordInvalid si la validación falla. Un rápido ejemplo para ilustralo:
+
+class User < ActiveRecord::Base
+  validates :name, presence: true
+end
+
+user = User.new
+user.save  # => false
+user.save! # => ActiveRecord::RecordInvalid: Validation failed: Name can't be blank
+
+Crear los controladores para los model
+
+Ejecutar el siguiente comando:
+$ rails g controller Employee
+
+app/controllers/employees_controller
+
+class EmployeesController < ApplicationController
+	def index
+		render 'index'
+	end
+end
+
+Nota: La convención de nombres del controlador difiere de la convención de nombres de los modelos, que se espera que sean nombrados en forma singular.
+
+<%= form_tag(:controller => "employees", :action => "register", :method => "post") do |f| %>		
+<% end %>

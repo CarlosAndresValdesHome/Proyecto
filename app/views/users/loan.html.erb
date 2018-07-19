@@ -1,0 +1,32 @@
+<div class="row text-center">
+<div class="col-md-12">
+  <span class="fa-stack fa-4x">
+    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+    <i class="fa fa-money fa-stack-1x fa-inverse"></i>
+  </span>
+ </div>
+<div class="container">
+
+<div class="card card-login mx-auto mt-5">
+  <div class="card-header">Simulador de Prestamos</div>
+  <div class="card-body">
+    <%= form_tag(:controller => "users", :action => "loan" ) do |f| %>
+      <div class="form-group">
+        <label for="lblValor">Valor a Solicitar</label>
+        <input class="form-control" id="txtvalorsolicitar" name="txtvalorsolicitar" type="text" aria-describedby="emailHelp" placeholder="Escriba el valor de Solicitud ">
+      </div>
+      <div class="form-group">
+        <label for="lblCuotas">Numero de Cuotas</label>
+        <input class="form-control" id="txtNumeroCuotas" name="txtNumeroCuotas" type="text" placeholder="Numeros de cuotas a pagar">
+      </div>
+      <div class="form-group">
+      <label for="lblValorPago">Valor Final a pagar</label>
+      <input class="form-control" id="txtValorPago" name="txtValorPago" type="text" placeholder="Valor a pagar mensual">
+    </div>
+      <input type="submit" class="btn btn-primary btn-block" value="Aceptar" />
+     
+    </div>
+    <% end %>
+  </div>
+</div>
+</div>

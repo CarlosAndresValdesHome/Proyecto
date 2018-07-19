@@ -1,0 +1,31 @@
+Entregables para el lunes 16
+Documento
+Hasta el capítulo 4
+
+Desarrollo
+
+*MER
+*Modelos creados en rails
+*Controladores creados en rails
+*Index de cada vista (Consulta)
+    Bootstrap
+*Menú de navegación
+___________
+Entregable para el lunes 23
+
+Documento
+Hasta el capítulo 5
+
+Desarrollo
+*Funciones de CRUD de cada vista
+*Parámetros generados con scaffold
+*Estilos aplicados
+*Interacción con base de datos desde rails
+*Funcionalidades contra Criterios de aceptación
+
+PRODUCT BACKLOG
+1. Proyecto web que me permita la implementación de vistas de despliegue y la comunicación con la base de datos 
+donde esta almacenada la información.
+
+Historia de Usuario
+ Como desarrollador necesito un proyecto web que este alojado en un repositorio de código para el control de versiones.

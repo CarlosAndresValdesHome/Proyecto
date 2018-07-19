@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Agencia OpusLine</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom fonts for this template -->
+
+<!-- Custom styles for this template -->
+<link href="/css/agency.min.css" rel="stylesheet">
+
+</head>
+
+
+  <body id="page-top">
+
+    <!-- Empleados  -->
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Empleados</h2>
+            <h4 class="section-subheading text-muted">Modulo exclusivo para empleados de Opus Line </h4>
+            <br/>
+            <br/>
+            <br/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="/img/portfolio/descarga.png" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Certificado Laboral </h4>
+              <p class="text-muted">Podrás descargar tu certificado laboral</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="/img/portfolio/descarga.png" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Desprendible de Pago</h4>
+              <p class="text-muted">Podrás descargar tus Certificados de pagos </p>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-2 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="/img/portfolio/prestamos.jpg" alt="" >
+              </a>
+            <div class="portfolio-caption">
+               <%= form_tag(:controller => "users", :action => "loan" ) do |f| %>
+              <h4>Préstamos</h4>
+              <p class="text-muted" value="" >Simulador de préstamos, solicita tus préstamos de forma ágil e inmediata </p>
+              <input type="submit" class="btn btn-primary btn-block" value="Validar" />
+     
+              </div>
+              <% end %>
+          </div>
+          
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>tt
+
+    <!-- Plugin JavaScript -->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="/js/jqBootstrapValidation.js"></script>
+    <script src="/js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/js/agency.min.js"></script>
+
+  </body>
+
+</html>

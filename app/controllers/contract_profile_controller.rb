@@ -1,0 +1,2 @@
+class ContractProfileController < ApplicationController
+end

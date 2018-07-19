@@ -1,0 +1,7 @@
+SELECT
+tbU.id,
+tbU."Login",
+tbP."Descripcion"
+FROM "Seguridad"."tbUsuario" tbU
+JOIN "Seguridad"."tbPerfil" tbP
+ON tbU."pelfil_id" = tbP.id

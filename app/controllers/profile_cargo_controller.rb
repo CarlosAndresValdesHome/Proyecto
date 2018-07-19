@@ -1,0 +1,2 @@
+class ProfileCargoController < ApplicationController
+end
