@@ -25,6 +25,6 @@ get "users/indexcompany" => "users#indexcompany"
 post "users/loginEmpresa" => "users#loginEmpresa" 
 get "users/company" 
 get "/users/registro" 
-
+#get "users/profile" 
 end
 

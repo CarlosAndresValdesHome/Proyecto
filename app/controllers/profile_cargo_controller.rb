@@ -1,2 +1,0 @@
-class ProfileCargoController < ApplicationController
-end

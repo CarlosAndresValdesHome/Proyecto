@@ -2,14 +2,14 @@
 
 one:
   dias_laborados: 1
-  valor_devengado: 
+  valor_devengado: 1
   deducciones: 1
   neto_pagado: 1
   id: 1
 
 two:
   dias_laborados: 1
-  valor_devengado: 
+  valor_devengado: 1
   deducciones: 1
   neto_pagado: 1
   id: 1

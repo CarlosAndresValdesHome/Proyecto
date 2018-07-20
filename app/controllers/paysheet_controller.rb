@@ -1,2 +1,0 @@
-class PaysheetController < ApplicationController
-end

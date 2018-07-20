@@ -1,5 +1,5 @@
 class Profile < ApplicationRecord
     def self.table_name
-    "Web.tbPerfil"
+        "Web.tbPerfil"
     end
 end
