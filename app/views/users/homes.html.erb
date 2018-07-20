@@ -132,7 +132,7 @@
     <% end %>
 
     <!-- Empresa -->
-   
+    <%= form_tag({:controller => "users", :action => "index"}, :method => "get") do |f| %> 
      <section id="empresa">
      
        <div class="container">
@@ -146,7 +146,7 @@
           
            <div class="col-md-12">
              
-             <%= link_to 'Login', {:controller => :users, :action => :indexcompany}, { class: "btn btn-primary btn-xl text-uppercase js-scroll-trigger", style: "width: 30%;" } %>
+             <%= link_to 'Login', {:controller => :users, :action => :index}, { class: "btn btn-primary btn-xl text-uppercase js-scroll-trigger", style: "width: 30%;" } %>
                <br/>
                <br/>
              
@@ -155,7 +155,7 @@
          </div>
        </div>
       </section>
-     
+      <% end %>
 
     <!-- Portfolio  -->
     <section class="bg-light" id="portfolio">
