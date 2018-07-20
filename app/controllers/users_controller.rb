@@ -59,9 +59,12 @@ class UsersController < ApplicationController
           def Index
             render 'index'
           end
+<<<<<<< HEAD
           def profile
             render 'profiles', layout: 'homeEmpresa'
           end
+=======
+>>>>>>> 6b57d416a54154cc86dc27cd83229299a5c82b9f
 
         
 
