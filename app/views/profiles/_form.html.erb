@@ -13,17 +13,17 @@
 <div class="form-group">
   <div class="form-row">
     <div class="col-md-4">
-      <label id="lblId">Id:</label>
+      <label id="lblId"><strong>Id:</strong></label>
         <input type="number" id="profile_id" name="profile[id]" class="form-control" placeholder="Ingrese Id"
         value="<%= @profile != nil ? @profile.id : '' %>">
     </div>
     <div class="col-md-4">
-      <label id="lblDescripcion">Descripción:</label>
+      <label id="lblDescripcion"><strong>Descripción:</strong></label>
       <input type="text" id="profile_descripcion" name="profile[descripcion]" class="form-control" placeholder="Ingrese Descripción"
       value="<%= @profile != nil ? @profile.descripcion : '' %>">
     </div>
     <div class="col-md-4">
-     <label id="lblIdUsuario">Descripción:</label>
+     <label id="lblIdUsuario"><strong>Id Usuario:</strong></label>
      <input type="submit" id="profile_id_usuario" name="profile[id_usuario]" class="form-control" placeholder="Ingrese Id Usuario"
      value="<%= @profile != nil ? @profile.id_usuario : '' %>">
     </div>
@@ -32,7 +32,7 @@
 <div class="form-group">
     <div class="form-row">
       <div class="col-md-12">
-        <center><input type="submit" id="btnAceptar" name="btnAceptar" value="Actualizar" class="btn btn-primary"/></center>s
+        <center><input type="submit" id="btnAceptar" name="btnAceptar" value="Actualizar" class="btn btn-primary"/></center>
       </div>
     </div>
 </div>

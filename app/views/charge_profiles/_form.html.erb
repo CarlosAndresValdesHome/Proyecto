@@ -2,26 +2,33 @@
   <% if charge_profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(charge_profile.errors.count, "error") %> prohibited this charge_profile from being saved:</h2>
-
       <ul>
       <% charge_profile.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
-  <% end %>
+<% end %>
 
-  <div class="field">
-    <%= form.label :id %>
-    <%= form.number_field :id, id: :charge_profile_id %>
+<div class="form-group">
+  <div class="form-row">
+    <div class="col-md-6">
+      <label id="lblId"><strong>Id:</strong></label>
+      <input type="number" id="charge_profile_id" name="charge_profile[id]" class="form-control" placeholder="Ingrese Id"
+      value="<%= @charge_profile != nil ? @charge_profile.id : '' %>">
+    </div>
+    <div class="col-md-6">
+      <label id="lblDescripcion"><strong>Descripción:</strong></label>
+      <input type="text" id="charge_profile_descripcion" name="charge_profile[descripcion]" class="form-control" placeholder="Ingrese Descripción"
+      value="<%= @charge_profile != nil ? @charge_profile.descripcion : '' %>">
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :descripcion %>
-    <%= form.text_field :descripcion, id: :charge_profile_descripcion %>
+</div>
+<div class="form-group">
+  <div class="form-row">
+    <div class="col-md-12">
+      <center><input type="submit" id="btnAceptar" name="btnAceptar" value="Actualizar" class="btn btn-primary"/></center>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
 <% end %>

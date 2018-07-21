@@ -1,6 +1,17 @@
-<h1>Editing Charge Profile</h1>
+<div class="container">
+  <div class="card mx-auto mt-5">
+    <div class="card-header"><h1>Editar Cargos de Perfil</h1></div>
+    <div class="card-body">
+        <%= render 'form', charge_profile: @charge_profile %>
+    <div class="form-group">
+        <div class="form-row">
+            <div class="col-md-12">
+                <center><%= link_to 'Ver', @charge_profile,{ class: "btn btn-info btn-sm" } %>
+                <%= link_to 'Volver', charge_profiles_path,{ class: "btn btn-info btn-sm" } %></center>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+</div>
 
-<%= render 'form', charge_profile: @charge_profile %>
-
-<%= link_to 'Show', @charge_profile %> |
-<%= link_to 'Back', charge_profiles_path %>
