@@ -2,7 +2,6 @@
   <% if profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
-
       <ul>
       <% profile.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,22 +10,30 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :id %>
-    <%= form.number_field :id, id: :profile_id %>
+<div class="form-group">
+  <div class="form-row">
+    <div class="col-md-4">
+      <label id="lblId">Id:</label>
+        <input type="number" id="profile_id" name="profile[id]" class="form-control" placeholder="Ingrese Id"
+        value="<%= @profile != nil ? @profile.id : '' %>">
+    </div>
+    <div class="col-md-4">
+      <label id="lblDescripcion">Descripción:</label>
+      <input type="text" id="profile_descripcion" name="profile[descripcion]" class="form-control" placeholder="Ingrese Descripción"
+      value="<%= @profile != nil ? @profile.descripcion : '' %>">
+    </div>
+    <div class="col-md-4">
+     <label id="lblIdUsuario">Descripción:</label>
+     <input type="submit" id="profile_id_usuario" name="profile[id_usuario]" class="form-control" placeholder="Ingrese Id Usuario"
+     value="<%= @profile != nil ? @profile.id_usuario : '' %>">
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :descripcion %>
-    <%= form.text_field :descripcion, id: :profile_descripcion %>
-  </div>
-
-  <div class="field">
-    <%= form.label :id_usuario %>
-    <%= form.number_field :id_usuario, id: :profile_id_usuario %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
+<div class="form-group">
+    <div class="form-row">
+      <div class="col-md-12">
+        <center><input type="submit" id="btnAceptar" name="btnAceptar" value="Actualizar" class="btn btn-primary"/></center>s
+      </div>
+    </div>
+</div>
 <% end %>
