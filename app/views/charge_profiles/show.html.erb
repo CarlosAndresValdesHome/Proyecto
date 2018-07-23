@@ -1,14 +1,28 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Id:</strong>
-  <%= @charge_profile.id %>
-</p>
-
-<p>
-  <strong>Descripcion:</strong>
-  <%= @charge_profile.descripcion %>
-</p>
-
-<%= link_to 'Edit', edit_charge_profile_path(@charge_profile) %> |
-<%= link_to 'Back', charge_profiles_path %>
+<div class="container">
+  <div class="card mx-auto mt-5">
+    <div class="card-header"><h1>Detalle</h1></div>
+    <div class="card-body">
+    <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <strong>Id:</strong>
+            <%= @charge_profile.id %>
+          </div>
+          <div class="col-md-6">
+            <strong>Descripción:</strong>
+            <%= @charge_profile.descripcion %>
+          </div>
+          </div>
+      </div>
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-12">
+            <center><%= link_to 'Edit', edit_charge_profile_path(@charge_profile),{ class: "btn btn-info btn-sm" } %>
+            <%= link_to 'Back', charge_profiles_path,{ class: "btn btn-info btn-sm" } %></center>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div> 
+</div>

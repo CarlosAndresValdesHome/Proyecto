@@ -48,6 +48,7 @@ end
  end
        
 
+<<<<<<< HEAD
  def indexcompany
    render "indexcompany"
  end
@@ -64,7 +65,15 @@ def profile
  render 'profiles', layout: 'homeEmpresa'
          
 end
+=======
+          def Index
+            render 'index'
+          end
+>>>>>>> d52723233dd33735ebe6ec4c5b9718a5af20f468
 
+          #def profile
+            #render 'profiles', layout: 'homeEmpresa'
+          #end
 end
 
 
