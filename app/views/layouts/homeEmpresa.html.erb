@@ -1,3 +1,5 @@
+
+ sesion = session[:sesion_login]
 <!DOCTYPE html>
 <html>
   <head>
@@ -50,7 +52,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <%= link_to 'Nuevo Empleado', {:controller => :users, :action => :index } %>          
+              <%= link_to 'Nuevo Empleado', {:controller => :users, :action => :register } %>          
             </li>
             <li>
               <%= link_to 'Actualizar Datos', {:controller => :users, :action => :index } %>          
@@ -80,7 +82,11 @@
       <ul class="navbar-nav ml-auto">       
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+            <%= session[:user] != nil ? session[:user] : ''  %> <%= session[:user] != nil ? session[:userA] : ''  %>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out" value ="sesion" ></i>Logout</a>
         </li>
       </ul>
     </div>

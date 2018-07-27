@@ -1,13 +1,13 @@
 class UsersController < ApplicationController
-
+#Login de Empresa
   def index
     render "indexcompany"
 end
-
+#Cargar vista Prestamos
 def loan
   render 'loan', layout: 'home'
  end
-   
+   #carga vista Empleado
  def employee
     render "employee"
  end
@@ -35,6 +35,13 @@ end
  def loginEmpresa      
    if User.exists?(:email=>params[:txtUser],:id=>params[:txtPassword])
      user = User.select('id_perfi').where(:email=>params[:txtUser],:id=>params[:txtPassword]).first
+    
+     user_session = User.select('nombre').where(:email=>params[:txtUser],:id=>params[:txtPassword]).first
+     user_sessionA = User.select('apellido').where(:email=>params[:txtUser],:id=>params[:txtPassword]).first
+    
+     session[:user] = user_session.nombre
+     session[:userA] = user_sessionA.apellido
+
      if user.id_perfi.eql?(1)
          render 'company', layout: 'homeEmpresa'
      else
@@ -48,28 +55,22 @@ end
  end
        
 
-<<<<<<< HEAD
- def indexcompany
-   render "indexcompany"
- end
-
- def home 
-   render 'homes' 
-end
-
-def Index
- render 'index'
-end
-    
-def profile
- render 'profiles', layout: 'homeEmpresa'
-         
-end
-=======
           def Index
             render 'index'
           end
->>>>>>> d52723233dd33735ebe6ec4c5b9718a5af20f468
+
+          def register
+            @perfiles=Profile.all
+            render 'register'
+          end
+
+          def edit
+           render 'edit'
+          end
+
+          def show
+            render 'show',  layout: 'home'
+           end
 
           #def profile
             #render 'profiles', layout: 'homeEmpresa'

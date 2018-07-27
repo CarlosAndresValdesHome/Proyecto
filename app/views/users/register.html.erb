@@ -10,7 +10,7 @@
     <div class="card mx-auto mt-5">
         <div class="card-header">Registrar Usuario</div>
         <div class="card-body">
-        <%= form_tag(:controller => "users", :action => "save_register", :method => "post") do |f| %>
+        <%= form_tag(:controller => "users", :action => "save_register") do |f| %>
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-md-6">
@@ -21,7 +21,7 @@
                         <label id="lblPerfil">Perfil:</label>
                         <select id="ddlPerfiles" name="ddlPerfiles" class="form-control">
                             <% @perfiles.each do |item| %>
-                                <option value="<%= item.id %>"><%= item.Descripcion %></option>
+                                <option value="<%= item.id %>"><%= item.descripcion %></option>
                             <% end %>
                         <select/>
                     </div>

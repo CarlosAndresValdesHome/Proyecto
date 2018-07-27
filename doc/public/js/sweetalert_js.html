@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>sweetalert.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Ejercicio 1_txt.html">Ejercicio 1</a>
+  
+    <li><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../HOME_html.html">HOME.html</a>
+  
+    <li><a href="../../Index_html.html">Index.html</a>
+  
+    <li><a href="../../README_md.html">README</a>
+  
+    <li><a href="../../README_txt.html">README</a>
+  
+    <li><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../Scripts PosgreSQL/join.html">join</a>
+  
+    <li><a href="../../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../../app/assets/javascripts/charge_profiles_coffee.html">charge_profiles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/companies_coffee.html">companies.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/company_coffee.html">company.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/contract_coffee.html">contract.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/contract_profile_coffee.html">contract_profile.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/contract_profiles_coffee.html">contract_profiles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/contracts_coffee.html">contracts.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/paysheet_coffee.html">paysheet.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/paysheets_coffee.html">paysheets.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/profile_cargo_coffee.html">profile_cargo.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/profiles_coffee.html">profiles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/user_coffee.html">user.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/users_coffee.html">users.coffee</a>
+  
+    <li><a href="../../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="../../app/assets/stylesheets/charge_profiles_scss.html">charge_profiles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/companies_scss.html">companies.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/company_scss.html">company.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/contract_scss.html">contract.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/contract_profile_scss.html">contract_profile.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/contract_profiles_scss.html">contract_profiles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/contracts_scss.html">contracts.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/paysheet_scss.html">paysheet.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/paysheets_scss.html">paysheets.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/profile_cargo_scss.html">profile_cargo.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/profiles_scss.html">profiles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/user_scss.html">user.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/users_scss.html">users.scss</a>
+  
+    <li><a href="../../app/views/charge_profiles/_charge_profile_json_jbuilder.html">_charge_profile.json.jbuilder</a>
+  
+    <li><a href="../../app/views/charge_profiles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/charge_profiles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/companies/_company_json_jbuilder.html">_company.json.jbuilder</a>
+  
+    <li><a href="../../app/views/companies/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/companies/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contract_profiles/_contract_profile_json_jbuilder.html">_contract_profile.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contract_profiles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contract_profiles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contracts/_contract_json_jbuilder.html">_contract.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contracts/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contracts/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paysheets/_paysheet_json_jbuilder.html">_paysheet.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paysheets/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paysheets/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/profiles/_profile_json_jbuilder.html">_profile.json.jbuilder</a>
+  
+    <li><a href="../../app/views/profiles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/profiles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/users/_user_json_jbuilder.html">_user.json.jbuilder</a>
+  
+    <li><a href="../../app/views/users/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/users/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../log/development_log.html">development.log</a>
+  
+    <li><a href="../../package_json.html">package.json</a>
+  
+    <li><a href="../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../../public/css/agency_css.html">agency.css</a>
+  
+    <li><a href="../../public/css/agency_min_css.html">agency.min.css</a>
+  
+    <li><a href="../../public/css/sb-admin_css.html">sb-admin.css</a>
+  
+    <li><a href="../../public/css/sb-admin_min_css.html">sb-admin.min.css</a>
+  
+    <li><a href="../../public/css/sweetalert_css.html">sweetalert.css</a>
+  
+    <li><a href="../../public/csse/sb-admin_css.html">sb-admin.css</a>
+  
+    <li><a href="../../public/csse/sb-admin_min_css.html">sb-admin.min.css</a>
+  
+    <li><a href="../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../public/js/agency_js.html">agency.js</a>
+  
+    <li><a href="../../public/js/agency_min_js.html">agency.min.js</a>
+  
+    <li><a href="../../public/js/contact_me_js.html">contact_me.js</a>
+  
+    <li><a href="../../public/js/contact_me_min_js.html">contact_me.min.js</a>
+  
+    <li><a href="../../public/js/jqBootstrapValidation_js.html">jqBootstrapValidation.js</a>
+  
+    <li><a href="../../public/js/jqBootstrapValidation_min_js.html">jqBootstrapValidation.min.js</a>
+  
+    <li><a href="../../public/js/sb-admin-charts_js.html">sb-admin-charts.js</a>
+  
+    <li><a href="../../public/js/sb-admin-charts_min_js.html">sb-admin-charts.min.js</a>
+  
+    <li><a href="../../public/js/sb-admin-datatables_js.html">sb-admin-datatables.js</a>
+  
+    <li><a href="../../public/js/sb-admin-datatables_min_js.html">sb-admin-datatables.min.js</a>
+  
+    <li><a href="../../public/js/sb-admin_js.html">sb-admin.js</a>
+  
+    <li><a href="../../public/js/sb-admin_min_js.html">sb-admin.min.js</a>
+  
+    <li><a href="../../public/js/sweetalert_js.html">sweetalert.js</a>
+  
+    <li><a href="../../public/js/sweetalert_min_js.html">sweetalert.min.js</a>
+  
+    <li><a href="../../public/jse/sb-admin-charts_js.html">sb-admin-charts.js</a>
+  
+    <li><a href="../../public/jse/sb-admin-charts_min_js.html">sb-admin-charts.min.js</a>
+  
+    <li><a href="../../public/jse/sb-admin-datatables_js.html">sb-admin-datatables.js</a>
+  
+    <li><a href="../../public/jse/sb-admin-datatables_min_js.html">sb-admin-datatables.min.js</a>
+  
+    <li><a href="../../public/jse/sb-admin_js.html">sb-admin.js</a>
+  
+    <li><a href="../../public/jse/sb-admin_min_js.html">sb-admin.min.js</a>
+  
+    <li><a href="../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../public/vendor/bootstrap/css/bootstrap-grid_css.html">bootstrap-grid.css</a>
+  
+    <li><a href="../../public/vendor/bootstrap/css/bootstrap-grid_min_css.html">bootstrap-grid.min.css</a>
+  
+    <li><a href="../../public/vendor/bootstrap/css/bootstrap-reboot_css.html">bootstrap-reboot.css</a>
+  
+    <li><a href="../../public/vendor/bootstrap/css/bootstrap-reboot_min_css.html">bootstrap-reboot.min.css</a>
+  
+    <li><a href="../../public/vendor/bootstrap/css/bootstrap_css.html">bootstrap.css</a>
+  
+    <li><a href="../../public/vendor/bootstrap/css/bootstrap_css_map.html">bootstrap.css.map</a>
+  
+    <li><a href="../../public/vendor/bootstrap/css/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../public/vendor/bootstrap/css/bootstrap_min_css_map.html">bootstrap.min.css.map</a>
+  
+    <li><a href="../../public/vendor/bootstrap/js/bootstrap_bundle_js.html">bootstrap.bundle.js</a>
+  
+    <li><a href="../../public/vendor/bootstrap/js/bootstrap_bundle_js_map.html">bootstrap.bundle.js.map</a>
+  
+    <li><a href="../../public/vendor/bootstrap/js/bootstrap_bundle_min_js.html">bootstrap.bundle.min.js</a>
+  
+    <li><a href="../../public/vendor/bootstrap/js/bootstrap_bundle_min_js_map.html">bootstrap.bundle.min.js.map</a>
+  
+    <li><a href="../../public/vendor/bootstrap/js/bootstrap_js.html">bootstrap.js</a>
+  
+    <li><a href="../../public/vendor/bootstrap/js/bootstrap_js_map.html">bootstrap.js.map</a>
+  
+    <li><a href="../../public/vendor/bootstrap/js/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../public/vendor/bootstrap/js/bootstrap_min_js_map.html">bootstrap.min.js.map</a>
+  
+    <li><a href="../../public/vendor/chart_js/Chart_bundle_js.html">Chart.bundle.js</a>
+  
+    <li><a href="../../public/vendor/chart_js/Chart_bundle_min_js.html">Chart.bundle.min.js</a>
+  
+    <li><a href="../../public/vendor/chart_js/Chart_js.html">Chart.js</a>
+  
+    <li><a href="../../public/vendor/chart_js/Chart_min_js.html">Chart.min.js</a>
+  
+    <li><a href="../../public/vendor/datatables/dataTables_bootstrap4_css.html">dataTables.bootstrap4.css</a>
+  
+    <li><a href="../../public/vendor/datatables/dataTables_bootstrap4_js.html">dataTables.bootstrap4.js</a>
+  
+    <li><a href="../../public/vendor/datatables/jquery_dataTables_js.html">jquery.dataTables.js</a>
+  
+    <li><a href="../../public/vendor/font-awesome/css/font-awesome_css.html">font-awesome.css</a>
+  
+    <li><a href="../../public/vendor/font-awesome/css/font-awesome_css_map.html">font-awesome.css.map</a>
+  
+    <li><a href="../../public/vendor/font-awesome/css/font-awesome_min_css.html">font-awesome.min.css</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/animated_less.html">animated.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/bordered-pulled_less.html">bordered-pulled.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/core_less.html">core.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/fixed-width_less.html">fixed-width.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/font-awesome_less.html">font-awesome.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/icons_less.html">icons.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/larger_less.html">larger.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/list_less.html">list.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/mixins_less.html">mixins.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/path_less.html">path.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/rotated-flipped_less.html">rotated-flipped.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/screen-reader_less.html">screen-reader.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/stacked_less.html">stacked.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/less/variables_less.html">variables.less</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_animated_scss.html">_animated.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_bordered-pulled_scss.html">_bordered-pulled.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_core_scss.html">_core.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_fixed-width_scss.html">_fixed-width.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_icons_scss.html">_icons.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_larger_scss.html">_larger.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_list_scss.html">_list.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_mixins_scss.html">_mixins.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_path_scss.html">_path.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_rotated-flipped_scss.html">_rotated-flipped.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_screen-reader_scss.html">_screen-reader.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_stacked_scss.html">_stacked.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/_variables_scss.html">_variables.scss</a>
+  
+    <li><a href="../../public/vendor/font-awesome/scss/font-awesome_scss.html">font-awesome.scss</a>
+  
+    <li><a href="../../public/vendor/jquery-easing/jquery_easing_compatibility_js.html">jquery.easing.compatibility.js</a>
+  
+    <li><a href="../../public/vendor/jquery-easing/jquery_easing_js.html">jquery.easing.js</a>
+  
+    <li><a href="../../public/vendor/jquery-easing/jquery_easing_min_js.html">jquery.easing.min.js</a>
+  
+    <li><a href="../../public/vendor/jquery/jquery_js.html">jquery.js</a>
+  
+    <li><a href="../../public/vendor/jquery/jquery_min_js.html">jquery.min.js</a>
+  
+    <li><a href="../../public/vendor/jquery/jquery_min_map.html">jquery.min.map</a>
+  
+    <li><a href="../../public/vendor/jquery/jquery_slim_js.html">jquery.slim.js</a>
+  
+    <li><a href="../../public/vendor/jquery/jquery_slim_min_js.html">jquery.slim.min.js</a>
+  
+    <li><a href="../../public/vendor/jquery/jquery_slim_min_map.html">jquery.slim.min.map</a>
+  
+    <li><a href="../../public/vendore/bootstrap/css/bootstrap-grid_css.html">bootstrap-grid.css</a>
+  
+    <li><a href="../../public/vendore/bootstrap/css/bootstrap-grid_min_css.html">bootstrap-grid.min.css</a>
+  
+    <li><a href="../../public/vendore/bootstrap/css/bootstrap-reboot_css.html">bootstrap-reboot.css</a>
+  
+    <li><a href="../../public/vendore/bootstrap/css/bootstrap-reboot_min_css.html">bootstrap-reboot.min.css</a>
+  
+    <li><a href="../../public/vendore/bootstrap/css/bootstrap_css.html">bootstrap.css</a>
+  
+    <li><a href="../../public/vendore/bootstrap/css/bootstrap_css_map.html">bootstrap.css.map</a>
+  
+    <li><a href="../../public/vendore/bootstrap/css/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../public/vendore/bootstrap/css/bootstrap_min_css_map.html">bootstrap.min.css.map</a>
+  
+    <li><a href="../../public/vendore/bootstrap/js/bootstrap_bundle_js.html">bootstrap.bundle.js</a>
+  
+    <li><a href="../../public/vendore/bootstrap/js/bootstrap_bundle_js_map.html">bootstrap.bundle.js.map</a>
+  
+    <li><a href="../../public/vendore/bootstrap/js/bootstrap_bundle_min_js.html">bootstrap.bundle.min.js</a>
+  
+    <li><a href="../../public/vendore/bootstrap/js/bootstrap_bundle_min_js_map.html">bootstrap.bundle.min.js.map</a>
+  
+    <li><a href="../../public/vendore/bootstrap/js/bootstrap_js.html">bootstrap.js</a>
+  
+    <li><a href="../../public/vendore/bootstrap/js/bootstrap_js_map.html">bootstrap.js.map</a>
+  
+    <li><a href="../../public/vendore/bootstrap/js/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../public/vendore/bootstrap/js/bootstrap_min_js_map.html">bootstrap.min.js.map</a>
+  
+    <li><a href="../../public/vendore/chart_js/Chart_bundle_js.html">Chart.bundle.js</a>
+  
+    <li><a href="../../public/vendore/chart_js/Chart_bundle_min_js.html">Chart.bundle.min.js</a>
+  
+    <li><a href="../../public/vendore/chart_js/Chart_js.html">Chart.js</a>
+  
+    <li><a href="../../public/vendore/chart_js/Chart_min_js.html">Chart.min.js</a>
+  
+    <li><a href="../../public/vendore/datatables/dataTables_bootstrap4_css.html">dataTables.bootstrap4.css</a>
+  
+    <li><a href="../../public/vendore/datatables/dataTables_bootstrap4_js.html">dataTables.bootstrap4.js</a>
+  
+    <li><a href="../../public/vendore/datatables/jquery_dataTables_js.html">jquery.dataTables.js</a>
+  
+    <li><a href="../../public/vendore/font-awesome/css/font-awesome_css.html">font-awesome.css</a>
+  
+    <li><a href="../../public/vendore/font-awesome/css/font-awesome_css_map.html">font-awesome.css.map</a>
+  
+    <li><a href="../../public/vendore/font-awesome/css/font-awesome_min_css.html">font-awesome.min.css</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/animated_less.html">animated.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/bordered-pulled_less.html">bordered-pulled.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/core_less.html">core.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/fixed-width_less.html">fixed-width.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/font-awesome_less.html">font-awesome.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/icons_less.html">icons.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/larger_less.html">larger.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/list_less.html">list.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/mixins_less.html">mixins.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/path_less.html">path.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/rotated-flipped_less.html">rotated-flipped.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/screen-reader_less.html">screen-reader.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/stacked_less.html">stacked.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/less/variables_less.html">variables.less</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_animated_scss.html">_animated.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_bordered-pulled_scss.html">_bordered-pulled.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_core_scss.html">_core.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_fixed-width_scss.html">_fixed-width.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_icons_scss.html">_icons.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_larger_scss.html">_larger.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_list_scss.html">_list.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_mixins_scss.html">_mixins.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_path_scss.html">_path.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_rotated-flipped_scss.html">_rotated-flipped.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_screen-reader_scss.html">_screen-reader.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_stacked_scss.html">_stacked.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/_variables_scss.html">_variables.scss</a>
+  
+    <li><a href="../../public/vendore/font-awesome/scss/font-awesome_scss.html">font-awesome.scss</a>
+  
+    <li><a href="../../public/vendore/jquery-easing/jquery_easing_compatibility_js.html">jquery.easing.compatibility.js</a>
+  
+    <li><a href="../../public/vendore/jquery-easing/jquery_easing_js.html">jquery.easing.js</a>
+  
+    <li><a href="../../public/vendore/jquery-easing/jquery_easing_min_js.html">jquery.easing.min.js</a>
+  
+    <li><a href="../../public/vendore/jquery/jquery_js.html">jquery.js</a>
+  
+    <li><a href="../../public/vendore/jquery/jquery_min_js.html">jquery.min.js</a>
+  
+    <li><a href="../../public/vendore/jquery/jquery_min_map.html">jquery.min.map</a>
+  
+    <li><a href="../../public/vendore/jquery/jquery_slim_js.html">jquery.slim.js</a>
+  
+    <li><a href="../../public/vendore/jquery/jquery_slim_min_js.html">jquery.slim.min.js</a>
+  
+    <li><a href="../../public/vendore/jquery/jquery_slim_min_map.html">jquery.slim.min.map</a>
+  
+    <li><a href="../../scrum_txt.html">scrum</a>
+  
+    <li><a href="../../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../../tmp/restart_txt.html">restart</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page public/js/sweetalert.js">
+
+<p>;(function(window, document, undefined) { “use strict”;</p>
+
+<p>(function e(t,n,r){function s(o,u){<a href="o">if(!n</a>){<a
+href="o">if(!t</a>){var a=typeof
+require==“function”&amp;&amp;require;if(!u&amp;&amp;a)return
+a(o,!0);if(i)return i(o,!0);var f=new Error(“Cannot find module
+&#39;”<code>o</code>“&#39;”);throw f.code=“MODULE_NOT_FOUND”,f}var <a
+href="o">l=n</a>={exports:{}};<a
+href="o">t</a>[0].call(l.exports,function(e){var <a href="o">n=t</a>[<a
+href="e">1]</a>;return s(n?n:e)},l,l.exports,e,t,n,r)}return <a
+href="o">n</a>.exports}var i=typeof
+require==“function”&amp;&amp;require;for(var <a
+href="o">o=0;o<r.length;o++)s(r</a>);return
+s})({1:[function(require,module,exports){ &#39;use strict&#39;;</p>
+
+<p>Object.defineProperty(exports, “__esModule”, {</p>
+
+<pre>value: true</pre>
+
+<p>}); var defaultParams = {</p>
+
+<pre>title: &#39;&#39;,
+text: &#39;&#39;,
+type: null,
+allowOutsideClick: false,
+showConfirmButton: true,
+showCancelButton: false,
+closeOnConfirm: true,
+closeOnCancel: true,
+confirmButtonText: &#39;OK&#39;,
+confirmButtonClass: &#39;btn-primary&#39;,
+cancelButtonText: &#39;Cancel&#39;,
+cancelButtonClass: &#39;btn-default&#39;,
+containerClass: &#39;&#39;,
+titleClass: &#39;&#39;,
+textClass: &#39;&#39;,
+imageUrl: null,
+imageSize: null,
+timer: null,
+customClass: &#39;&#39;,
+html: false,
+animation: true,
+allowEscapeKey: true,
+inputType: &#39;text&#39;,
+inputPlaceholder: &#39;&#39;,
+inputValue: &#39;&#39;,
+showLoaderOnConfirm: false</pre>
+
+<p>};</p>
+
+<p>exports.default = defaultParams;</p>
+
+<p>},{}],2:[function(require,module,exports){ &#39;use strict&#39;;</p>
+
+<p>Object.defineProperty(exports, “__esModule”, {</p>
+
+<pre>value: true</pre>
+
+<p>}); exports.handleCancel = exports.handleConfirm = exports.handleButton =
+undefined;</p>
+
+<p>var _handleSwalDom = require(&#39;./handle-swal-dom&#39;);</p>
+
+<p>var _handleDom = require(&#39;./handle-dom&#39;);</p>
+
+<pre class="ruby"><span class="ruby-constant">User</span> <span class="ruby-identifier">clicked</span> <span class="ruby-identifier">on</span> <span class="ruby-string">&quot;Confirm&quot;</span><span class="ruby-operator">/</span><span class="ruby-string">&quot;OK&quot;</span> <span class="ruby-keyword">or</span> <span class="ruby-string">&quot;Cancel&quot;</span>
+</pre>
+
+<p>var handleButton = function handleButton(event, params, modal) {</p>
+
+<pre>var e = event || window.event;
+var target = e.target || e.srcElement;
+
+var targetedConfirm = target.className.indexOf(&#39;confirm&#39;) !== -1;
+var targetedOverlay = target.className.indexOf(&#39;sweet-overlay&#39;) !== -1;
+var modalIsVisible = (0, _handleDom.hasClass)(modal, &#39;visible&#39;);
+var doneFunctionExists = params.doneFunction &amp;&amp; modal.getAttribute(&#39;data-has-done-function&#39;) === &#39;true&#39;;
+
+// Since the user can change the background-color of the confirm button programmatically,
+// we must calculate what the color should be on hover/active
+var normalColor, hoverColor, activeColor;
+if (targetedConfirm &amp;&amp; params.confirmButtonColor) {
+  normalColor = params.confirmButtonColor;
+  hoverColor = colorLuminance(normalColor, -0.04);
+  activeColor = colorLuminance(normalColor, -0.14);
+}
+
+function shouldSetConfirmButtonColor(color) {
+  if (targetedConfirm &amp;&amp; params.confirmButtonColor) {
+    target.style.backgroundColor = color;
+  }
+}
+
+switch (e.type) {
+  case &#39;click&#39;:
+    var clickedOnModal = modal === target;
+    var clickedOnModalChild = (0, _handleDom.isDescendant)(modal, target);
+
+    // Ignore click outside if allowOutsideClick is false
+    if (!clickedOnModal &amp;&amp; !clickedOnModalChild &amp;&amp; modalIsVisible &amp;&amp; !params.allowOutsideClick) {
+      break;
+    }
+
+    if (targetedConfirm &amp;&amp; doneFunctionExists &amp;&amp; modalIsVisible) {
+      handleConfirm(modal, params);
+    } else if (doneFunctionExists &amp;&amp; modalIsVisible || targetedOverlay) {
+      handleCancel(modal, params);
+    } else if ((0, _handleDom.isDescendant)(modal, target) &amp;&amp; target.tagName === &#39;BUTTON&#39;) {
+      sweetAlert.close();
+    }
+    break;
+}</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre>  User clicked on &quot;Confirm&quot;/&quot;OK&quot;
+/</pre>
+
+<p>var handleConfirm = function handleConfirm(modal, params) {</p>
+
+<pre>var callbackValue = true;
+
+if ((0, _handleDom.hasClass)(modal, &#39;show-input&#39;)) {
+  callbackValue = modal.querySelector(&#39;input&#39;).value;
+
+  if (!callbackValue) {
+    callbackValue = &#39;&#39;;
+  }
+}
+
+params.doneFunction(callbackValue);
+
+if (params.closeOnConfirm) {
+  sweetAlert.close();
+}
+// Disable cancel and confirm button if the parameter is true
+if (params.showLoaderOnConfirm) {
+  sweetAlert.disableButtons();
+}</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre>  User clicked on &quot;Cancel&quot;
+/</pre>
+
+<p>var handleCancel = function handleCancel(modal, params) {</p>
+
+<pre>// Check if callback function expects a parameter (to track cancel actions)
+var functionAsStr = String(params.doneFunction).replace(/\s/g, &#39;&#39;);
+var functionHandlesCancel = functionAsStr.substring(0, 9) === &#39;function(&#39; &amp;&amp; functionAsStr.substring(9, 10) !== &#39;)&#39;;
+
+if (functionHandlesCancel) {
+  params.doneFunction(false);
+}
+
+if (params.closeOnCancel) {
+  sweetAlert.close();
+}</pre>
+
+<p>};</p>
+
+<p>exports.handleButton = handleButton; exports.handleConfirm = handleConfirm;
+exports.handleCancel = handleCancel;</p>
+
+<p>},{“./handle-dom”:3,“./handle-swal-dom”:5}],3:[function(require,module,exports){
+&#39;use strict&#39;;</p>
+
+<p>Object.defineProperty(exports, “__esModule”, {</p>
+
+<pre>value: true</pre>
+
+<p>}); var hasClass = function hasClass(elem, className) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">new</span> <span class="ruby-constant">RegExp</span>(<span class="ruby-string">&#39; &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">className</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39; &#39;</span>).<span class="ruby-identifier">test</span>(<span class="ruby-string">&#39; &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">elem</span>.<span class="ruby-identifier">className</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39; &#39;</span>);
+</pre>
+
+<p>};</p>
+
+<p>var addClass = function addClass(elem, className) {</p>
+
+<pre>if (!hasClass(elem, className)) {
+  elem.className += &#39; &#39; + className;
+}</pre>
+
+<p>};</p>
+
+<p>var removeClass = function removeClass(elem, className) {</p>
+
+<pre>var newClass = &#39; &#39; + elem.className.replace(/[\t\r\n]/g, &#39; &#39;) + &#39; &#39;;
+if (hasClass(elem, className)) {
+  while (newClass.indexOf(&#39; &#39; + className + &#39; &#39;) &gt;= 0) {
+    newClass = newClass.replace(&#39; &#39; + className + &#39; &#39;, &#39; &#39;);
+  }
+  elem.className = newClass.replace(/^\s+|\s+$/g, &#39;&#39;);
+}</pre>
+
+<p>};</p>
+
+<p>var escapeHtml = function escapeHtml(str) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">var</span> <span class="ruby-identifier">div</span> = <span class="ruby-identifier">document</span>.<span class="ruby-identifier">createElement</span>(<span class="ruby-string">&#39;div&#39;</span>);
+<span class="ruby-identifier">div</span>.<span class="ruby-identifier">appendChild</span>(<span class="ruby-identifier">document</span>.<span class="ruby-identifier">createTextNode</span>(<span class="ruby-identifier">str</span>));
+<span class="ruby-keyword">return</span> <span class="ruby-identifier">div</span>.<span class="ruby-identifier">innerHTML</span>;
+</pre>
+
+<p>};</p>
+
+<p>var _show = function _show(elem) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">elem</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-string">&#39;&#39;</span>;
+<span class="ruby-identifier">elem</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">display</span> = <span class="ruby-string">&#39;block&#39;</span>;
+</pre>
+
+<p>};</p>
+
+<p>var show = function show(elems) {</p>
+
+<pre>if (elems &amp;&amp; !elems.length) {
+  return _show(elems);
+}
+for (var i = 0; i &lt; elems.length; ++i) {
+  _show(elems[i]);
+}</pre>
+
+<p>};</p>
+
+<p>var _hide = function _hide(elem) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">elem</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-string">&#39;&#39;</span>;
+<span class="ruby-identifier">elem</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">display</span> = <span class="ruby-string">&#39;none&#39;</span>;
+</pre>
+
+<p>};</p>
+
+<p>var hide = function hide(elems) {</p>
+
+<pre>if (elems &amp;&amp; !elems.length) {
+  return _hide(elems);
+}
+for (var i = 0; i &lt; elems.length; ++i) {
+  _hide(elems[i]);
+}</pre>
+
+<p>};</p>
+
+<p>var isDescendant = function isDescendant(parent, child) {</p>
+
+<pre>var node = child.parentNode;
+while (node !== null) {
+  if (node === parent) {
+    return true;
+  }
+  node = node.parentNode;
+}
+return false;</pre>
+
+<p>};</p>
+
+<p>var getTopMargin = function getTopMargin(elem) {</p>
+
+<pre>elem.style.left = &#39;-9999px&#39;;
+elem.style.display = &#39;block&#39;;
+
+var height = elem.clientHeight,
+    padding;
+if (typeof getComputedStyle !== &quot;undefined&quot;) {
+  // IE 8
+  padding = parseInt(getComputedStyle(elem).getPropertyValue(&#39;padding-top&#39;), 10);
+} else {
+  padding = parseInt(elem.currentStyle.padding);
+}
+
+elem.style.left = &#39;&#39;;
+elem.style.display = &#39;none&#39;;
+return &#39;-&#39; + parseInt((height + padding) / 2) + &#39;px&#39;;</pre>
+
+<p>};</p>
+
+<p>var fadeIn = function fadeIn(elem, interval) {</p>
+
+<pre>if (+elem.style.opacity &lt; 1) {
+  interval = interval || 16;
+  elem.style.opacity = 0;
+  elem.style.display = &#39;block&#39;;
+  var last = +new Date();
+  var tick = function tick() {
+    elem.style.opacity = +elem.style.opacity + (new Date() - last) / 100;
+    last = +new Date();
+
+    if (+elem.style.opacity &lt; 1) {
+      setTimeout(tick, interval);
+    }
+  };
+  tick();
+}
+elem.style.display = &#39;block&#39;; //fallback IE8</pre>
+
+<p>};</p>
+
+<p>var fadeOut = function fadeOut(elem, interval) {</p>
+
+<pre>interval = interval || 16;
+elem.style.opacity = 1;
+var last = +new Date();
+var tick = function tick() {
+  elem.style.opacity = +elem.style.opacity - (new Date() - last) / 100;
+  last = +new Date();
+
+  if (+elem.style.opacity &gt; 0) {
+    setTimeout(tick, interval);
+  } else {
+    elem.style.display = &#39;none&#39;;
+  }
+};
+tick();</pre>
+
+<p>};</p>
+
+<p>var fireClick = function fireClick(node) {</p>
+
+<pre>// Taken from http://www.nonobtrusive.com/2011/11/29/programatically-fire-crossbrowser-click-event-with-javascript/
+// Then fixed for today&#39;s Chrome browser.
+if (typeof MouseEvent === &#39;function&#39;) {
+  // Up-to-date approach
+  var mevt = new MouseEvent(&#39;click&#39;, {
+    view: window,
+    bubbles: false,
+    cancelable: true
+  });
+  node.dispatchEvent(mevt);
+} else if (document.createEvent) {
+  // Fallback
+  var evt = document.createEvent(&#39;MouseEvents&#39;);
+  evt.initEvent(&#39;click&#39;, false, false);
+  node.dispatchEvent(evt);
+} else if (document.createEventObject) {
+  node.fireEvent(&#39;onclick&#39;);
+} else if (typeof node.onclick === &#39;function&#39;) {
+  node.onclick();
+}</pre>
+
+<p>};</p>
+
+<p>var stopEventPropagation = function stopEventPropagation(e) {</p>
+
+<pre>// In particular, make sure the space bar doesn&#39;t scroll the main window.
+if (typeof e.stopPropagation === &#39;function&#39;) {
+  e.stopPropagation();
+  e.preventDefault();
+} else if (window.event &amp;&amp; window.event.hasOwnProperty(&#39;cancelBubble&#39;)) {
+  window.event.cancelBubble = true;
+}</pre>
+
+<p>};</p>
+
+<p>exports.hasClass = hasClass; exports.addClass = addClass;
+exports.removeClass = removeClass; exports.escapeHtml = escapeHtml;
+exports._show = _show; exports.show = show; exports._hide = _hide;
+exports.hide = hide; exports.isDescendant = isDescendant;
+exports.getTopMargin = getTopMargin; exports.fadeIn = fadeIn;
+exports.fadeOut = fadeOut; exports.fireClick = fireClick;
+exports.stopEventPropagation = stopEventPropagation;</p>
+
+<p>},{}],4:[function(require,module,exports){ &#39;use strict&#39;;</p>
+
+<p>Object.defineProperty(exports, “__esModule”, {</p>
+
+<pre>value: true</pre>
+
+<p>});</p>
+
+<p>var _handleDom = require(&#39;./handle-dom&#39;);</p>
+
+<p>var _handleSwalDom = require(&#39;./handle-swal-dom&#39;);</p>
+
+<p>var handleKeyDown = function handleKeyDown(event, params, modal) {</p>
+
+<pre>var e = event || window.event;
+var keyCode = e.keyCode || e.which;
+
+var $okButton = modal.querySelector(&#39;button.confirm&#39;);
+var $cancelButton = modal.querySelector(&#39;button.cancel&#39;);
+var $modalButtons = modal.querySelectorAll(&#39;button[tabindex]&#39;);
+
+if ([9, 13, 32, 27].indexOf(keyCode) === -1) {
+  // Don&#39;t do work on keys we don&#39;t care about.
+  return;
+}
+
+var $targetElement = e.target || e.srcElement;
+
+var btnIndex = -1; // Find the button - note, this is a nodelist, not an array.
+for (var i = 0; i &lt; $modalButtons.length; i++) {
+  if ($targetElement === $modalButtons[i]) {
+    btnIndex = i;
+    break;
+  }
+}
+
+if (keyCode === 9) {
+  // TAB
+  if (btnIndex === -1) {
+    // No button focused. Jump to the confirm button.
+    $targetElement = $okButton;
+  } else {
+    // Cycle to the next button
+    if (btnIndex === $modalButtons.length - 1) {
+      $targetElement = $modalButtons[0];
+    } else {
+      $targetElement = $modalButtons[btnIndex + 1];
+    }
+  }
+
+  (0, _handleDom.stopEventPropagation)(e);
+  $targetElement.focus();
+
+  if (params.confirmButtonColor) {
+    (0, _handleSwalDom.setFocusStyle)($targetElement, params.confirmButtonColor);
+  }
+} else {
+  if (keyCode === 13) {
+    if ($targetElement.tagName === &#39;INPUT&#39;) {
+      $targetElement = $okButton;
+      $okButton.focus();
+    }
+
+    if (btnIndex === -1) {
+      // ENTER/SPACE clicked outside of a button.
+      $targetElement = $okButton;
+    } else {
+      // Do nothing - let the browser handle it.
+      $targetElement = undefined;
+    }
+  } else if (keyCode === 27 &amp;&amp; params.allowEscapeKey === true) {
+    $targetElement = $cancelButton;
+    (0, _handleDom.fireClick)($targetElement, e);
+  } else {
+    // Fallback - let the browser handle it.
+    $targetElement = undefined;
+  }
+}</pre>
+
+<p>};</p>
+
+<p>exports.default = handleKeyDown;</p>
+
+<p>},{“./handle-dom”:3,“./handle-swal-dom”:5}],5:[function(require,module,exports){
+&#39;use strict&#39;;</p>
+
+<p>Object.defineProperty(exports, “__esModule”, {</p>
+
+<pre>value: true</pre>
+
+<p>}); exports.fixVerticalPosition = exports.resetInputError =
+exports.resetInput = exports.openModal = exports.getInput =
+exports.getOverlay = exports.getModal = exports.sweetAlertInitialize =
+undefined;</p>
+
+<p>var _handleDom = require(&#39;./handle-dom&#39;);</p>
+
+<p>var _defaultParams = require(&#39;./default-params&#39;);</p>
+
+<p>var _defaultParams2 = _interopRequireDefault(_defaultParams);</p>
+
+<p>var _injectedHtml = require(&#39;./injected-html&#39;);</p>
+
+<p>var _injectedHtml2 = _interopRequireDefault(_injectedHtml);</p>
+
+<p>function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule
+? obj : { default: obj }; }</p>
+
+<p>var modalClass = &#39;.sweet-alert&#39;; var overlayClass =
+&#39;.sweet-overlay&#39;;</p>
+
+<p>/*</p>
+
+<pre> Add modal + overlay to DOM
+/</pre>
+
+<p>var sweetAlertInitialize = function sweetAlertInitialize() {</p>
+
+<pre>var sweetWrap = document.createElement(&#39;div&#39;);
+sweetWrap.innerHTML = _injectedHtml2.default;
+
+// Append elements to body
+while (sweetWrap.firstChild) {
+  document.body.appendChild(sweetWrap.firstChild);
+}</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Get DOM element of modal
+/</pre>
+
+<p>var getModal = function getModal() {</p>
+
+<pre>var $modal = document.querySelector(modalClass);
+
+if (!$modal) {
+  sweetAlertInitialize();
+  $modal = getModal();
+}
+
+return $modal;</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Get DOM element of input (in modal)
+/</pre>
+
+<p>var getInput = function getInput() {</p>
+
+<pre>var $modal = getModal();
+if ($modal) {
+  return $modal.querySelector(&#39;input&#39;);
+}</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Get DOM element of overlay
+/</pre>
+
+<p>var getOverlay = function getOverlay() {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">querySelector</span>(<span class="ruby-identifier">overlayClass</span>);
+</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Animation when opening modal
+/</pre>
+
+<p>var openModal = function openModal(callback) {</p>
+
+<pre>var $modal = getModal();
+(0, _handleDom.fadeIn)(getOverlay(), 10);
+(0, _handleDom.show)($modal);
+(0, _handleDom.addClass)($modal, &#39;showSweetAlert&#39;);
+(0, _handleDom.removeClass)($modal, &#39;hideSweetAlert&#39;);
+
+window.previousActiveElement = document.activeElement;
+var $okButton = $modal.querySelector(&#39;button.confirm&#39;);
+$okButton.focus();
+
+setTimeout(function () {
+  (0, _handleDom.addClass)($modal, &#39;visible&#39;);
+}, 500);
+
+var timer = $modal.getAttribute(&#39;data-timer&#39;);
+
+if (timer !== &#39;null&#39; &amp;&amp; timer !== &#39;&#39;) {
+  var timerCallback = callback;
+  $modal.timeout = setTimeout(function () {
+    var doneFunctionExists = (timerCallback || null) &amp;&amp; $modal.getAttribute(&#39;data-has-done-function&#39;) === &#39;true&#39;;
+    if (doneFunctionExists) {
+      timerCallback(null);
+    } else {
+      sweetAlert.close();
+    }
+  }, timer);
+}</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Reset the styling of the input
+ (for example if errors have been shown)
+/</pre>
+
+<p>var resetInput = function resetInput() {</p>
+
+<pre>var $modal = getModal();
+var $input = getInput();
+
+(0, _handleDom.removeClass)($modal, &#39;show-input&#39;);
+$input.value = _defaultParams2.default.inputValue;
+$input.setAttribute(&#39;type&#39;, _defaultParams2.default.inputType);
+$input.setAttribute(&#39;placeholder&#39;, _defaultParams2.default.inputPlaceholder);
+
+resetInputError();</pre>
+
+<p>};</p>
+
+<p>var resetInputError = function resetInputError(event) {</p>
+
+<pre>// If press enter =&gt; ignore
+if (event &amp;&amp; event.keyCode === 13) {
+  return false;
+}
+
+var $modal = getModal();
+
+var $errorIcon = $modal.querySelector(&#39;.sa-input-error&#39;);
+(0, _handleDom.removeClass)($errorIcon, &#39;show&#39;);
+
+var $errorContainer = $modal.querySelector(&#39;.form-group&#39;);
+(0, _handleDom.removeClass)($errorContainer, &#39;has-error&#39;);</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Set &quot;margin-top&quot;-property on modal based on its computed height
+/</pre>
+
+<p>var fixVerticalPosition = function fixVerticalPosition() {</p>
+
+<pre>var $modal = getModal();
+$modal.style.marginTop = (0, _handleDom.getTopMargin)(getModal());</pre>
+
+<p>};</p>
+
+<p>exports.sweetAlertInitialize = sweetAlertInitialize; exports.getModal =
+getModal; exports.getOverlay = getOverlay; exports.getInput = getInput;
+exports.openModal = openModal; exports.resetInput = resetInput;
+exports.resetInputError = resetInputError; exports.fixVerticalPosition =
+fixVerticalPosition;</p>
+
+<p>},{“./default-params”:1,“./handle-dom”:3,“./injected-html”:6}],6:[function(require,module,exports){
+“use strict”;</p>
+
+<p>Object.defineProperty(exports, “__esModule”, {</p>
+
+<pre>value: true</pre>
+
+<p>}); var injectedHTML =</p>
+
+<p>// Dark overlay “&lt;div class=&quot;sweet-overlay&quot;
+tabIndex=&quot;-1&quot;&gt;&lt;/div&gt;” +</p>
+
+<p>// Modal “&lt;div class=&quot;sweet-alert&quot;
+tabIndex=&quot;-1&quot;&gt;” +</p>
+
+<p>// Error icon “&lt;div class=&quot;sa-icon sa-error&quot;&gt;n     
+&lt;span class=&quot;sa-x-mark&quot;&gt;n        &lt;span
+class=&quot;sa-line sa-left&quot;&gt;&lt;/span&gt;n        &lt;span
+class=&quot;sa-line sa-right&quot;&gt;&lt;/span&gt;n      &lt;/span&gt;n   
+&lt;/div&gt;” +</p>
+
+<p>// Warning icon “&lt;div class=&quot;sa-icon sa-warning&quot;&gt;n     
+&lt;span class=&quot;sa-body&quot;&gt;&lt;/span&gt;n      &lt;span
+class=&quot;sa-dot&quot;&gt;&lt;/span&gt;n    &lt;/div&gt;” +</p>
+
+<p>// Info icon “&lt;div class=&quot;sa-icon sa-info&quot;&gt;&lt;/div&gt;” +</p>
+
+<p>// Success icon “&lt;div class=&quot;sa-icon sa-success&quot;&gt;n     
+&lt;span class=&quot;sa-line sa-tip&quot;&gt;&lt;/span&gt;n      &lt;span
+class=&quot;sa-line sa-long&quot;&gt;&lt;/span&gt;nn      &lt;div
+class=&quot;sa-placeholder&quot;&gt;&lt;/div&gt;n      &lt;div
+class=&quot;sa-fix&quot;&gt;&lt;/div&gt;n    &lt;/div&gt;” + “&lt;div
+class=&quot;sa-icon sa-custom&quot;&gt;&lt;/div&gt;” +</p>
+
+<p>// Title, text and input “&lt;h2&gt;Title&lt;/h2&gt;n    &lt;p
+class=&quot;lead text-muted&quot;&gt;Text&lt;/p&gt;n    &lt;div
+class=&quot;form-group&quot;&gt;n      &lt;input type=&quot;text&quot;
+class=&quot;form-control&quot; tabIndex=&quot;3&quot; /&gt;n      &lt;span
+class=&quot;sa-input-error help-block&quot;&gt;n        &lt;span
+class=&quot;glyphicon glyphicon-exclamation-sign&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;sa-help-text&quot;&gt;Not valid&lt;/span&gt;n     
+&lt;/span&gt;n    &lt;/div&gt;” +</p>
+
+<p>// Cancel and confirm buttons “&lt;div
+class=&quot;sa-button-container&quot;&gt;n      &lt;button
+class=&quot;cancel btn btn-lg&quot;
+tabIndex=&quot;2&quot;&gt;Cancel&lt;/button&gt;n      &lt;div
+class=&quot;sa-confirm-button-container&quot;&gt;n        &lt;button
+class=&quot;confirm btn btn-lg&quot;
+tabIndex=&quot;1&quot;&gt;OK&lt;/button&gt;” +</p>
+
+<p>// Loading animation “&lt;div class=&quot;la-ball-fall&quot;&gt;n         
+&lt;div&gt;&lt;/div&gt;n          &lt;div&gt;&lt;/div&gt;n         
+&lt;div&gt;&lt;/div&gt;n        &lt;/div&gt;n      &lt;/div&gt;n   
+&lt;/div&gt;” +</p>
+
+<p>// End of modal “&lt;/div&gt;”;</p>
+
+<p>exports.default = injectedHTML;</p>
+
+<p>},{}],7:[function(require,module,exports){ &#39;use strict&#39;;</p>
+
+<p>Object.defineProperty(exports, “__esModule”, {</p>
+
+<pre>value: true</pre>
+
+<p>});</p>
+
+<p>var _typeof = typeof Symbol === “function” &amp;&amp; typeof
+Symbol.iterator === “symbol” ? function (obj) { return typeof obj; } :
+function (obj) { return obj &amp;&amp; typeof Symbol === “function”
+&amp;&amp; obj.constructor === Symbol ? “symbol” : typeof obj; };</p>
+
+<p>var _utils = require(&#39;./utils&#39;);</p>
+
+<p>var _handleSwalDom = require(&#39;./handle-swal-dom&#39;);</p>
+
+<p>var _handleDom = require(&#39;./handle-dom&#39;);</p>
+
+<p>var alertTypes = [&#39;error&#39;, &#39;warning&#39;, &#39;info&#39;,
+&#39;success&#39;, &#39;input&#39;, &#39;prompt&#39;];</p>
+
+<p>/*</p>
+
+<pre> Set type, text and actions on modal
+/</pre>
+
+<p>var setParameters = function setParameters(params) {</p>
+
+<pre>var modal = (0, _handleSwalDom.getModal)();
+
+var $title = modal.querySelector(&#39;h2&#39;);
+var $text = modal.querySelector(&#39;p&#39;);
+var $cancelBtn = modal.querySelector(&#39;button.cancel&#39;);
+var $confirmBtn = modal.querySelector(&#39;button.confirm&#39;);
+
+/*
+   Title
+  /
+$title.innerHTML = params.html ? params.title : (0, _handleDom.escapeHtml)(params.title).split(&#39;\n&#39;).join(&#39;&lt;br&gt;&#39;);
+
+/*
+   Text
+  /
+$text.innerHTML = params.html ? params.text : (0, _handleDom.escapeHtml)(params.text || &#39;&#39;).split(&#39;\n&#39;).join(&#39;&lt;br&gt;&#39;);
+if (params.text) (0, _handleDom.show)($text);
+
+/*
+   Custom class
+  /
+if (params.customClass) {
+  (0, _handleDom.addClass)(modal, params.customClass);
+  modal.setAttribute(&#39;data-custom-class&#39;, params.customClass);
+} else {
+  // Find previously set classes and remove them
+  var customClass = modal.getAttribute(&#39;data-custom-class&#39;);
+  (0, _handleDom.removeClass)(modal, customClass);
+  modal.setAttribute(&#39;data-custom-class&#39;, &#39;&#39;);
+}
+
+/*
+   Icon
+  /
+(0, _handleDom.hide)(modal.querySelectorAll(&#39;.sa-icon&#39;));
+
+if (params.type &amp;&amp; !(0, _utils.isIE8)()) {
+  var _ret = function () {
+
+    var validType = false;
+
+    for (var i = 0; i &lt; alertTypes.length; i++) {
+      if (params.type === alertTypes[i]) {
+        validType = true;
+        break;
+      }
+    }
+
+    if (!validType) {
+      logStr(&#39;Unknown alert type: &#39; + params.type);
+      return {
+        v: false
+      };
+    }
+
+    var typesWithIcons = [&#39;success&#39;, &#39;error&#39;, &#39;warning&#39;, &#39;info&#39;];
+    var $icon = void 0;
+
+    if (typesWithIcons.indexOf(params.type) !== -1) {
+      $icon = modal.querySelector(&#39;.sa-icon.&#39; + &#39;sa-&#39; + params.type);
+      (0, _handleDom.show)($icon);
+    }
+
+    var $input = (0, _handleSwalDom.getInput)();
+
+    // Animate icon
+    switch (params.type) {
+
+      case &#39;success&#39;:
+        (0, _handleDom.addClass)($icon, &#39;animate&#39;);
+        (0, _handleDom.addClass)($icon.querySelector(&#39;.sa-tip&#39;), &#39;animateSuccessTip&#39;);
+        (0, _handleDom.addClass)($icon.querySelector(&#39;.sa-long&#39;), &#39;animateSuccessLong&#39;);
+        break;
+
+      case &#39;error&#39;:
+        (0, _handleDom.addClass)($icon, &#39;animateErrorIcon&#39;);
+        (0, _handleDom.addClass)($icon.querySelector(&#39;.sa-x-mark&#39;), &#39;animateXMark&#39;);
+        break;
+
+      case &#39;warning&#39;:
+        (0, _handleDom.addClass)($icon, &#39;pulseWarning&#39;);
+        (0, _handleDom.addClass)($icon.querySelector(&#39;.sa-body&#39;), &#39;pulseWarningIns&#39;);
+        (0, _handleDom.addClass)($icon.querySelector(&#39;.sa-dot&#39;), &#39;pulseWarningIns&#39;);
+        break;
+
+      case &#39;input&#39;:
+      case &#39;prompt&#39;:
+        $input.setAttribute(&#39;type&#39;, params.inputType);
+        $input.value = params.inputValue;
+        $input.setAttribute(&#39;placeholder&#39;, params.inputPlaceholder);
+        (0, _handleDom.addClass)(modal, &#39;show-input&#39;);
+        setTimeout(function () {
+          $input.focus();
+          $input.addEventListener(&#39;keyup&#39;, swal.resetInputError);
+        }, 400);
+        break;
+    }
+  }();
+
+  if ((typeof _ret === &#39;undefined&#39; ? &#39;undefined&#39; : _typeof(_ret)) === &quot;object&quot;) return _ret.v;
+}
+
+/*
+   Custom image
+  /
+if (params.imageUrl) {
+  var $customIcon = modal.querySelector(&#39;.sa-icon.sa-custom&#39;);
+
+  $customIcon.style.backgroundImage = &#39;url(&#39; + params.imageUrl + &#39;)&#39;;
+  (0, _handleDom.show)($customIcon);
+
+  var _imgWidth = 80;
+  var _imgHeight = 80;
+
+  if (params.imageSize) {
+    var dimensions = params.imageSize.toString().split(&#39;x&#39;);
+    var imgWidth = dimensions[0];
+    var imgHeight = dimensions[1];
+
+    if (!imgWidth || !imgHeight) {
+      logStr(&#39;Parameter imageSize expects value with format WIDTHxHEIGHT, got &#39; + params.imageSize);
+    } else {
+      _imgWidth = imgWidth;
+      _imgHeight = imgHeight;
+    }
+  }
+
+  $customIcon.setAttribute(&#39;style&#39;, $customIcon.getAttribute(&#39;style&#39;) + &#39;width:&#39; + _imgWidth + &#39;px; height:&#39; + _imgHeight + &#39;px&#39;);
+}
+
+/*
+   Show cancel button?
+  /
+modal.setAttribute(&#39;data-has-cancel-button&#39;, params.showCancelButton);
+if (params.showCancelButton) {
+  $cancelBtn.style.display = &#39;inline-block&#39;;
+} else {
+  (0, _handleDom.hide)($cancelBtn);
+}
+
+/*
+   Show confirm button?
+  /
+modal.setAttribute(&#39;data-has-confirm-button&#39;, params.showConfirmButton);
+if (params.showConfirmButton) {
+  $confirmBtn.style.display = &#39;inline-block&#39;;
+} else {
+  (0, _handleDom.hide)($confirmBtn);
+}
+
+/*
+   Custom text on cancel/confirm buttons
+  /
+if (params.cancelButtonText) {
+  $cancelBtn.innerHTML = (0, _handleDom.escapeHtml)(params.cancelButtonText);
+}
+if (params.confirmButtonText) {
+  $confirmBtn.innerHTML = (0, _handleDom.escapeHtml)(params.confirmButtonText);
+}
+
+/*
+   Reset confirm buttons to default class (Ugly fix)
+  /
+$confirmBtn.className = &#39;confirm btn btn-lg&#39;;
+
+/*
+   Attach selected class to the sweet alert modal
+  /
+(0, _handleDom.addClass)(modal, params.containerClass);
+
+/*
+   Set confirm button to selected class
+  /
+(0, _handleDom.addClass)($confirmBtn, params.confirmButtonClass);
+
+/*
+   Set cancel button to selected class
+  /
+(0, _handleDom.addClass)($cancelBtn, params.cancelButtonClass);
+
+/*
+   Set title to selected class
+  /
+(0, _handleDom.addClass)($title, params.titleClass);
+
+/*
+   Set text to selected class
+  /
+(0, _handleDom.addClass)($text, params.textClass);
+
+/*
+   Allow outside click
+  /
+modal.setAttribute(&#39;data-allow-outside-click&#39;, params.allowOutsideClick);
+
+/*
+   Callback function
+  /
+var hasDoneFunction = params.doneFunction ? true : false;
+modal.setAttribute(&#39;data-has-done-function&#39;, hasDoneFunction);
+
+/*
+   Animation
+  /
+if (!params.animation) {
+  modal.setAttribute(&#39;data-animation&#39;, &#39;none&#39;);
+} else if (typeof params.animation === &#39;string&#39;) {
+  modal.setAttribute(&#39;data-animation&#39;, params.animation); // Custom animation
+} else {
+    modal.setAttribute(&#39;data-animation&#39;, &#39;pop&#39;);
+  }
+
+/*
+   Timer
+  /
+modal.setAttribute(&#39;data-timer&#39;, params.timer);</pre>
+
+<p>};</p>
+
+<p>exports.default = setParameters;</p>
+
+<p>},{“./handle-dom”:3,“./handle-swal-dom”:5,“./utils”:8}],8:[function(require,module,exports){
+&#39;use strict&#39;;</p>
+
+<p>Object.defineProperty(exports, “__esModule”, {</p>
+
+<pre>value: true</pre>
+
+<p>}); /*</p>
+
+<pre> Allow user to pass their own params
+/</pre>
+
+<p>var extend = function extend(a, b) {</p>
+
+<pre>for (var key in b) {
+  if (b.hasOwnProperty(key)) {
+    a[key] = b[key];
+  }
+}
+return a;</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Check if the user is using Internet Explorer 8 (for fallbacks)
+/</pre>
+
+<p>var isIE8 = function isIE8() {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">window</span>.<span class="ruby-identifier">attachEvent</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">window</span>.<span class="ruby-identifier">addEventListener</span>;
+</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> IE compatible logging for developers
+/</pre>
+
+<p>var logStr = function logStr(string) {</p>
+
+<pre>if (window.console) {
+  // IE...
+  window.console.log(&#39;SweetAlert: &#39; + string);
+}</pre>
+
+<p>};</p>
+
+<p>exports.extend = extend; exports.isIE8 = isIE8; exports.logStr = logStr;</p>
+
+<p>},{}],9:[function(require,module,exports){ &#39;use strict&#39;;</p>
+
+<p>Object.defineProperty(exports, “__esModule”, {</p>
+
+<pre>value: true</pre>
+
+<p>});</p>
+
+<p>var _typeof = typeof Symbol === “function” &amp;&amp; typeof
+Symbol.iterator === “symbol” ? function (obj) { return typeof obj; } :
+function (obj) { return obj &amp;&amp; typeof Symbol === “function”
+&amp;&amp; obj.constructor === Symbol ? “symbol” : typeof obj; }; //
+SweetAlert // 2014-2015 © - Tristan Edwards // github.com/t4t5/sweetalert</p>
+
+<p>/*</p>
+
+<pre> jQuery-like functions for manipulating the DOM
+/</pre>
+
+<p>/*</p>
+
+<pre> Handy utilities
+/</pre>
+
+<p>/*</p>
+
+<pre>  Handle sweetAlert&#39;s DOM elements
+/</pre>
+
+<p>// Handle button events and keyboard events</p>
+
+<p>// Default values</p>
+
+<p>var _handleDom = require(&#39;./modules/handle-dom&#39;);</p>
+
+<p>var _utils = require(&#39;./modules/utils&#39;);</p>
+
+<p>var _handleSwalDom = require(&#39;./modules/handle-swal-dom&#39;);</p>
+
+<p>var _handleClick = require(&#39;./modules/handle-click&#39;);</p>
+
+<p>var _handleKey = require(&#39;./modules/handle-key&#39;);</p>
+
+<p>var _handleKey2 = _interopRequireDefault(_handleKey);</p>
+
+<p>var _defaultParams = require(&#39;./modules/default-params&#39;);</p>
+
+<p>var _defaultParams2 = _interopRequireDefault(_defaultParams);</p>
+
+<p>var _setParams = require(&#39;./modules/set-params&#39;);</p>
+
+<p>var _setParams2 = _interopRequireDefault(_setParams);</p>
+
+<p>function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule
+? obj : { default: obj }; }</p>
+
+<p>/*</p>
+
+<pre> Remember state in cases where opening and handling a modal will fiddle with it.
+ (We also use window.previousActiveElement as a global variable)
+/</pre>
+
+<p>var previousWindowKeyDown; var lastFocusedButton;</p>
+
+<p>/*</p>
+
+<pre> Global sweetAlert function
+ (this is what the user calls)
+/</pre>
+
+<p>var sweetAlert, _swal;</p>
+
+<p>exports.default = sweetAlert = _swal = function swal() {</p>
+
+<pre>var customizations = arguments[0];
+
+(0, _handleDom.addClass)(document.body, &#39;stop-scrolling&#39;);
+(0, _handleSwalDom.resetInput)();
+
+/*
+   Use argument if defined or default value from params object otherwise.
+   Supports the case where a default value is boolean true and should be
+   overridden by a corresponding explicit argument which is boolean false.
+  /
+function argumentOrDefault(key) {
+  var args = customizations;
+  return args[key] === undefined ? _defaultParams2.default[key] : args[key];
+}
+
+if (customizations === undefined) {
+  (0, _utils.logStr)(&#39;SweetAlert expects at least 1 attribute!&#39;);
+  return false;
+}
+
+var params = (0, _utils.extend)({}, _defaultParams2.default);
+
+switch (typeof customizations === &#39;undefined&#39; ? &#39;undefined&#39; : _typeof(customizations)) {
+
+  // Ex: swal(&quot;Hello&quot;, &quot;Just testing&quot;, &quot;info&quot;);
+  case &#39;string&#39;:
+    params.title = customizations;
+    params.text = arguments[1] || &#39;&#39;;
+    params.type = arguments[2] || &#39;&#39;;
+    break;
+
+  // Ex: swal({ title:&quot;Hello&quot;, text: &quot;Just testing&quot;, type: &quot;info&quot; });
+  case &#39;object&#39;:
+    if (customizations.title === undefined) {
+      (0, _utils.logStr)(&#39;Missing &quot;title&quot; argument!&#39;);
+      return false;
+    }
+
+    params.title = customizations.title;
+
+    for (var customName in _defaultParams2.default) {
+      params[customName] = argumentOrDefault(customName);
+    }
+
+    // Show &quot;Confirm&quot; instead of &quot;OK&quot; if cancel button is visible
+    params.confirmButtonText = params.showCancelButton ? &#39;Confirm&#39; : _defaultParams2.default.confirmButtonText;
+    params.confirmButtonText = argumentOrDefault(&#39;confirmButtonText&#39;);
+
+    // Callback function when clicking on &quot;OK&quot;/&quot;Cancel&quot;
+    params.doneFunction = arguments[1] || null;
+
+    break;
+
+  default:
+    (0, _utils.logStr)(&#39;Unexpected type of argument! Expected &quot;string&quot; or &quot;object&quot;, got &#39; + (typeof customizations === &#39;undefined&#39; ? &#39;undefined&#39; : _typeof(customizations)));
+    return false;
+
+}
+
+(0, _setParams2.default)(params);
+(0, _handleSwalDom.fixVerticalPosition)();
+(0, _handleSwalDom.openModal)(arguments[1]);
+
+// Modal interactions
+var modal = (0, _handleSwalDom.getModal)();
+
+/*
+   Make sure all modal buttons respond to all events
+  /
+var $buttons = modal.querySelectorAll(&#39;button&#39;);
+var buttonEvents = [&#39;onclick&#39;];
+var onButtonEvent = function onButtonEvent(e) {
+  return (0, _handleClick.handleButton)(e, params, modal);
+};
+
+for (var btnIndex = 0; btnIndex &lt; $buttons.length; btnIndex++) {
+  for (var evtIndex = 0; evtIndex &lt; buttonEvents.length; evtIndex++) {
+    var btnEvt = buttonEvents[evtIndex];
+    $buttons[btnIndex][btnEvt] = onButtonEvent;
+  }
+}
+
+// Clicking outside the modal dismisses it (if allowed by user)
+(0, _handleSwalDom.getOverlay)().onclick = onButtonEvent;
+
+previousWindowKeyDown = window.onkeydown;
+
+var onKeyEvent = function onKeyEvent(e) {
+  return (0, _handleKey2.default)(e, params, modal);
+};
+window.onkeydown = onKeyEvent;
+
+window.onfocus = function () {
+  // When the user has focused away and focused back from the whole window.
+  setTimeout(function () {
+    // Put in a timeout to jump out of the event sequence.
+    // Calling focus() in the event sequence confuses things.
+    if (lastFocusedButton !== undefined) {
+      lastFocusedButton.focus();
+      lastFocusedButton = undefined;
+    }
+  }, 0);
+};
+
+// Show alert with enabled buttons always
+_swal.enableButtons();</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Set default params for each popup
+ @param {Object} userParams
+/</pre>
+
+<p>sweetAlert.setDefaults = _swal.setDefaults = function (userParams) {</p>
+
+<pre>if (!userParams) {
+  throw new Error(&#39;userParams is required&#39;);
+}
+if ((typeof userParams === &#39;undefined&#39; ? &#39;undefined&#39; : _typeof(userParams)) !== &#39;object&#39;) {
+  throw new Error(&#39;userParams has to be a object&#39;);
+}
+
+(0, _utils.extend)(_defaultParams2.default, userParams);</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Animation when closing modal
+/</pre>
+
+<p>sweetAlert.close = _swal.close = function () {</p>
+
+<pre>var modal = (0, _handleSwalDom.getModal)();
+
+(0, _handleDom.fadeOut)((0, _handleSwalDom.getOverlay)(), 5);
+(0, _handleDom.fadeOut)(modal, 5);
+(0, _handleDom.removeClass)(modal, &#39;showSweetAlert&#39;);
+(0, _handleDom.addClass)(modal, &#39;hideSweetAlert&#39;);
+(0, _handleDom.removeClass)(modal, &#39;visible&#39;);
+
+/*
+   Reset icon animations
+  /
+var $successIcon = modal.querySelector(&#39;.sa-icon.sa-success&#39;);
+(0, _handleDom.removeClass)($successIcon, &#39;animate&#39;);
+(0, _handleDom.removeClass)($successIcon.querySelector(&#39;.sa-tip&#39;), &#39;animateSuccessTip&#39;);
+(0, _handleDom.removeClass)($successIcon.querySelector(&#39;.sa-long&#39;), &#39;animateSuccessLong&#39;);
+
+var $errorIcon = modal.querySelector(&#39;.sa-icon.sa-error&#39;);
+(0, _handleDom.removeClass)($errorIcon, &#39;animateErrorIcon&#39;);
+(0, _handleDom.removeClass)($errorIcon.querySelector(&#39;.sa-x-mark&#39;), &#39;animateXMark&#39;);
+
+var $warningIcon = modal.querySelector(&#39;.sa-icon.sa-warning&#39;);
+(0, _handleDom.removeClass)($warningIcon, &#39;pulseWarning&#39;);
+(0, _handleDom.removeClass)($warningIcon.querySelector(&#39;.sa-body&#39;), &#39;pulseWarningIns&#39;);
+(0, _handleDom.removeClass)($warningIcon.querySelector(&#39;.sa-dot&#39;), &#39;pulseWarningIns&#39;);
+
+// Reset custom class (delay so that UI changes aren&#39;t visible)
+setTimeout(function () {
+  var customClass = modal.getAttribute(&#39;data-custom-class&#39;);
+  (0, _handleDom.removeClass)(modal, customClass);
+}, 300);
+
+// Make page scrollable again
+(0, _handleDom.removeClass)(document.body, &#39;stop-scrolling&#39;);
+
+// Reset the page to its previous state
+window.onkeydown = previousWindowKeyDown;
+if (window.previousActiveElement) {
+  window.previousActiveElement.focus();
+}
+lastFocusedButton = undefined;
+clearTimeout(modal.timeout);
+
+return true;</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Validation of the input field is done by user
+ If something is wrong =&gt; call showInputError with errorMessage
+/</pre>
+
+<p>sweetAlert.showInputError = _swal.showInputError = function (errorMessage)
+{</p>
+
+<pre>var modal = (0, _handleSwalDom.getModal)();
+
+var $errorIcon = modal.querySelector(&#39;.sa-input-error&#39;);
+(0, _handleDom.addClass)($errorIcon, &#39;show&#39;);
+
+var $errorContainer = modal.querySelector(&#39;.form-group&#39;);
+(0, _handleDom.addClass)($errorContainer, &#39;has-error&#39;);
+
+$errorContainer.querySelector(&#39;.sa-help-text&#39;).innerHTML = errorMessage;
+
+setTimeout(function () {
+  sweetAlert.enableButtons();
+}, 1);
+
+modal.querySelector(&#39;input&#39;).focus();</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Reset input error DOM elements
+/</pre>
+
+<p>sweetAlert.resetInputError = _swal.resetInputError = function (event) {</p>
+
+<pre>// If press enter =&gt; ignore
+if (event &amp;&amp; event.keyCode === 13) {
+  return false;
+}
+
+var $modal = (0, _handleSwalDom.getModal)();
+
+var $errorIcon = $modal.querySelector(&#39;.sa-input-error&#39;);
+(0, _handleDom.removeClass)($errorIcon, &#39;show&#39;);
+
+var $errorContainer = $modal.querySelector(&#39;.form-group&#39;);
+(0, _handleDom.removeClass)($errorContainer, &#39;has-error&#39;);</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Disable confirm and cancel buttons
+/</pre>
+
+<p>sweetAlert.disableButtons = _swal.disableButtons = function (event) {</p>
+
+<pre>var modal = (0, _handleSwalDom.getModal)();
+var $confirmButton = modal.querySelector(&#39;button.confirm&#39;);
+var $cancelButton = modal.querySelector(&#39;button.cancel&#39;);
+$confirmButton.disabled = true;
+$cancelButton.disabled = true;</pre>
+
+<p>};</p>
+
+<p>/*</p>
+
+<pre> Enable confirm and cancel buttons
+/</pre>
+
+<p>sweetAlert.enableButtons = _swal.enableButtons = function (event) {</p>
+
+<pre>var modal = (0, _handleSwalDom.getModal)();
+var $confirmButton = modal.querySelector(&#39;button.confirm&#39;);
+var $cancelButton = modal.querySelector(&#39;button.cancel&#39;);
+$confirmButton.disabled = false;
+$cancelButton.disabled = false;</pre>
+
+<p>};</p>
+
+<p>if (typeof window !== &#39;undefined&#39;) {</p>
+
+<pre>// The &#39;handle-click&#39; module requires
+// that &#39;sweetAlert&#39; was set as global.
+window.sweetAlert = window.swal = sweetAlert;</pre>
+
+<p>} else {</p>
+
+<pre>(0, _utils.logStr)(&#39;SweetAlert is a frontend module!&#39;);</pre>
+
+<p>}</p>
+
+<p>},{“./modules/default-params”:1,“./modules/handle-click”:2,“./modules/handle-dom”:3,“./modules/handle-key”:4,“./modules/handle-swal-dom”:5,“./modules/set-params”:7,“./modules/utils”:8}]},{},[9]);</p>
+
+<p>/*</p>
+
+<pre> Use SweetAlert with RequireJS
+/</pre>
+
+<p>if (typeof define === &#39;function&#39; &amp;&amp; define.amd) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">define</span>(<span class="ruby-identifier">function</span> () {
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">sweetAlert</span>;
+});
+</pre>
+
+<p>} else if (typeof module !== &#39;undefined&#39; &amp;&amp; module.exports)
+{</p>
+
+<pre>module.exports = sweetAlert;</pre>
+
+<p>}</p>
+
+<p>})(window, document);</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.4.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
