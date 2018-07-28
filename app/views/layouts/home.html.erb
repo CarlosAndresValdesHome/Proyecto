@@ -45,8 +45,8 @@
             <span class="nav-link-text">Menu</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
-            <li>
-              <%= link_to 'Descarga Certificado Laboral', {:controller => :users, :action => :index } %>          
+            <li>                    
+              <%= link_to 'Descarga Certificado Laboral', {:controller => :reports, :action => :export, :format => :pdf } %>														
             </li>
             <li>
               <%= link_to 'Descarga Comprobante de Pago', {:controller => :users, :action => :index } %>          
