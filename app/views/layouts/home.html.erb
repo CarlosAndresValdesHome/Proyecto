@@ -49,7 +49,7 @@
               <%= link_to 'Descarga Certificado Laboral', {:controller => :reports, :action => :export, :format => :pdf } %>														
             </li>
             <li>
-              <%= link_to 'Descarga Comprobante de Pago', {:controller => :users, :action => :index } %>          
+              <%= link_to 'Descarga Comprobante de Pago', {:controller => :reports, :action => :paysheet, :format => :pdf  } %>          
             </li>
             <li>
               <%= link_to 'Simulador de Creditos', {:controller => :users, :action => :show } %>          

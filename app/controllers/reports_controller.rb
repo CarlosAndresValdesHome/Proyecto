@@ -20,14 +20,20 @@ class ReportsController < ApplicationController
         @cargo = session[:datos]["cargo"]
         @nombreUs = session[:datos]["nombre"]
         @tipoContrato = session[:datos]["tipo_contrato"]
-        @idEmpresa = session[:datos]["C.id"]
-        
-
-      
-        
+        @idEmpresa = session[:datos]["idEmpresa"]
+     
         render template: 'users/reporte',pdf: 'Reporte',layout: 'pdf.html'
     end
+
+    def paysheet
+        @nombreUs = session[:datos]["nombre"]
+        @idEmpresa = session[:datos]["id"]
+        @nombre = session[:user] << " " <<  session[:userA]
+        @id = session[:datos]["id"]
+        @cargo = session[:datos]["cargo"]
+        render template: 'users/paysheet',pdf: 'Nomina',layout: 'pdf.html'
+    end 
+
 end
 
-   #session[:datos]["id"]
-     #session[:datos]["cargo"]
+ 
