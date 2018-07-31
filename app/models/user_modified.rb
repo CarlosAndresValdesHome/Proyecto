@@ -1,0 +1,2 @@
+class UserModified < ApplicationRecord
+end

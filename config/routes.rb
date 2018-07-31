@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_modifieds
   resources :paysheets
   resources :contract_profiles
   resources :contracts

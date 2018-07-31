@@ -31,9 +31,20 @@ class ReportsController < ApplicationController
         @nombre = session[:user] << " " <<  session[:userA]
         @id = session[:datos]["id"]
         @cargo = session[:datos]["cargo"]
+        @idEmpresa = session[:datos]["nit"]
+        
+        @dias = session[:datosNomina][0]["dias_laborados"]
+        @NetoPago = session[:datosNomina][0]["neto_pagado"]
+        @comisiones = session[:datosNomina][0]["comisiones"]
+        @AuxTrasporte = session[:datosNomina][0]["auxilio_trasporte"]
+        @recargos = session[:datosNomina][0]["recargos"]
+        @prima = session[:datosNomina][0]["prima"]
+        @NetoPago = session[:datosNomina][0]["prestamos"]
+        @salud = session[:datosNomina][0]["salud"]
+        @pension = session[:datosNomina][0]["pension"]
         render template: 'users/paysheet',pdf: 'Nomina',layout: 'pdf.html'
     end 
 
 end
 
- 
+#N.dias_laborados, N.neto_pagado, N.id, N.comisiones, N.auxilio_trasporte, N.recargos,N.prima, N.prestamos, N.salud, N.pension
