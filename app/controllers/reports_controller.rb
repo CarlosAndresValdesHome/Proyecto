@@ -39,9 +39,11 @@ class ReportsController < ApplicationController
         @AuxTrasporte = session[:datosNomina][0]["auxilio_trasporte"]
         @recargos = session[:datosNomina][0]["recargos"]
         @prima = session[:datosNomina][0]["prima"]
-        @NetoPago = session[:datosNomina][0]["prestamos"]
+        @prestamos = session[:datosNomina][0]["prestamos"]
         @salud = session[:datosNomina][0]["salud"]
         @pension = session[:datosNomina][0]["pension"]
+
+        @total=@NetoPago + @AuxTrasporte +  @comisiones +  @recargos + @prima + @salud + @pension
         render template: 'users/paysheet',pdf: 'Nomina',layout: 'pdf.html'
     end 
 
