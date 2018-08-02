@@ -70,7 +70,58 @@ end
        render 'indexcompany'
    end
  end
-       
+     
+def save_register
+  @perfiles = Profile.all
+        mensaje = ""
+        if params[:txtLogin].strip.empty? 
+            mensaje += "Ingrese Login,"
+        end
+        if params[:ddlPerfiles].empty? 
+            mensaje += "Seleccione Perfil,"
+        end
+        if params[:txtPassword].strip.empty? 
+            mensaje += "Ingrese Password,"
+        end
+        if !params[:txtPassword].strip.eql?(params[:txtConfirmarPassword].strip) 
+            mensaje += "Password no coincide,"
+        end
+                
+        #Si el  mensaje es diferente de vacío, contiene log de errores
+        if !mensaje.eql?("")
+            @mensaje = mensaje.slide 0..-2
+            @tipo = 'error' 
+              return
+        end
+
+        #Dos formas de recuperar el id máximo y de sumarle 1 a ese valor máximo
+        #user_search = user.order_by("id").last
+        #id = user_search.id + 1
+        id = User.maximum('id') + 1
+            
+        #Instanciamos un nuevo objeto de User y lo nombramos user
+        user = User.new
+        user.id = id
+        user.Login = params[:txtLogin]
+        user.Password = params[:txtPassword]
+        user.pelfil_id = params[:ddlPerfiles]
+  @user = User.new(user_params)
+
+  respond_to do |format|
+    if @user.save
+      NotifyMailer.send_mail(params[:txtLogin],'Creación de cuenta',user).deliver
+      render json: {status: "ok", mensaje: 'Se realizó proceso con éxito', tipo: 'success'}
+      format.html { redirect_to @user, notice: 'User was successfully created.' }
+      format.json { render :show, status: :created, location: @user }
+    else
+      render json: {status: "ok", mensaje: 'Hubo un error durante el procedimiento', tipo: 'error'}
+      format.html { render :new }
+      format.json { render json: @user.errors, status: :unprocessable_entity }
+    end
+    
+    
+end
+
 
           def Index
             render 'index'
@@ -87,7 +138,7 @@ end
 
           def show
             render 'show', layout: 'home'
-           end
+          end
 
       
 
