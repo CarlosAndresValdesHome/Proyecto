@@ -1,9 +1,72 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user_modified.name %>
-</p>
-
-<%= link_to 'Edit', edit_user_modified_path(@user_modified) %> |
-<%= link_to 'Back', user_modifieds_path %>
+<div class="container">
+  <div class="card mx-auto mt-5">
+    <div class="card-header"><h1>Detalle</h1></div>
+    <div class="card-body">
+    <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-1">
+            <strong>Id:</strong>
+            <%= @user_modified.id %>
+          </div>
+          <div class="col-md-1">
+            <strong>Nombre:</strong>
+            <%= @user_modified.nombre %>
+          </div>
+          <div class="col-md-1">
+            <strong>Apellido:</strong>
+            <%= @user_modified.apellido %>
+          </div>
+          <div class="col-md-1">
+            <strong>Direccion:</strong>
+            <%= @user_modified.direccion %>
+          </div>
+          <div class="col-md-1">
+            <strong>Telefono:</strong>
+            <%= @user_modified.telefono %>
+          </div>
+          <div class="col-md-1">
+            <strong>Email:</strong>
+            <%= @user_modified.email %>
+          </div>
+          <div class="col-md-1">
+            <strong>Id Empresa:</strong>
+            <%= @user_modified.id_empresa %>
+          </div>
+          <div class="col-md-1">
+            <strong>Id Perfil:</strong>
+            <%= @user_modified.id_perfil %>
+          </div>
+          <div class="col-md-1">
+            <strong>Id Perfil Cargo:</strong>
+            <%= @user_modified.id_perfil_cargo %>
+          </div>
+          <div class="col-md-1">
+            <strong>Id Nómina:</strong>
+            <%= @user_modified.id_nomina %>
+          </div>
+          <div class="col-md-1">
+            <strong>Pregunta Secreta:</strong>
+            <%= @user_modified.preguntaSecreta %>
+          </div>
+          <div class="col-md-1">
+            <strong>Contraseñaa:</strong>
+            <%= @user_modified.contrase��a %>
+          </div>
+          <div class="col-md-1">
+            <strong>Id Contrato:</strong>
+            <%= @user_modified.id_contrato %>
+          </div>
+          </div>
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-12">
+                <center><%= link_to 'Editar', edit_user_modified_path(@user_modified),{ class: "btn btn-info btn-sm" } %>
+                <%= link_to 'Volver', user_modifieds_path,{ class: "btn btn-info btn-sm" } %></center>
+              </div>
+            </div> 
+          </div>
+    </div>
+  </div> 
+</div>
