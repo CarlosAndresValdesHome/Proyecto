@@ -2,7 +2,6 @@
   <% if user_modified.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user_modified.errors.count, "error") %> prohibited this user_modified from being saved:</h2>
-
       <ul>
       <% user_modified.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,12 +10,66 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :user_modified_name %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <div class="form-group">
+  <div class="form-row">
+    <div class="col-md-1">
+      <label id="lblId"><strong>Id:</strong></label>
+      <input type="number" id="user_modified_id" name="user_modified[id]" class="form-control" placeholder="Ingrese Id"
+        value="<%= @user_modified != nil ? @user_modified.id : '' %>">
+    </div>
+    <div class="col-md-1">
+      <input type="text" id="user_modified_nombre" name="user_modified[nombre]" class="form-control" placeholder="Ingrese Nombre"
+      value="<%= @user_modified != nil ? @user_modified.nombre : '' %>">
+    </div>
+    <div class="col-md-1">
+      <input type="text" id="user_modified_apellido" name="user_modified[apellido]" class="form-control" placeholder="Ingrese Apellido"
+      value="<%= @user_modified != nil ? @user_modified.apellido : '' %>">
+    </div> 
+    <div class="col-md-1">
+      <input type="text" id="user_modified_direccion" name="user_modified[direccion]" class="form-control" placeholder="Ingrese Dirección"
+      value="<%= @user_modified != nil ? @user_modified.direccion : '' %>">
+    </div>
+    <div class="col-md-1">
+      <input type="text" id="user_modified_telefono" name="user_modified[telefono]" class="form-control" placeholder="Ingrese Teléfono"
+      value="<%= @user_modified != nil ? @user_modified.telefono : '' %>">
+    </div>
+    <div class="col-md-1">
+      <input type="text" id="user_modified_email" name="user_modified[email]" class="form-control" placeholder="Ingrese Email"
+      value="<%= @user_modified != nil ? @user_modified.email : '' %>">
+    </div>
+    <div class="col-md-1">
+      <input type="number" id="user_modified_id_empresa" name="user_modified[id_empresa]" class="form-control" placeholder="Ingrese Identificación Empresa"
+      value="<%= @user_modified != nil ? @user_modified.id_empresa : '' %>">
+    </div>
+    <div class="col-md-1">
+      <input type="number" id="user_modified_id_perfil" name="user_modified[id_perfi]" class="form-control" placeholder="Ingrese Identificación Perfil"
+      value="<%= @user_modified != nil ? @user_modified.id_perfi : '' %>">
+    </div>
+    <div class="col-md-1">
+      <input type="number" id="user_modified_id_perfil_cargo" name="user_modified[id_perfil_cargo]" class="form-control" placeholder="Ingrese Identificación del Cargo"
+      value="<%= @user_modified != nil ? @user_modified.id_perfil_cargo : '' %>">
+    </div>
+    <div class="col-md-1">
+      <input type="number" id="user_modified_id_nomina" name="user_modified[id_nomina]" class="form-control" placeholder="Ingrese Identificación de la Nómina"
+      value="<%= @user_modified != nil ? @user_modified.id_nomina : '' %>">
+    </div>
+    <div class="col-md-1">
+      <input type="text" id="user_modified_preguntaSecreta" name="ususer_modifieder[preguntaSecreta]" class="form-control" placeholder="Ingrese Pregunta Secreta"
+      value="<%= @user_modified != nil ? @user_modified.preguntaSecreta : '' %>">
+    </div>
+    <div class="col-md-1">
+      <input type="text" id="user_modified_contrase��a" name="user_modified[contraseña]" class="form-control" placeholder="Ingrese Contraseña"
+      value="<%= @user_modified != nil ? @user_modified.contraseña : '' %>">
+    </div>
+    <div class="col-md-1">
+      <input type="number" id="user_modified_id_contrato" name="user_modified[id_contrato]" class="form-control" placeholder="Ingrese Identificación del Contrato"
+      value="<%= @user_modified != nil ? @user_modified.id_contrato : '' %>">
+    </div>
+    <div class="form-group">
+    <div class="form-row">
+      <div class="col-md-12">
+        <center><input type="submit" id="btnAceptar" name="btnAceptar" value="Aceptar" class="btn btn-primary"/></center>
+      </div>
+    </div>
+</div>
 <% end %>

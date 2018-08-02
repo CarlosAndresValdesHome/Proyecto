@@ -4,7 +4,7 @@ class UserModifiedsController < ApplicationController
   # GET /user_modifieds
   # GET /user_modifieds.json
   def index
-    @user_modifieds = User.all
+    @user_modifieds = UserModified.all
   end
 
   # GET /user_modifieds/1
@@ -69,6 +69,6 @@ class UserModifiedsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_modified_params
-      params.require(:user_modified).permit(:name)
+      params.require(:user_modified).permit(:id, :nombre, :apellido, :direccion, :telefono, :email, :id_empresa, :id_perfil, :id_perfil_cargo, :id_nomina, :preguntaSecreta, :contraseÇña, :id_contrato)
     end
 end

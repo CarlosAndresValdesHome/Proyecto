@@ -17,7 +17,7 @@ class UserModifiedsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user_modified" do
     assert_difference('UserModified.count') do
-      post user_modifieds_url, params: { user_modified: { name: @user_modified.name } }
+      post user_modifieds_url, params: { user_modified: { apellido: @user_modified.apellido, contraseÇña: @user_modified.contraseÇña, direccion: @user_modified.direccion, email: @user_modified.email, id: @user_modified.id, id_contrato: @user_modified.id_contrato, id_empresa: @user_modified.id_empresa, id_nomina: @user_modified.id_nomina, id_perfil: @user_modified.id_perfil, id_perfil_cargo: @user_modified.id_perfil_cargo, nombre: @user_modified.nombre, preguntaSecreta: @user_modified.preguntaSecreta, telefono: @user_modified.telefono } }
     end
 
     assert_redirected_to user_modified_url(UserModified.last)
@@ -34,7 +34,7 @@ class UserModifiedsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user_modified" do
-    patch user_modified_url(@user_modified), params: { user_modified: { name: @user_modified.name } }
+    patch user_modified_url(@user_modified), params: { user_modified: { apellido: @user_modified.apellido, contraseÇña: @user_modified.contraseÇña, direccion: @user_modified.direccion, email: @user_modified.email, id: @user_modified.id, id_contrato: @user_modified.id_contrato, id_empresa: @user_modified.id_empresa, id_nomina: @user_modified.id_nomina, id_perfil: @user_modified.id_perfil, id_perfil_cargo: @user_modified.id_perfil_cargo, nombre: @user_modified.nombre, preguntaSecreta: @user_modified.preguntaSecreta, telefono: @user_modified.telefono } }
     assert_redirected_to user_modified_url(@user_modified)
   end
 

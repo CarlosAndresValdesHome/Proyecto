@@ -1,6 +1,16 @@
-<h1>Editing User Modified</h1>
-
-<%= render 'form', user_modified: @user_modified %>
-
-<%= link_to 'Show', @user_modified %> |
-<%= link_to 'Back', user_modifieds_path %>
+<div class="container">
+  <div class="card mx-auto mt-5">
+    <div class="card-header"><h1>Editar Usuario</h1></div>
+    <div class="card-body">
+     <%= render 'form', user_modified: @user_modified %>
+     <div class="form-group">
+     <div class="form-row">
+       <div class="col-md-12">
+        <center><%= link_to 'Ver', @user_modified,{ class: "btn btn-info btn-sm" } %>
+        <%= link_to 'Volver', user_modifieds_path,{ class: "btn btn-info btn-sm" } %></center>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
