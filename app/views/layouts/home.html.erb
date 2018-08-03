@@ -23,43 +23,38 @@
     <!-- Core plugin JavaScript-->
     <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Page level plugin JavaScript-->
-    <script src="/vendor/chart.js/Chart.min.js"></script>
-    <script src="/vendor/datatables/jquery.dataTables.js"></script>
-    <script src="/vendor/datatables/dataTables.bootstrap4.js"></script>
     <!-- Custom scripts for all pages-->
-    <script src="/js/sb-admin.min.js"></script>
+    <script src="/js/sb-admin.min.js?00"></script>
     <!-- Custom scripts for this page-->
-    <script src="/js/sb-admin-datatables.min.js"></script>
-    <script src="/js/sb-admin-charts.min.js"></script>
   </head>
 
-  <body>
+  <body class="fixed-nav sticky-footer bg-dark" id="page-top">
     <!-- Navigation-->
     
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-  
-  <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-  
-      <a class="navbar-brand" href="index.html"> <h5><center> Usuario en Linea:  <%= session[:user] != nil ? session[:user] : ''  %> <%= session[:user] != nil ? session[:userA] : ''  %></h5></center></a>
-         
-     
-      
-       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-         
-         <i class="fa fa-align-left"></i>
-         <span class="nav-link-text">Menu</span>
-          </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents">
-            <li>                    
-              <%= link_to 'Descarga Certificado Laboral', {:controller => :reports, :action => :export, :format => :pdf } %>														
+   <p style="color:#86A2D1";>Usuario en Linea :   <%=@nombre = session[:user] << " " <<  session[:userA]%> </p>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+    <br />
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+        
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Components" data-parent="#exampleAccordion">
+            <i class="fa fa-align-left"></i> <span class="nav-link-text"><p style="color:#86A2D1";>Menu</p></span>
+    
+          </a> 
+          <ul class="sidenav-second-level collapse" id="Components">
+            <li>
+              <%= link_to 'Descarga Certificado Laboral', {:controller => :reports, :action => :export, :format => :pdf} %>          
             </li>
             <li>
-              <%= link_to 'Descarga Comprobante de Pago', {:controller => :reports, :action => :paysheet, :format => :pdf  } %>          
+              <%= link_to 'Descarga Comprobante de Pago',{:controller => :reports, :action => :paysheet, :format => :pdf} %>          
             </li>
             <li>
-              <%= link_to 'Simulador de Creditos', {:controller => :users, :action => :show } %>          
+              <%= link_to 'Simulador de Creditos', {:controller => :users, :action => :show }  %>   
+                                                      
             </li>
           
           </ul>
@@ -72,14 +67,16 @@
           </a>
         </li>
       </ul>
-      <ul class="navbar-nav ml-auto"> 
-          <li class="nav-item">
+      <ul class="navbar-nav ml-auto">       
+        <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-           <i class="fa fa-fw fa-sign-out"></i>Salir</a>
+            <i class="fa fa-fw fa-sign-out"></i>Salir</a>
         </li>
       </ul>
     </div>
   </nav>
+
+
   <div class="content-wrapper">
     <div class="container-fluid">
       <%= yield %>
@@ -115,6 +112,7 @@
         </div>
       </div>
     </div>
+    
     <script>
     $('#toggleNavPosition').click(function() {
       $('body').toggleClass('fixed-nav');

@@ -7,11 +7,11 @@ class UsersController < ApplicationController
 
 #Cargar vista Prestamos
  def loan
-  #if (:valorSolicitar=>params[:txtvalorsolicitar], :numeroCuotas=>params[:txtNumeroCuotas])!= nil
-     #neto = valorSolicitar/numeroCuotas
-     #total = neto *0.05
-     #@total = total
-  #end
+  if (params[:txtvalorsolicitar])!= nil and  (params[:txtNumeroCuotas])!= nil
+     neto = valorSolicitar/numeroCuotas
+     total = neto *0.05
+     @total = total
+  end
 
  end
 
@@ -143,6 +143,7 @@ end
       
 
           
+end
 end
 
 

@@ -31,5 +31,6 @@ get "edit" => "users#register"
 get "reports/export"
 get "reports/paysheet"
 get "users/show"
+post "/users/loan" => "users#loan"
 end
 

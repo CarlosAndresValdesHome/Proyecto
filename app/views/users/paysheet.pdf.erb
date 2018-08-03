@@ -59,33 +59,33 @@
                         
                         </tr>
                         <tr>
-
+                        
                         <td><b>COMISIONES</b> </td>
                         <td><b></b> </td>
-                        <td><b></b> </td>
+                        <td><b><%=@comisiones %></b> </td>
                         <td><b>PRESTAMOS</b> </td>
                         <td><b></b> </td>
-                        <td><b></b> </td>
+                        <td><b><%=@prestamos %></b></td>
                         
                         </tr>
                         <tr>
 
                         <td><b>AUXILIO DE TRANSPORTE</b> </td>
-                        <td><b></b> </td>
-                        <td><b></b> </td>
+                        <td><b><%= @dias %></b> </td>
+                        <td><b><%= @AuxTrasporte %></b> </td>
                         <td><b>SALUD</b> </td>
-                        <td><b></b> </td>
-                        <td><b></b> </td>
+                        <td><b><%= @dias %></b> </td>
+                        <td><b><%= @salud %></b> </td>
                         
                         </tr>
                         <tr>
 
                         <td><b>RECARGOS LABORALES</b> </td>
-                        <td><b></b> </td>
-                        <td><b></b> </td>
+                        <td><b></b></b> </td>
+                        <td><b><%= @recargos %></b></b> </td>
                         <td><b>PENSION</b> </td>
-                        <td><b></b> </td>
-                        <td><b></b> </td>
+                        <td><b><%= @dias %></b> </td>
+                        <td><b><%= @pension %></b> </td>
                         
                         </tr>
                         <tr>
@@ -95,14 +95,14 @@
                         <td><b></b> </td>
                         <td><b>DESCUENTOS</b> </td>
                         <td><b></b> </td>
-                        <td><b></b> </td>
+                        <td><b><%= @descuentos %></b> </td>
                         
                         </tr>
                         <tr>
 
                         <td><b>PRIMA DE SERVICIO</b> </td>
                         <td><b></b> </td>
-                        <td><b></b> </td>
+                        <td><b><%= @prima %></b> </td>
                         <td><b>OTROS</b> </td>
                         <td><b></b> </td>
                         <td><b></b> </td>
@@ -121,11 +121,11 @@
                         <tr>
 
                         <td><b>TOTAL DEVENGADO</b> </td>
-                        <td><b></b> </td>
-                        <td><b></b> </td>
+                        <td><b><%= @dias %></b> </td>
+                        <td><b><%= @totalDevengo %></b> </td>
                         <td><b>TOTAL DEDUCCIONES</b> </td>
-                        <td><b></b> </td>
-                        <td><b></b> </td>
+                        <td><b><b><%= @dias %></b> </td>
+                        <td><b><b><%= @descuentos %></b> </td>
                         
                         </tr>
                            </table>
@@ -139,7 +139,7 @@
                           <table class="table table-bordered" style="width:100%">
                             <tr>
 
-                            <td><center><b >NETO A PAGAR </b> <%= " $ " %>  <b> <%= @NetoPago %> </b></center> </td>
+                            <td><center><b >NETO A PAGAR </b> <%= " $ " %>  <b> <%= @netoPagar %> </b></center> </td>
                             
                             </tr>
                </table>
