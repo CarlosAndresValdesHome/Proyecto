@@ -32,5 +32,11 @@ get "reports/export"
 get "reports/paysheet"
 get "users/show"
 post "/users/loan" => "users#loan"
+get "/charge_profiles/index"
+get "/user_modifieds/index" => "user_modifieds#index" 
+get "/companies/index"
+get "/contract_profiles/index"
+
+
 end
 

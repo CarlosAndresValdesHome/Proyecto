@@ -5,6 +5,8 @@ class ContractProfilesController < ApplicationController
   # GET /contract_profiles.json
   def index
     @contract_profiles = ContractProfile.all
+    render 'index', layout: 'homeEmpresa'
+    
   end
 
   # GET /contract_profiles/1
@@ -15,10 +17,12 @@ class ContractProfilesController < ApplicationController
   # GET /contract_profiles/new
   def new
     @contract_profile = ContractProfile.new
+    render 'new', layout: 'homeEmpresa'
   end
 
   # GET /contract_profiles/1/edit
   def edit
+    render 'edit', layout: 'homeEmpresa'
   end
 
   # POST /contract_profiles

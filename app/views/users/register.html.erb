@@ -20,7 +20,7 @@
                     <div class="col-md-6">
                         <label id="lblPerfil">Perfil:</label>
                         <select id="ddlPerfiles" name="ddlPerfiles" class="form-control">
-                            <% @perfiles.each do |item| %>
+                            
                                 <option value="<%= item.id %>"><%= item.descripcion %></option>
                             <% end %>
                         <select/>
@@ -47,4 +47,5 @@
         <% end %>
         </div>
     </div>
-</div>
+    </div>
+   

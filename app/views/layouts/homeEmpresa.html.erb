@@ -38,8 +38,10 @@
   <body>
     <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav"><br/>
-   <a class="navbar-brand" href="index.html">Opus Line Web</a>
-   <a class="navbar-brand" href="index.html">  Usuario en Linea:  <%= session[:user] != nil ? session[:user] : ''  %> <%= session[:user] != nil ? session[:userA] : ''  %></a>
+  
+   <a class="navbar-brand" href="index.html"><p style="color:#86A2D1";>Opus Line Web </p></a>
+   <p style="color:#86A2D1";>Administrador en Linea :   <%=@nombre = session[:user] << " " <<  session[:userA]%> </p>
+
    
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -54,22 +56,19 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <%= link_to 'Nuevo Empleado', {:controller => :users, :action => :register } %>          
+              <%= link_to 'Usuarios', {:controller => :user_modifieds, :action => :index } %>          
             </li>
             <li>
-              <%= link_to 'Actualizar Datos', {:controller => :users, :action => :index } %>          
+              <%= link_to 'Empresasa', {:controller => :companies, :action => :index } %>          
             </li>
             <li>
-              <%= link_to 'Eliminar Datos', {:controller => :users, :action => :index } %>          
-            </li>
+              <%= link_to 'Contratos', {:controller => :contract_profiles , :action => :index } %>  
+              </li>        
             <li>
-              <%= link_to 'Buscar Datos', {:controller => :users, :action => :index } %>          
+              <%= link_to 'Perfil', {:controller => :charge_profiles, :action => :index } %>          
             </li>
-            <li>
+            
               <%= link_to 'Contactenos', {:controller => :users, :action => :index } %>          
-            </li>
-            <li>
-              <%= link_to 'Perfil', {:controller => :users, :action => :index } %>          
             </li>
           </ul>
         </li>

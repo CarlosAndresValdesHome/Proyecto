@@ -5,6 +5,7 @@ class CompaniesController < ApplicationController
   # GET /companies.json
   def index
     @companies = Company.all
+    render 'index', layout: 'homeEmpresa'
   end
 
   # GET /companies/1
@@ -15,10 +16,12 @@ class CompaniesController < ApplicationController
   # GET /companies/new
   def new
     @company = Company.new
+    render 'new', layout: 'homeEmpresa'
   end
 
   # GET /companies/1/edit
   def edit
+    render 'edit', layout: 'homeEmpresa'
   end
 
   # POST /companies

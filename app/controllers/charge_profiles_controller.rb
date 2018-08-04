@@ -5,6 +5,7 @@ class ChargeProfilesController < ApplicationController
   # GET /charge_profiles.json
   def index
     @charge_profiles = ChargeProfile.all
+    render 'index', layout: 'homeEmpresa'
   end
 
   # GET /charge_profiles/1
@@ -15,10 +16,12 @@ class ChargeProfilesController < ApplicationController
   # GET /charge_profiles/new
   def new
     @charge_profile = ChargeProfile.new
+    render 'new', layout: 'homeEmpresa'
   end
 
   # GET /charge_profiles/1/edit
   def edit
+    render 'edit', layout: 'homeEmpresa'
   end
 
   # POST /charge_profiles
@@ -33,6 +36,7 @@ class ChargeProfilesController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @charge_profile.errors, status: :unprocessable_entity }
+        
       end
     end
   end
