@@ -5,20 +5,24 @@ class ProfilesController < ApplicationController
   # GET /profiles.json
   def index
     @profiles = Profile.all
+    render 'index', layout: 'homeEmpresa'
   end
 
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    render 'show', layout: 'homeEmpresa'
   end
 
   # GET /profiles/new
   def new
     @profile = Profile.new
+    render 'new', layout: 'homeEmpresa'
   end
 
   # GET /profiles/1/edit
   def edit
+    render 'edit', layout: 'homeEmpresa'
   end
 
   # POST /profiles

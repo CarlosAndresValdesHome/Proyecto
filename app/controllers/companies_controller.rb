@@ -11,6 +11,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
+    render 'show', layout: 'homeEmpresa'
   end
 
   # GET /companies/new

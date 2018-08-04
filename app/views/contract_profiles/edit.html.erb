@@ -1,6 +1,16 @@
-<h1>Editing Contract Profile</h1>
-
-<%= render 'form', contract_profile: @contract_profile %>
-
-<%= link_to 'Show', @contract_profile %> |
-<%= link_to 'Back', contract_profiles_path %>
+<div class="container">
+  <div class="card mx-auto mt-5">
+    <div class="card-header"><h1>Editar Tipo de Contrato</h1></div>
+    <div class="card-body">
+        <%= render 'form', contract_profile: @contract_profile %>
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col-md-12">            
+            <center><%= link_to 'Ver', @contract_profile,{ class: "btn btn-info btn-sm" } %>
+            <%= link_to 'Volver', contract_profiles_path,{ class: "btn btn-info btn-sm" } %></center>
+            </div>
+            </div>
+        </div>
+   </div>
+  </div>
+</div>

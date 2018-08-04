@@ -12,6 +12,7 @@ class ContractProfilesController < ApplicationController
   # GET /contract_profiles/1
   # GET /contract_profiles/1.json
   def show
+    render 'show', layout: 'homeEmpresa'
   end
 
   # GET /contract_profiles/new

@@ -10,23 +10,30 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :id %>
-    <%= form.number_field :id, id: :contract_profile_id %>
+  <div class="form-group">
+  <div class="form-row">
+    <div class="col-md-4>
+      <label id="lblId"><strong>Id:</strong></label>
+      <input type="number" id="contract_profile_id" name="contract_profile[id]" class="form-control" placeholder="Ingrese Id"
+      value="<%= @contract_profile != nil ? @contract_profile.id : '' %>">
+    </div>
+    <div class="col-md-4>
+      <label id="lblId"><strong>Descripción:</strong></label>
+      <input type="text" id="contract_profile_descripcion" name="contract_profile[descripcion]" class="form-control" placeholder="Ingrese Descripción"
+      value="<%= @contract_profile != nil ? @contract_profile.descripcion : '' %>">
+    </div>
+    <div class="col-md-4>
+      <label id="lblId"><strong>Id Contrato:</strong></label>
+      <input type="number" id="contract_profile_id_contratos" name="contract_profile[id_contratos]" class="form-control" placeholder="Ingrese Id Contrato"
+      value="<%= @contract_profile != nil ? @contract_profile.id_contratos : '' %>">
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :descripcion %>
-    <%= form.text_field :descripcion, id: :contract_profile_descripcion %>
-  </div>
-
-  <div class="field">
-    <%= form.label :id_contratos %>
-    <%= form.number_field :id_contratos, id: :contract_profile_id_contratos %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
+<div class="form-group">
+    <div class="form-row">
+      <div class="col-md-12">
+        <center><input type="submit" id="btnAceptar" name="btnAceptar" value="Aceptar" class="btn btn-primary"/></center>
+      </div>
+    </div>
+</div>
 <% end %>

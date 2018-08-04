@@ -36,6 +36,6 @@ get "/charge_profiles/index"
 get "/user_modifieds/index" => "user_modifieds#index" 
 get "/companies/index"
 get "/contract_profiles/index"
-get "MiguelOlaya"
+get "/contracts/index"
 end
 

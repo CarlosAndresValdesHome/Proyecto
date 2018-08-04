@@ -1,39 +1,48 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Id:</strong>
-  <%= @contract.id %>
-</p>
-
-<p>
-  <strong>Salario:</strong>
-  <%= @contract.salario %>
-</p>
-
-<p>
-  <strong>Cargo:</strong>
-  <%= @contract.cargo %>
-</p>
-
-<p>
-  <strong>Id empresa:</strong>
-  <%= @contract.id_empresa %>
-</p>
-
-<p>
-  <strong>Tipo contrato:</strong>
-  <%= @contract.tipo_contrato %>
-</p>
-
-<p>
-  <strong>Fecha ingreso:</strong>
-  <%= @contract.fecha_ingreso %>
-</p>
-
-<p>
-  <strong>Fecha retiro:</strong>
-  <%= @contract.fecha_retiro %>
-</p>
-
-<%= link_to 'Edit', edit_contract_path(@contract) %> |
-<%= link_to 'Back', contracts_path %>
+<div class="container">
+  <div class="card mx-auto mt-5">
+    <div class="card-header"><h1>Detalle</h1></div>
+    <div class="card-body">
+    <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-1">
+            <strong>Id:</strong>
+            <%= @contract.id %>
+          </div>
+          <div class="col-md-1">
+            <strong>Salario:</strong>
+            <%= @contract.salario %>
+          </div>
+          <div class="col-md-1">
+            <strong>Cargo:</strong>
+            <%= @contract.cargo %>
+          </div>
+          <div class="col-md-1">
+            <strong>Id Empresa:</strong>
+            <%= @contract.id_empresa %>
+          </div>
+          <div class="col-md-1">
+            <strong>Tipo Contrato:</strong>
+            <%= @contract.tipo_contrato %>
+          </div>
+          <div class="col-md-1">
+            <strong>Fecha Ingreso:</strong>
+            <%= @contract.fecha_ingreso %>
+          </div>
+          <div class="col-md-1">
+            <strong>Fecha Retiro:</strong>
+            <%= @contract.fecha_retiro %>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+      <div class="form-row">
+        <div class="col-md-12">
+          <center><%= link_to 'Editar', edit_contract_path(@contract),{ class: "btn btn-info btn-sm" } %>
+          <%= link_to 'Volver', contracts_path,{ class: "btn btn-info btn-sm" } %></center>
+        </div>
+      </div> 
+    </div>
+  </div>
+ </div> 
+</div>

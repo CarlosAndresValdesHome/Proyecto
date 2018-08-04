@@ -11,6 +11,7 @@ class ChargeProfilesController < ApplicationController
   # GET /charge_profiles/1
   # GET /charge_profiles/1.json
   def show
+    render 'show', layout: 'homeEmpresa'
   end
 
   # GET /charge_profiles/new
