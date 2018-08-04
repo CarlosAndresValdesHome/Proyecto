@@ -5,20 +5,24 @@ class ContractsController < ApplicationController
   # GET /contracts.json
   def index
     @contracts = Contract.all
+    render 'index', layout: 'homeEmpresa'
   end
 
   # GET /contracts/1
   # GET /contracts/1.json
   def show
+    render 'show', layout: 'homeEmpresa'
   end
 
   # GET /contracts/new
   def new
     @contract = Contract.new
+    render 'new', layout: 'homeEmpresa'
   end
 
   # GET /contracts/1/edit
   def edit
+    render 'edit', layout: 'homeEmpresa'
   end
 
   # POST /contracts

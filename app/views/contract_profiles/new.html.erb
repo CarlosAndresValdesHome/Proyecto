@@ -1,5 +1,15 @@
-<h1>New Contract Profile</h1>
-
-<%= render 'form', contract_profile: @contract_profile %>
-
-<%= link_to 'Back', contract_profiles_path %>
+<div class="container">
+  <div class="card mx-auto mt-5">
+    <div class="card-header"><h1>Nuevo Perfil de Contrato</h1></div>
+    <div class="card-body">
+            <%= render 'form', contract_profile: @contract_profile %>
+        <div class="form-group">
+         <div class="form-row">
+          <div class="col-md-12">
+            <center><%= link_to 'Volver', contract_profiles_path,{ class: "btn btn-info btn-sm" } %></center>
+          </div>
+         </div>
+        </div>
+   </div>
+  </div>
+</div>

@@ -2,7 +2,6 @@
   <% if contract.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
-
       <ul>
       <% contract.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,43 +9,51 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :id %>
-    <%= form.number_field :id, id: :contract_id %>
+  
+<div class="form-group">
+  <div class="form-row">
+    <div class="col-md-1>
+     <label id="lblId"><strong>Id:</strong></label>
+     <input type="number" id="contract_id" name="contract[id]" class="form-control" placeholder="Ingrese Id"
+     value="<%= @contract != nil ? @contract.id : '' %>">
+    </div>
+    <div class="col-md-1>
+      <label id="lblSalario"><strong>Salario:</strong></label>
+      <input type="number" id="contract_salario" name="contract[salario]" class="form-control" placeholder="Ingrese Salario"
+      value="<%= @contract != nil ? @contract.salario : '' %>">
+    </div>
+    <div class="col-md-1>
+      <label id="lblCargo"><strong>Salario:</strong></label>
+      <input type="text" id="contract_cargo" name="contract[cargo]" class="form-control" placeholder="Ingrese Cargo"
+      value="<%= @contract != nil ? @contract.cargo : '' %>">
+    </div>
+    <div class="col-md-1>
+      <label id="lblIdEmpresa"><strong>Salario:</strong></label>
+      <input type="number" id="contract_id_empresa" name="contract[id_empresa]" class="form-control" placeholder="Ingrese Identificación Empresa"
+      value="<%= @contract != nil ? @contract.id_empresa : '' %>">
+    </div>
+    <div class="col-md-1>
+      <label id="lblTipoContrato"><strong>Salario:</strong></label>
+      <input type="text" id="contract_tipo_contrato" name="contract[tipo_contrato]" class="form-control" placeholder="Ingrese Tipo de Contrato"
+      value="<%= @contract != nil ? @contract.tipo_contrato : '' %>">
+    </div>
+    <div class="col-md-1>
+      <label id="lblFechaIngreso"><strong>Salario:</strong></label>
+      <input type="text" id="contract_fecha_ingreso" name="contract[fecha_ingreso]" class="form-control" placeholder="Ingrese Fecha de Ingreso"
+      value="<%= @contract != nil ? @contract.fecha_ingreso : '' %>">
+    </div>
+    <div class="col-md-1>
+      <label id="lblFechaRetiro"><strong>Salario:</strong></label>
+      <input type="text" id="contract_fecha_retiro" name="contract[fecha_retiro]" class="form-control" placeholder="Ingrese Fecha de Retiro"
+      value="<%= @contract != nil ? @contract.fecha_retiro : '' %>">
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :salario %>
-    <%= form.number_field :salario, id: :contract_salario %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cargo %>
-    <%= form.text_field :cargo, id: :contract_cargo %>
-  </div>
-
-  <div class="field">
-    <%= form.label :id_empresa %>
-    <%= form.number_field :id_empresa, id: :contract_id_empresa %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tipo_contrato %>
-    <%= form.text_field :tipo_contrato, id: :contract_tipo_contrato %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fecha_ingreso %>
-    <%= form.text_field :fecha_ingreso, id: :contract_fecha_ingreso %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fecha_retiro %>
-    <%= form.text_field :fecha_retiro, id: :contract_fecha_retiro %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
+<div class="form-group">
+    <div class="form-row">
+      <div class="col-md-12">
+        <center><input type="submit" id="btnAceptar" name="btnAceptar" value="Actualizar" class="btn btn-primary"/></center>
+      </div>
+    </div>
+</div>
 <% end %>

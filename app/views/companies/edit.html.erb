@@ -1,6 +1,16 @@
-<h1>Editing Company</h1>
-
-<%= render 'form', company: @company %>
-
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>
+<div class="container">
+  <div class="card mx-auto mt-5">
+    <div class="card-header"><h1>Editar Compañía</h1></div>
+    <div class="card-body">
+     <%= render 'form', company: @company %>
+      <div class="form-group">
+       <div class="form-row">
+        <div class="col-md-12">
+         <center><%= link_to 'Ver', @company,{ class: "btn btn-info btn-sm" } %>
+         <%= link_to 'Volver', companies_path,{ class: "btn btn-info btn-sm" } %></center>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
