@@ -5,17 +5,23 @@
     <div class="card-body">
     <div class="form-group">
         <div class="form-row">
-          <div class="col-md-4">
-            <strong>Id:</strong>
-            <%= @contract_profile.id %>
-          </div>
-          <div class="col-md-4">
-            <strong>Descripción:</strong>
-            <%= @contract_profile.descripcion %>
-          </div>
-          <div class="col-md-4">
-            <strong>Id Contratos:</strong>
-            <%= @contract_profile.id_contratos %>
+          <div class="col-md-12">
+          <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th><strong>Id:</strong></th>
+                  <th><strong>Descripción:</strong></th>
+                  <th><strong>Id Contratos:</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><%= @contract_profile.id %></td>
+                  <td><%= @contract_profile.descripcion %></td>
+                  <td><%= @contract_profile.id_contratos %></td>
+                </tr>
+                </tbody>
+              </table>          
           </div>
         </div>
       </div>

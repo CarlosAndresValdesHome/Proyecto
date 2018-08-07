@@ -5,60 +5,46 @@
     <div class="card-body">
     <div class="form-group">
         <div class="form-row">
-          <div class="col-md-1">
-            <strong>Id:</strong>
-            <%= @user_modified.id %>
+          <div class="col-md-12">
+          <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th><strong>Id:</strong></th>
+                  <th><strong>Nombre:</strong></th>
+                  <th><strong>Apellido:</strong></th>
+                  <th><strong>Direccion:</strong></th>
+                  <th><strong>Telefono:</strong></th>
+                  <th><strong>Email:</strong></th>
+                  <th><strong>Id Empresa:</strong></th>
+                  <th><strong>Id Perfil:</strong></th>
+                  <th><strong>Id Perfil Cargo:</strong></th>
+                  <th><strong>Id Nómina:</strong></th>
+                  <th><strong>Pregunta Secreta:</strong></th>
+                  <th><strong>Contraseña:</strong></th>
+                  <th><strong>Id Contrato:</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><%= @user_modified.id %></td>
+                  <td><%= @user_modified.nombre %></td>
+                  <td><%= @user_modified.apellido %></td>
+                  <td><%= @user_modified.direccion %></td>
+                  <td><%= @user_modified.telefono %></td>
+                  <td><%= @user_modified.email %></td>
+                  <td><%= @user_modified.id_empresa %></td>
+                  <td><%= @user_modified.id_perfi %></td>
+                  <td><%= @user_modified.id_perfil_cargo %></td>
+                  <td><%= @user_modified.id_nomina %></td>
+                  <td><%= @user_modified.preguntaSecreta %></td>
+                  <td><%= @user_modified.contraseña %></td>
+                  <td><%= @user_modified.id_contrato %></td>
+                </tr>
+                </tbody>
+              </table>
           </div>
-          <div class="col-md-1">
-            <strong>Nombre:</strong>
-            <%= @user_modified.nombre %>
-          </div>
-          <div class="col-md-1">
-            <strong>Apellido:</strong>
-            <%= @user_modified.apellido %>
-          </div>
-          <div class="col-md-1">
-            <strong>Direccion:</strong>
-            <%= @user_modified.direccion %>
-          </div>
-          <div class="col-md-1">
-            <strong>Telefono:</strong>
-            <%= @user_modified.telefono %>
-          </div>
-          <div class="col-md-1">
-            <strong>Email:</strong>
-            <%= @user_modified.email %>
-          </div>
-          <div class="col-md-1">
-            <strong>Id Empresa:</strong>
-            <%= @user_modified.id_empresa %>
-          </div>
-          <div class="col-md-1">
-            <strong>Id Perfil:</strong>
-            <%= @user_modified.id_perfil %>
-          </div>
-          <div class="col-md-1">
-            <strong>Id Perfil Cargo:</strong>
-            <%= @user_modified.id_perfil_cargo %>
-          </div>
-          <div class="col-md-1">
-            <strong>Id Nómina:</strong>
-            <%= @user_modified.id_nomina %>
-          </div>
-          <div class="col-md-1">
-            <strong>Pregunta Secreta:</strong>
-            <%= @user_modified.preguntaSecreta %>
-          </div>
-          <div class="col-md-1">
-            <strong>Contraseñaa:</strong>
-            <%= @user_modified.contrase��a %>
-          </div>
-          <div class="col-md-1">
-            <strong>Id Contrato:</strong>
-            <%= @user_modified.id_contrato %>
-          </div>
-          </div>
-          </div>
+        </div>
+      </div>
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-12">

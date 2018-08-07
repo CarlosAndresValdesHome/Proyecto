@@ -5,33 +5,31 @@
     <div class="card-body">
     <div class="form-group">
         <div class="form-row">
-          <div class="col-md-1">
-            <strong>Id:</strong>
-            <%= @contract.id %>
-          </div>
-          <div class="col-md-1">
-            <strong>Salario:</strong>
-            <%= @contract.salario %>
-          </div>
-          <div class="col-md-1">
-            <strong>Cargo:</strong>
-            <%= @contract.cargo %>
-          </div>
-          <div class="col-md-1">
-            <strong>Id Empresa:</strong>
-            <%= @contract.id_empresa %>
-          </div>
-          <div class="col-md-1">
-            <strong>Tipo Contrato:</strong>
-            <%= @contract.tipo_contrato %>
-          </div>
-          <div class="col-md-1">
-            <strong>Fecha Ingreso:</strong>
-            <%= @contract.fecha_ingreso %>
-          </div>
-          <div class="col-md-1">
-            <strong>Fecha Retiro:</strong>
-            <%= @contract.fecha_retiro %>
+          <div class="col-md-12">
+          <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th><strong>Id:</strong></th>
+              <th><strong>Salario:</strong></th>
+              <th><strong>Cargo:</strong></th>
+              <th><strong>Id Empresa:</strong></th>
+              <th><strong>Tipo Contrato:</strong></th>
+              <th><strong>Fecha Ingreso:</strong></th>
+              <th><strong>Fecha Retiro:</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= @contract.id %></td>
+              <td><%= @contract.salario %></td>
+              <td><%= @contract.cargo %></td>
+              <td><%= @contract.id_empresa %></td>
+              <td><%= @contract.tipo_contrato %></td>
+              <td><%= @contract.fecha_ingreso %></td>
+              <td><%= @contract.fecha_retiro %></td>
+            </tr>
+            </tbody>
+          </table>                       
           </div>
         </div>
       </div>

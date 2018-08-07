@@ -5,25 +5,27 @@
       <div class="card-body">
         <div class="form-group">
           <div class="form-row">
-            <div class="col-md-2">
-              <strong>Id:</strong>
-              <%= @company.id %>
-            </div>
-            <div class="col-md-2">
-              <strong>Nombre:</strong>
-              <%= @company.nombre %>
-            </div>
-            <div class="col-md-2">
-              <strong>Dirección:</strong>
-              <%= @company.direccion %>
-            </div>
-            <div class="col-md-2">
-              <strong>Teléfono:</strong>
-              <%= @company.telefono %>
-            </div>
-            <div class="col-md-2">
-              <strong>Email:</strong>
-              <%= @company.email %>
+            <div class="col-md-12">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th><strong>Id:</strong></th>
+                    <th><strong>Nombre:</strong></th>
+                    <th><strong>Dirección:</strong></th>
+                    <th><strong>Teléfono:</strong></th>
+                    <th><strong>Email:</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><%= @company.id %></td>
+                    <td><%= @company.nombre %></td>
+                    <td><%= @company.direccion %></td>
+                    <td><%= @company.telefono %></td>
+                    <td><%= @company.email %></td>
+                  </tr>
+                </tbody>
+              </table>                      
             </div>
           </div>
         </div>
