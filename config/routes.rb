@@ -36,10 +36,6 @@ get "/charge_profiles/index"
 get "/user_modifieds/index" => "user_modifieds#index" 
 get "/companies/index"
 get "/contract_profiles/index"
-<<<<<<< HEAD
-
-=======
 get "/contracts/index"
->>>>>>> 773e798bcc6b0a65209af38638f3381f9feb664b
 end
 

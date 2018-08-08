@@ -69,6 +69,6 @@ class UserModifiedsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_modified_params
-      params.require(:user_modified).permit(:id, :nombre, :apellido, :direccion, :telefono, :email, :id_empresa, :id_perfil, :id_perfil_cargo, :id_nomina, :preguntaSecreta, :contraseÇña, :id_contrato)
+      params.require(:user_modified).permit(:id, :nombre, :apellido, :direccion, :telefono, :email, :id_empresa, :id_perfil, :id_perfil_cargo, :id_nomina, :preguntaSecreta, :contraseï¿½ï¿½a, :id_contrato)
     end
 end

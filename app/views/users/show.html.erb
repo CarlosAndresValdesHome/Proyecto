@@ -1,8 +1,31 @@
 
 
 <% if  @total != nil %>
+<input type="text" id="txtvalorsolicitado" hidden="" value="<%= @valorSolicitado  %>"/>
+  <input type="text" id="txtnumeroCuota" hidden="" value="<%= @numeroCuotas %>"/>
+<script>
+swal({
+  title: "Datos del prestamo",
+  text:  "El valor del prestamo es $ <%= @valorSolicitado %> ,el numero de cuotas es <%= @numeroCuotas %> y el valor a pagar por mes es de $<%= @total %>",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonClass: "btn-danger",
+  confirmButtonText: "Acepto el prestamo",
+  cancelButtonText: "No Acepto",
+  closeOnConfirm: false,
+  closeOnCancel: false
+},
+function(isConfirm) {
+  if (isConfirm) {
+    swal("Confirmacion", "Su solicitud se enviara al analista de credito para el estudio.", "success");
+  } else {
+    swal("Confirmacion", "Su solicitud fue cancelada  :( ", "error");
+   
+  }
+});
+</script>
 <% end %>
-
+<body style="background-color:#E0E6EF;">
 <div class="row text-center">
 <div class="col-md-12">
    <br/>
@@ -26,14 +49,17 @@
          <label for="lblCuotas">Numero de Cuotas</label>
          <input class="form-control" id="txtNumeroCuotas" name="txtNumeroCuotas" type="text" placeholder="Numeros de cuotas a pagar">
       </div>
-      <div class="form-group">
-        <label for="lblValorPago">Valor Final a pagar</label>
-         <input class="form-control" id="txtValorPago" name="txtValorPago" type="text" placeholder="Valor a pagar mensual" value ="<%=@total%>">
-    </div>
+     
       <input type="submit" class="btn btn-primary btn-block" value="Aceptar" />
    </div>
     <% end %>
+    </div>
+   
+    <%= link_to 'Regresar', {:controller => :users, :action => :employee} %>
+   
+   </div>
   </div>
 </div>
 </div>
 </div>
+</body>

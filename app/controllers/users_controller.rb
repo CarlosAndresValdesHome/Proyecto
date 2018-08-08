@@ -9,8 +9,11 @@ class UsersController < ApplicationController
  def loan
   if params[:txtvalorsolicitar] != nil and params[:txtNumeroCuotas] != nil
      neto = params[:txtvalorsolicitar].to_f / params[:txtNumeroCuotas].to_f
-     total = neto * 0.05
+     totalp = neto * 0.02
+     total = neto + totalp
      @total = total
+     @valorSolicitado =  params[:txtvalorsolicitar]
+     @numeroCuotas = params[:txtNumeroCuotas]
      render "show"
   end
 
