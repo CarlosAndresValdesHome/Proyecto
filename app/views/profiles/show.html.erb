@@ -5,17 +5,23 @@
     <div class="card-body">
     <div class="form-group">
         <div class="form-row">
-          <div class="col-md-4">
-            <strong>Id:</strong>
-            <%= @profile.id %>
-          </div>
-          <div class="col-md-4">
-            <strong>Descripcion:</strong>
-            <%= @profile.descripcion %>
-          </div>
-          <div class="col-md-4">
-            <strong>Id Usuario:</strong>
-            <%= @profile.id_usuario %>
+          <div class="col-md-12">
+          <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th><strong>Id:</strong></th>
+                  <th><strong>Descripcion:</strong></th>
+                  <th><strong>Id Usuario:</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><%= @profile.id %></td>
+                  <td><%= @profile.descripcion %></td>
+                  <td><%= @profile.id_usuario %></td>
+                </tr>
+                </tbody>
+              </table>
           </div>
         </div>
       </div>
