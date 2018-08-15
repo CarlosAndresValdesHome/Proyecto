@@ -136,7 +136,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 26</span>
+            <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 31</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create</span>
   <span class="ruby-ivar">@contract_profile</span> = <span class="ruby-constant">ContractProfile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">contract_profile_params</span>)
 
@@ -179,7 +179,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 56</span>
+            <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 61</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy</span>
   <span class="ruby-ivar">@contract_profile</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
@@ -216,8 +216,9 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 21</span>
+            <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">edit</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;edit&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;homeEmpresa&#39;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -242,7 +243,10 @@
 
         <div class="method-description">
           
-          <p>GET /contract_profiles GET /contract_profiles.json</p>
+          <p>contolador de Perfil Contratos</p>
+
+<pre>GET /contract_profiles
+GET /contract_profiles.json</pre>
           
           
 
@@ -251,6 +255,8 @@
             <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 6</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
   <span class="ruby-ivar">@contract_profiles</span> = <span class="ruby-constant">ContractProfile</span>.<span class="ruby-identifier">all</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;index&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;homeEmpresa&#39;</span>
+  
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -281,9 +287,10 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 16</span>
+            <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 19</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">new</span>
   <span class="ruby-ivar">@contract_profile</span> = <span class="ruby-constant">ContractProfile</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;new&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;homeEmpresa&#39;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -314,8 +321,9 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 12</span>
+            <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 14</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">show</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;show&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;homeEmpresa&#39;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -346,7 +354,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 42</span>
+            <pre><span class="ruby-comment"># File app/controllers/contract_profiles_controller.rb, line 47</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@contract_profile</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">contract_profile_params</span>)

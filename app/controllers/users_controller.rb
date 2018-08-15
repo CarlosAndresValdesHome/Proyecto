@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
+
 #Login de Empresa
   def index
+    #Login de Empresa
     render "indexcompany"
   end
 
@@ -24,16 +26,16 @@ class UsersController < ApplicationController
  def employee
     render "employee", layout: 'home'
  end
- 
+ #carga la vista de empresa y se integra al layout de empresas
   def company
    render 'company', layout: 'homeEmpresa'
   end
 
-
+#carga la vista de lagin
 def Login
        redirect_to :controller => 'users', :action => 'login' 
 end
-
+#valida en la base de datos si el  usuario y contraseña existen
 def login
    
 if User.exists?(:email=>params[:txtUser],:id=>params[:txtPassword])
@@ -46,16 +48,16 @@ if User.exists?(:email=>params[:txtUser],:id=>params[:txtPassword])
  end
 
 end
-
+#realiza las consultas en la base de datos y trae informacion para ingresar a los modulos segun su perfil
  def loginEmpresa      
    if User.exists?(:email=>params[:txtUser],:id=>params[:txtPassword])
      user = User.select('id_perfi,id').where(:email=>params[:txtUser],:id=>params[:txtPassword]).first
     
-     user_session = User.select('nombre ').where(:email=>params[:txtUser],:id=>params[:txtPassword]).first
+     user_session = User.select('nombre').where(:email=>params[:txtUser],:id=>params[:txtPassword]).first
      user_sessionA = User.select('apellido').where(:email=>params[:txtUser],:id=>params[:txtPassword]).first
-    
-     session[:user] = user_session.nombre 
-     session[:userA] = user_sessionA.apellido
+   
+     session[:nombre] = user_session.nombre 
+     session[:apellido] = user_sessionA.apellido
 
      
      session[:datos] = User.select('U.id, U.nombre, U.apellido, C.salario, C.cargo, C.tipo_contrato, C.fecha_ingreso, C.fecha_retiro, E.id as nit, E.nombre').joins(' U JOIN "Web"."tbContratos" C ON C.id = U.id_contrato JOIN  "Web"."tbEmpresa" E ON E.id = U.id_empresa JOIN "Web"."tbUsuarios"
@@ -74,7 +76,7 @@ end
        render 'indexcompany'
    end
  end
-     
+  #grava registros de perfiles   
 def save_register
   @perfiles = Profile.all
         mensaje = ""
@@ -126,7 +128,7 @@ def save_register
     
 end
 
-
+#realiza un render a index
           def Index
             render 'index'
           end
@@ -135,11 +137,11 @@ end
             @perfiles=Profile.all
             render 'register'
           end
-
+#edita datos de perfiles
           def edit
            render 'edit'
           end
-
+#direcciona a la vvista show donde esta el simulador de creditos
           def show
             render 'show', layout: 'home'
           end

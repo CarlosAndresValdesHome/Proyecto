@@ -1,6 +1,6 @@
 class PaysheetsController < ApplicationController
   before_action :set_paysheet, only: [:show, :edit, :update, :destroy]
-
+#controlador de Nomina
   # GET /paysheets
   # GET /paysheets.json
   def index

@@ -1,5 +1,6 @@
 class ReportsController < ApplicationController
     def export
+        #contolador de PDF
         #https://wkhtmltopdf.org/downloads.html
 
         # rails g wicked_pdf
@@ -10,8 +11,9 @@ class ReportsController < ApplicationController
         # }
 
         # config/initializers/mime_types.rb
-        # Mime::Type.register "application/pdf", :pdf		
-        @nombre = session[:user] << " " <<  session[:userA]
+        # Mime::Type.register "application/pdf", :pdf	
+        #Creacion de Carta laboral en formato PDF, datos suministrados por la consulta es el controlador Users	
+        @nombre = session[:nombre] << " " <<  session[:apellido]
         
         @id = session[:datos]["id"]
         @salario = session[:datos]["salario"]
@@ -24,11 +26,11 @@ class ReportsController < ApplicationController
      
         render template: 'users/reporte',pdf: 'Reporte',layout: 'pdf.html'
     end
-
+#creacion de Desprendible de pago formato PDF, datos suministrados por la consulta es el controlador Users	
     def paysheet
         @nombreUs = session[:datos]["nombre"]
         @idEmpresa = session[:datos]["id"]
-        @nombre = session[:user] << " " <<  session[:userA]
+        @nombre = session[:nombre] << " " <<  session[:apellido]
         @id = session[:datos]["id"]
         @cargo = session[:datos]["cargo"]
         @idEmpresa = session[:datos]["nit"]
@@ -52,4 +54,3 @@ class ReportsController < ApplicationController
 
 end
 
-#N.dias_laborados, N.neto_pagado, N.id, N.comisiones, N.auxilio_trasporte, N.recargos,N.prima, N.prestamos, N.salud, N.pension

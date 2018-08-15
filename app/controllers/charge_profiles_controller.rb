@@ -1,6 +1,6 @@
 class ChargeProfilesController < ApplicationController
   before_action :set_charge_profile, only: [:show, :edit, :update, :destroy]
-
+#controlador de Perfil Cargo
   # GET /charge_profiles
   # GET /charge_profiles.json
   def index

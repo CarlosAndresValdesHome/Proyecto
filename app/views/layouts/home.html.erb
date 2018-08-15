@@ -32,8 +32,8 @@
     <!-- Navigation-->
     
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-   <p style="color:#86A2D1";>Usuario en Linea :   <%=@nombre = session[:user] << " " <<  session[:userA]%> </p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav"><br/>
+   <p style="color:#86A2D1";>Usuario en Linea :   <%=@nombre = session[:nombre]%>  <%=session[:apellido]%> </p>
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
     <br />
