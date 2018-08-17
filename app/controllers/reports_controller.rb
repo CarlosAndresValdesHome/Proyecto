@@ -13,7 +13,8 @@ class ReportsController < ApplicationController
         # config/initializers/mime_types.rb
         # Mime::Type.register "application/pdf", :pdf	
         #Creacion de Carta laboral en formato PDF, datos suministrados por la consulta es el controlador Users	
-        @nombre = session[:nombre] << " " <<  session[:apellido]
+        @nombre = session[:nombre] 
+        @apellido= session[:apellido]
         
         @id = session[:datos]["id"]
         @salario = session[:datos]["salario"]
@@ -30,10 +31,11 @@ class ReportsController < ApplicationController
     def paysheet
         @nombreUs = session[:datos]["nombre"]
         @idEmpresa = session[:datos]["id"]
-        @nombre = session[:nombre] << " " <<  session[:apellido]
+        @nombre = session[:nombre] 
+        @apellido= session[:apellido]
         @id = session[:datos]["id"]
         @cargo = session[:datos]["cargo"]
-        @idEmpresa = session[:datos]["nit"]
+        @nomEmpresa = session[:datos]["nit"]
         
         @dias = session[:datosNomina][0]["dias_laborados"]
         @NetoPago = session[:datosNomina][0]["neto_pagado"]

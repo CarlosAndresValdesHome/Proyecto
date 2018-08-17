@@ -60,7 +60,7 @@ end
      session[:apellido] = user_sessionA.apellido
 
      
-     session[:datos] = User.select('U.id, U.nombre, U.apellido, C.salario, C.cargo, C.tipo_contrato, C.fecha_ingreso, C.fecha_retiro, E.id as nit, E.nombre').joins(' U JOIN "Web"."tbContratos" C ON C.id = U.id_contrato JOIN  "Web"."tbEmpresa" E ON E.id = U.id_empresa JOIN "Web"."tbUsuarios"
+     session[:datos] = User.select('U.id, U.nombre, U.apellido, C.salario, C.cargo, C.tipo_contrato, C.fecha_ingreso, C.fecha_retiro, E.id as "nit", E.nombre').joins(' U JOIN "Web"."tbContratos" C ON C.id = U.id_contrato JOIN  "Web"."tbEmpresa" E ON E.id = U.id_empresa JOIN "Web"."tbUsuarios"
      ON U.id =' << user.id.to_s).first
         
      session[:datosNomina] = Paysheet.select('N.dias_laborados, N.neto_pagado, N.id, N.comisiones, N.auxilio_trasporte, N.recargos,N.prima, N.prestamos, N.salud, N.pension').joins(' N JOIN "Web"."tbUsuarios" U ON U.id =' << user.id.to_s)
