@@ -5,20 +5,24 @@ class UserModifiedsController < ApplicationController
   # GET /user_modifieds.json
   def index
     @user_modifieds = UserModified.all
+    render 'index', layout: 'homeEmpresa'
   end
 
   # GET /user_modifieds/1
   # GET /user_modifieds/1.json
   def show
+    render 'show', layout: 'homeEmpresa'
   end
 
   # GET /user_modifieds/new
   def new
     @user_modified = UserModified.new
+    render 'new', layout: 'homeEmpresa'
   end
 
   # GET /user_modifieds/1/edit
   def edit
+    render 'edit', layout: 'homeEmpresa'
   end
 
   # POST /user_modifieds
