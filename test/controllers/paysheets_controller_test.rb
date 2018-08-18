@@ -17,7 +17,7 @@ class PaysheetsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create paysheet" do
     assert_difference('Paysheet.count') do
-      post paysheets_url, params: { paysheet: { deducciones: @paysheet.deducciones, dias_laborados: @paysheet.dias_laborados, id: @paysheet.id, neto_pagado: @paysheet.neto_pagado, valor_devengado: @paysheet.valor_devengado } }
+      post paysheets_url, params: { paysheet: { auxilio_trasporte: @paysheet.auxilio_trasporte, comisiones: @paysheet.comisiones, dias_laborados: @paysheet.dias_laborados, id: @paysheet.id, neto_pagado: @paysheet.neto_pagado, pension: @paysheet.pension, prestamos: @paysheet.prestamos, prima: @paysheet.prima, recargos: @paysheet.recargos, salud: @paysheet.salud } }
     end
 
     assert_redirected_to paysheet_url(Paysheet.last)
@@ -34,7 +34,7 @@ class PaysheetsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update paysheet" do
-    patch paysheet_url(@paysheet), params: { paysheet: { deducciones: @paysheet.deducciones, dias_laborados: @paysheet.dias_laborados, id: @paysheet.id, neto_pagado: @paysheet.neto_pagado, valor_devengado: @paysheet.valor_devengado } }
+    patch paysheet_url(@paysheet), params: { paysheet: { auxilio_trasporte: @paysheet.auxilio_trasporte, comisiones: @paysheet.comisiones, dias_laborados: @paysheet.dias_laborados, id: @paysheet.id, neto_pagado: @paysheet.neto_pagado, pension: @paysheet.pension, prestamos: @paysheet.prestamos, prima: @paysheet.prima, recargos: @paysheet.recargos, salud: @paysheet.salud } }
     assert_redirected_to paysheet_url(@paysheet)
   end
 

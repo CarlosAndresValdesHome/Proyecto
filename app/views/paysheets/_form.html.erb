@@ -11,32 +11,65 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :dias_laborados %>
-    <%= form.number_field :dias_laborados, id: :paysheet_dias_laborados %>
+<div class="form-group">
+  <div class="form-row">
+    <div class="col-md-1">
+      <label id="lblId"><strong>Id:</strong></label>
+      <input type="number" id="paysheet_id" name="paysheet[id]" class="form-control" placeholder="Identificación"
+      value="<%= @paysheet != nil ? @paysheet.id : '' %>">
+    </div>
+    <div class="col-md-1">
+      <label id="lblDiasLaborados"><strong>Días Laborados:</strong></label>
+      <input type="number" id="paysheet_dias_laborados" name="paysheet[dias_laborados]" class="form-control" placeholder="Días Laborados"
+      value="<%= @paysheet != nil ? @paysheet.dias_laborados : '' %>">
+    </div>
+    <div class="col-md-1">
+      <label id="lblComisiones"><strong>Comisiones:</strong></label>
+      <input type="number" id="paysheet_comisiones" name="paysheet[comisiones]" class="form-control" placeholder="Comisiones"
+      value="<%= @paysheet != nil ? @paysheet.comisiones : '' %>">
+    </div>
+    <div class="col-md-1">
+      <label id="lblAuxTransporte"><strong>Auxilio de Transporte:</strong></label>
+      <input type="number" id="paysheet_auxilio_trasporte" name="paysheet[auxilio_trasporte]" class="form-control" placeholder="Auxilio de Transporte"
+      value="<%= @paysheet != nil ? @paysheet.auxilio_trasporte : '' %>">
+    </div>
+    <div class="col-md-1">
+      <label id="lblRecargos"><strong>Recargos:</strong></label>
+      <input type="number" id="paysheet_recargos" name="paysheet[recargos]" class="form-control" placeholder="Recargos"
+      value="<%= @paysheet != nil ? @paysheet.recargos : '' %>">
+    </div>
+    <div class="col-md-1">
+      <label id="lblPrima"><strong>Prima:</strong></label>
+      <input type="number" id="paysheet_prima" name="paysheet[prima]" class="form-control" placeholder="Prima"
+      value="<%= @paysheet != nil ? @paysheet.prima : '' %>">
+    </div>
+    <div class="col-md-1">
+      <label id="lblPrestamos"><strong>Préstamos:</strong></label>
+      <input type="number" id="paysheet_prestamos" name="paysheet[prestamos]" class="form-control" placeholder="Cuóta del Préstamo"
+      value="<%= @paysheet != nil ? @paysheet.prestamos : '' %>">
+    </div>
+    <div class="col-md-1">
+      <label id="lblSalud"><strong>Salud:</strong></label>
+      <input type="number" id="paysheet_salud" name="paysheet[salud]" class="form-control" placeholder="Salud"
+      value="<%= @paysheet != nil ? @paysheet.salud : '' %>">
+    </div>
+    <div class="col-md-1">
+      <label id="lblPension"><strong>Pensión:</strong></label>
+      <input type="number" id="paysheet_pension" name="paysheet[pension]" class="form-control" placeholder="Pensión"
+      value="<%= @paysheet != nil ? @paysheet.pension : '' %>">
+    </div>
+    <div class="col-md-1">
+      <label id="lblNetoPagado"><strong>Neto Pagado:</strong></label>
+      <input type="number" id="paysheet_neto_pagado" name="paysheet[neto_pagado]" class="form-control" placeholder="Neto a Pagar"
+      value="<%= @paysheet != nil ? @paysheet.neto_pagado : '' %>">
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :valor_devengado %>
-    <%= form.number_field :valor_devengado, id: :paysheet_valor_devengado %>
+</div>
+<div class="form-group">
+  <div class="form-row">
+    <div class="col-md-12">
+      <center><input type="submit" id="btnAceptar" name="btnAceptar" value="Aceptar" class="btn btn-primary"/></center>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :deducciones %>
-    <%= form.number_field :deducciones, id: :paysheet_deducciones %>
-  </div>
-
-  <div class="field">
-    <%= form.label :neto_pagado %>
-    <%= form.number_field :neto_pagado, id: :paysheet_neto_pagado %>
-  </div>
-
-  <div class="field">
-    <%= form.label :id %>
-    <%= form.number_field :id, id: :paysheet_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
 <% end %>

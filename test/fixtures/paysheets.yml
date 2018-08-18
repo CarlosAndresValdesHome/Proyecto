@@ -2,14 +2,24 @@
 
 one:
   dias_laborados: 1
-  valor_devengado: 1
-  deducciones: 1
   neto_pagado: 1
   id: 1
+  comisiones: 1
+  auxilio_trasporte: 1
+  recargos: 1
+  prima: 1
+  prestamos: 1
+  salud: 1
+  pension: 1
 
 two:
   dias_laborados: 1
-  valor_devengado: 1
-  deducciones: 1
   neto_pagado: 1
   id: 1
+  comisiones: 1
+  auxilio_trasporte: 1
+  recargos: 1
+  prima: 1
+  prestamos: 1
+  salud: 1
+  pension: 1

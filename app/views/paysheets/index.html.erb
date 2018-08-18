@@ -1,35 +1,57 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Paysheets</h1>
-
-<table>
+<div class="container">
+  <div class="card mx-auto mt-5">
+    <div class="card-header"><h1>Nómina</h1></div>
+    <div class="card-body">
+<div class="form-group">
+  <div class="form-row">
+    <div class="col-md-12">
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Dias laborados</th>
-      <th>Valor devengado</th>
-      <th>Deducciones</th>
-      <th>Neto pagado</th>
       <th>Id</th>
+      <th>Dias Laborados</th>
+      <th>Comisiones</th>
+      <th>Auxilio Transporte</th>
+      <th>Recargos</th>
+      <th>Prima</th>
+      <th>Préstamos</th>
+      <th>Salud</th>
+      <th>Pensión</th>
+      <th>Neto Pagado</th>
       <th colspan="3">Opciones</th>
     </tr>
   </thead>
-
   <tbody>
     <% @paysheets.each do |paysheet| %>
       <tr>
-        <td><%= paysheet.dias_laborados %></td>
-        <td><%= paysheet.valor_devengado %></td>
-        <td><%= paysheet.deducciones %></td>
-        <td><%= paysheet.neto_pagado %></td>
         <td><%= paysheet.id %></td>
-        <td><%= link_to 'Show', paysheet %></td>
-        <td><%= link_to 'Edit', edit_paysheet_path(paysheet) %></td>
-        <td><%= link_to 'Destroy', paysheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= paysheet.dias_laborados %></td>
+        <td><%= paysheet.comisiones %></td>
+        <td><%= paysheet.auxilio_trasporte %></td>
+        <td><%= paysheet.recargos %></td>
+        <td><%= paysheet.prima %></td>
+        <td><%= paysheet.prestamos %></td>
+        <td><%= paysheet.salud %></td>
+        <td><%= paysheet.pension %></td>
+        <td><%= paysheet.neto_pagado %></td>
+        <td><%= link_to 'Ver', paysheet,{ class: "btn btn-info btn-sm" } %></td>
+        <td><%= link_to 'Editar', edit_paysheet_path(paysheet),{ class: "btn btn-success btn-sm" } %></td>
+        <td><%= link_to 'Eliminar', paysheet, :class => "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Está Seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Paysheet', new_paysheet_path %>
+<div class="form-group">
+ <div class="form-row">
+  <div class="col-md-12">
+    <center><%= link_to 'Nueva Nómina', new_paysheet_path,{ class: "btn btn-warning btn-sm" } %></center>
+  </div>
+ </div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

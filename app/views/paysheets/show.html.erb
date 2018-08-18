@@ -1,29 +1,53 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Dias laborados:</strong>
-  <%= @paysheet.dias_laborados %>
-</p>
-
-<p>
-  <strong>Valor devengado:</strong>
-  <%= @paysheet.valor_devengado %>
-</p>
-
-<p>
-  <strong>Deducciones:</strong>
-  <%= @paysheet.deducciones %>
-</p>
-
-<p>
-  <strong>Neto pagado:</strong>
-  <%= @paysheet.neto_pagado %>
-</p>
-
-<p>
-  <strong>Id:</strong>
-  <%= @paysheet.id %>
-</p>
-
-<%= link_to 'Edit', edit_paysheet_path(@paysheet) %> |
-<%= link_to 'Back', paysheets_path %>
+<div class="container">
+  <div class="card mx-auto mt-5">
+    <div class="card-header"><h1>Detalle</h1></div>
+      <div class="card-body">
+      
+    <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-12">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th><strong>Id:</strong></th>
+                  <th><strong>Días Laborados:</strong></th>
+                  <th><strong>Comisiones:</strong></th>
+                  <th><strong>Auxilio Transporte:</strong></th>
+                  <th><strong>Recargos:</strong></th>
+                  <th><strong>Prima:</strong></th>
+                  <th><strong>Préstamos:</strong></th>
+                  <th><strong>Salud:</strong></th>
+                  <th><strong>Pension:</strong></th>
+                  <th><strong>Neto Pagado:</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><%= @paysheet.id %></td>
+                  <td><%= @paysheet.dias_laborados %></td>
+                  <td><%= @paysheet.comisiones %></td>
+                  <td><%= @paysheet.auxilio_trasporte %></td>
+                  <td><%= @paysheet.recargos %></td>
+                  <td><%= @paysheet.prima %></td>
+                  <td><%= @paysheet.prestamos %></td>
+                  <td><%= @paysheet.salud %></td>
+                  <td><%= @paysheet.pension %></td>
+                  <td><%= @paysheet.neto_pagado %></td>
+                </tr>
+                </tbody>
+              </table>
+          </div>
+        </div> 
+    </div> 
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-12">
+            <center><%= link_to 'Editar', edit_paysheet_path(@paysheet),{ class: "btn btn-info btn-sm" } %>
+            <%= link_to 'Volver', paysheets_path,{ class: "btn btn-info btn-sm" } %></center>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div> 
+</div>

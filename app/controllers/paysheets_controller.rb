@@ -69,6 +69,6 @@ class PaysheetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def paysheet_params
-      params.require(:paysheet).permit(:dias_laborados, :valor_devengado, :deducciones, :neto_pagado, :id)
+      params.require(:paysheet).permit(:dias_laborados, :neto_pagado, :id, :comisiones, :auxilio_trasporte, :recargos, :prima, :prestamos, :salud, :pension)
     end
 end
