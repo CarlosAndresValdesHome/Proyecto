@@ -1,60 +1,83 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Usuarios</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Direccion</th>
-      <th>Telefono</th>
-      <th>Email</th>
-      <th>Id Empresa</th>
-      <th>Id Perfil</th>
-      <th>Id Perfil Cargo</th>
-      <th>Id Nómina</th>
-      <th>Pregunta secreta</th>
-      <th>Contraseña</th>
-      <th>Id Contrato</th>
-      <th colspan="3">Opciones</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @user_modifieds.each do |user_modified| %>
-      <tr>
-        <td><%= user_modified.id %></td>
-        <td><%= user_modified.nombre %></td>
-        <td><%= user_modified.apellido %></td>
-        <td><%= user_modified.direccion %></td>
-        <td><%= user_modified.telefono %></td>
-        <td><%= user_modified.email %></td>
-        <td><%= user_modified.id_empresa %></td>
-        <td><%= user_modified.id_perfi %></td>
-        <td><%= user_modified.id_perfil_cargo %></td>
-        <td><%= user_modified.id_nomina %></td>
-        <td><%= user_modified.preguntaSecreta %></td>
-        <td><%= user_modified.contraseña %></td>
-        <td><%= user_modified.id_contrato %></td>
-        <td><%= link_to 'Ver', user_modified,{ class: "btn btn-info btn-sm" } %></td>
-        <td><%= link_to 'Editar', edit_user_modified_path(user_modified),{ class: "btn btn-success btn-sm" } %></td>
-        <td><%= link_to 'Eliminar', user_modified, :class => "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Está Seguro?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+  <div class="card mx-auto mt-5">
+    <div class="card-header"><h1>Usuarios</h1></div>
+      <div class="card-body">
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-12">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @user_modifieds.each do |user_modified| %>
+                  <tr>
+                    <td><%= user_modified.id %></td>
+                    <td><%= user_modified.nombre %></td>
+                    <td><%= user_modified.apellido %></td>
+                    <td><%= user_modified.direccion %></td>
+                    <td><%= user_modified.telefono %></td>
+                  </tr>
+                  <% end %>
+                </tbody>
+                <thead>
+                  <tr>
+                    <th>Email</th>
+                    <th>Id Empresa</th>
+                    <th>Id Perfil</th>
+                    <th>Id Perfil Cargo</th>
+                    <th>Id Nómina</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @user_modifieds.each do |user_modified| %>
+                  <tr>
+                    <td><%= user_modified.email %></td>
+                    <td><%= user_modified.id_empresa %></td>
+                    <td><%= user_modified.id_perfi %></td>
+                    <td><%= user_modified.id_perfil_cargo %></td>
+                    <td><%= user_modified.id_nomina %></td>
+                  </tr>
+                  <% end %>
+                </tbody>
+                <thead>
+                  <tr>
+                    <th>Pregunta secreta</th>
+                    <th>Contraseña</th>
+                    <th>Id Contrato</th>
+                    <th colspan="3">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @user_modifieds.each do |user_modified| %>
+                  <tr>
+                    <td><%= user_modified.preguntaSecreta %></td>
+                    <td><%= user_modified.contraseña %></td>
+                    <td><%= user_modified.id_contrato %></td>
+                    <td><%= link_to 'Ver', user_modified,{ class: "btn btn-info btn-sm" } %></td>
+                    <td><%= link_to 'Editar', edit_user_modified_path(user_modified),{ class: "btn btn-success btn-sm" } %></td>
+                    <td><%= link_to 'Eliminar', user_modified, :class => "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Está Seguro?' } %></td>
+                  </tr>
+                  <% end %>
+                </tbody>
+              </table>
 <div class="form-group">
- <div class="form-row">
-  <div class="col-md-12">
-    <center><%= link_to 'Nuevo Usuario', new_user_modified_path,{ class: "btn btn-warning btn-sm" } %></center>
-  </div>
+  <div class="form-row">
+    <div class="col-md-12">
+      <center><%= link_to 'Nuevo Usuario', new_user_modified_path,{ class: "btn btn-warning btn-sm" } %></center>
+    </div>
  </div>
 </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
