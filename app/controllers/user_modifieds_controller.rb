@@ -1,6 +1,6 @@
 class UserModifiedsController < ApplicationController
   before_action :set_user_modified, only: [:show, :edit, :update, :destroy]
-
+#controlador de Usuarios
   # GET /user_modifieds
   # GET /user_modifieds.json
   def index

@@ -1,6 +1,6 @@
 class ContractProfilesController < ApplicationController
   before_action :set_contract_profile, only: [:show, :edit, :update, :destroy]
-
+#contolador de Perfil Contratos
   # GET /contract_profiles
   # GET /contract_profiles.json
   def index

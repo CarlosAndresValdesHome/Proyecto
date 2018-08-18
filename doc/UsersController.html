@@ -75,6 +75,10 @@
     
     <li ><a href="#method-i-Login">#Login</a>
     
+    <li ><a href="#method-i-company">#company</a>
+    
+    <li ><a href="#method-i-edit">#edit</a>
+    
     <li ><a href="#method-i-employee">#employee</a>
     
     <li ><a href="#method-i-index">#index</a>
@@ -86,6 +90,10 @@
     <li ><a href="#method-i-loginEmpresa">#loginEmpresa</a>
     
     <li ><a href="#method-i-register">#register</a>
+    
+    <li ><a href="#method-i-save_register">#save_register</a>
+    
+    <li ><a href="#method-i-show">#show</a>
     
   </ul>
 </div>
@@ -108,6 +116,25 @@
 
     
 
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="Login">Login
+        
+        <dd>
+        
+      
+        <dt id="Password">Password
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
     
 
     
@@ -132,13 +159,13 @@
 
         <div class="method-description">
           
-          
+          <p>realiza un render a index</p>
           
           
 
           
           <div class="method-source-code" id="Index-source">
-            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 51</span>
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 132</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">Index</span>
   <span class="ruby-identifier ruby-title">render</span> <span class="ruby-string">&#39;index&#39;</span>
 <span class="ruby-keyword">end</span></pre>
@@ -165,15 +192,81 @@
 
         <div class="method-description">
           
-          
+          <p>carga la vista de lagin</p>
           
           
 
           
           <div class="method-source-code" id="Login-source">
-            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 16</span>
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">Login</span>
        <span class="ruby-identifier ruby-title">redirect_to</span> <span class="ruby-value">:controller</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;users&#39;</span>, <span class="ruby-value">:action</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;login&#39;</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-company" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">company</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>carga la vista de empresa y se integra al layout de empresas</p>
+          
+          
+
+          
+          <div class="method-source-code" id="company-source">
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">company</span>
+ <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;company&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;homeEmpresa&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>edita datos de perfiles</p>
+          
+          
+
+          
+          <div class="method-source-code" id="edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">edit</span>
+ <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;edit&#39;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -198,15 +291,15 @@
 
         <div class="method-description">
           
-          
+          <p>carga vista Empleado</p>
           
           
 
           
           <div class="method-source-code" id="employee-source">
-            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 11</span>
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 26</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">employee</span>
-   <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;employee&quot;</span>
+   <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;employee&quot;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;home&#39;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -231,15 +324,16 @@
 
         <div class="method-description">
           
-          
+          <p><a href="UsersController.html#method-i-Login">#Login</a> de Empresa</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 3</span>
-  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
-    <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;indexcompany&quot;</span>
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
+  <span class="ruby-comment">#Login de Empresa</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;indexcompany&quot;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -264,16 +358,25 @@
 
         <div class="method-description">
           
-          
+          <p>Cargar vista Prestamos</p>
           
           
 
           
           <div class="method-source-code" id="loan-source">
-            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 7</span>
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 11</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">loan</span>
-  <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;loan&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;home&#39;</span>
- <span class="ruby-keyword">end</span></pre>
+ <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:txtvalorsolicitar</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:txtNumeroCuotas</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">neto</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:txtvalorsolicitar</span>].<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:txtNumeroCuotas</span>].<span class="ruby-identifier">to_f</span>
+    <span class="ruby-identifier">totalp</span> = <span class="ruby-identifier">neto</span> <span class="ruby-operator">*</span> <span class="ruby-value">0.02</span>
+    <span class="ruby-identifier">total</span> = <span class="ruby-identifier">neto</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">totalp</span>
+    <span class="ruby-ivar">@total</span> = <span class="ruby-identifier">total</span>
+    <span class="ruby-ivar">@valorSolicitado</span> =  <span class="ruby-identifier">params</span>[<span class="ruby-value">:txtvalorsolicitar</span>]
+    <span class="ruby-ivar">@numeroCuotas</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:txtNumeroCuotas</span>]
+    <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;show&quot;</span>
+ <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>
@@ -297,18 +400,16 @@
 
         <div class="method-description">
           
-          
+          <p>valida en la base de datos si el  usuario y contraseña existen</p>
           
           
 
           
           <div class="method-source-code" id="login-source">
-            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 20</span>
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 39</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">login</span>
    
 <span class="ruby-keyword">if</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-value">:email</span><span class="ruby-operator">=&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtUser</span>],<span class="ruby-value">:id</span><span class="ruby-operator">=&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtPassword</span>])
- 
-   
  <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;employee&#39;</span>
  
  <span class="ruby-keyword">else</span> 
@@ -341,16 +442,30 @@
 
         <div class="method-description">
           
-          
+          <p>realiza las consultas en la base de datos y trae informacion para ingresar
+a los modulos segun su perfil</p>
           
           
 
           
           <div class="method-source-code" id="loginEmpresa-source">
-            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 35</span>
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 52</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">loginEmpresa</span>      
   <span class="ruby-keyword">if</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-value">:email</span><span class="ruby-operator">=&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtUser</span>],<span class="ruby-value">:id</span><span class="ruby-operator">=&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtPassword</span>])
-    <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;id_perfi&#39;</span>).<span class="ruby-identifier">where</span>(<span class="ruby-value">:email</span><span class="ruby-operator">=&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtUser</span>],<span class="ruby-value">:id</span><span class="ruby-operator">=&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtPassword</span>]).<span class="ruby-identifier">first</span>
+    <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;id_perfi,id&#39;</span>).<span class="ruby-identifier">where</span>(<span class="ruby-value">:email</span><span class="ruby-operator">=&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtUser</span>],<span class="ruby-value">:id</span><span class="ruby-operator">=&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtPassword</span>]).<span class="ruby-identifier">first</span>
+   
+    <span class="ruby-identifier">user_session</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;nombre&#39;</span>).<span class="ruby-identifier">where</span>(<span class="ruby-value">:email</span><span class="ruby-operator">=&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtUser</span>],<span class="ruby-value">:id</span><span class="ruby-operator">=&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtPassword</span>]).<span class="ruby-identifier">first</span>
+    <span class="ruby-identifier">user_sessionA</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;apellido&#39;</span>).<span class="ruby-identifier">where</span>(<span class="ruby-value">:email</span><span class="ruby-operator">=&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtUser</span>],<span class="ruby-value">:id</span><span class="ruby-operator">=&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtPassword</span>]).<span class="ruby-identifier">first</span>
+  
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:nombre</span>] = <span class="ruby-identifier">user_session</span>.<span class="ruby-identifier">nombre</span> 
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:apellido</span>] = <span class="ruby-identifier">user_sessionA</span>.<span class="ruby-identifier">apellido</span>
+
+    
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:datos</span>] = <span class="ruby-constant">User</span>.<span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;U.id, U.nombre, U.apellido, C.salario, C.cargo, C.tipo_contrato, C.fecha_ingreso, C.fecha_retiro, E.id as nit, E.nombre&#39;</span>).<span class="ruby-identifier">joins</span>(<span class="ruby-string">&#39; U JOIN &quot;Web&quot;.&quot;tbContratos&quot; C ON C.id = U.id_contrato JOIN  &quot;Web&quot;.&quot;tbEmpresa&quot; E ON E.id = U.id_empresa JOIN &quot;Web&quot;.&quot;tbUsuarios&quot;
+    ON U.id =&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">first</span>
+       
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:datosNomina</span>] = <span class="ruby-constant">Paysheet</span>.<span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;N.dias_laborados, N.neto_pagado, N.id, N.comisiones, N.auxilio_trasporte, N.recargos,N.prima, N.prestamos, N.salud, N.pension&#39;</span>).<span class="ruby-identifier">joins</span>(<span class="ruby-string">&#39; N JOIN &quot;Web&quot;.&quot;tbUsuarios&quot; U ON U.id =&#39;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span>)
+
     <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id_perfi</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value">1</span>)
         <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;company&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;homeEmpresa&#39;</span>
     <span class="ruby-keyword">else</span>
@@ -391,9 +506,146 @@
 
           
           <div class="method-source-code" id="register-source">
-            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 55</span>
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 136</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">register</span>
+  <span class="ruby-ivar">@perfiles</span>=<span class="ruby-constant">Profile</span>.<span class="ruby-identifier">all</span>
   <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;register&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-save_register" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_register</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>grava registros de perfiles</p>
+          
+          
+
+          
+          <div class="method-source-code" id="save_register-source">
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">save_register</span>
+  <span class="ruby-ivar">@perfiles</span> = <span class="ruby-constant">Profile</span>.<span class="ruby-identifier">all</span>
+        <span class="ruby-identifier">mensaje</span> = <span class="ruby-string">&quot;&quot;</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:txtLogin</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> 
+            <span class="ruby-identifier">mensaje</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;Ingrese Login,&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ddlPerfiles</span>].<span class="ruby-identifier">empty?</span> 
+            <span class="ruby-identifier">mensaje</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;Seleccione Perfil,&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:txtPassword</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> 
+            <span class="ruby-identifier">mensaje</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;Ingrese Password,&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:txtPassword</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:txtConfirmarPassword</span>].<span class="ruby-identifier">strip</span>) 
+            <span class="ruby-identifier">mensaje</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;Password no coincide,&quot;</span>
+        <span class="ruby-keyword">end</span>
+                
+        <span class="ruby-comment">#Si el  mensaje es diferente de vacío, contiene log de errores</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">mensaje</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&quot;&quot;</span>)
+            <span class="ruby-ivar">@mensaje</span> = <span class="ruby-identifier">mensaje</span>.<span class="ruby-identifier">slide</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-2</span>
+            <span class="ruby-ivar">@tipo</span> = <span class="ruby-string">&#39;error&#39;</span> 
+              <span class="ruby-keyword">return</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-comment">#Dos formas de recuperar el id máximo y de sumarle 1 a ese valor máximo</span>
+        <span class="ruby-comment">#user_search = user.order_by(&quot;id&quot;).last</span>
+        <span class="ruby-comment">#id = user_search.id + 1</span>
+        <span class="ruby-identifier">id</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">maximum</span>(<span class="ruby-string">&#39;id&#39;</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+            
+        <span class="ruby-comment">#Instanciamos un nuevo objeto de User y lo nombramos user</span>
+        <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span> = <span class="ruby-identifier">id</span>
+        <span class="ruby-identifier">user</span>.<span class="ruby-constant">Login</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:txtLogin</span>]
+        <span class="ruby-identifier">user</span>.<span class="ruby-constant">Password</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:txtPassword</span>]
+        <span class="ruby-identifier">user</span>.<span class="ruby-identifier">pelfil_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ddlPerfiles</span>]
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">user_params</span>)
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-constant">NotifyMailer</span>.<span class="ruby-identifier">send_mail</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:txtLogin</span>],<span class="ruby-string">&#39;Creación de cuenta&#39;</span>,<span class="ruby-identifier">user</span>).<span class="ruby-identifier">deliver</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> {<span class="ruby-value">status:</span> <span class="ruby-string">&quot;ok&quot;</span>, <span class="ruby-value">mensaje:</span> <span class="ruby-string">&#39;Se realizó proceso con éxito&#39;</span>, <span class="ruby-value">tipo:</span> <span class="ruby-string">&#39;success&#39;</span>}
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@user</span>, <span class="ruby-value">notice:</span> <span class="ruby-string">&#39;User was successfully created.&#39;</span> }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:show</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:created</span>, <span class="ruby-value">location:</span> <span class="ruby-ivar">@user</span> }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> {<span class="ruby-value">status:</span> <span class="ruby-string">&quot;ok&quot;</span>, <span class="ruby-value">mensaje:</span> <span class="ruby-string">&#39;Hubo un error durante el procedimiento&#39;</span>, <span class="ruby-value">tipo:</span> <span class="ruby-string">&#39;error&#39;</span>}
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:new</span> }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span> }
+    <span class="ruby-keyword">end</span>
+    
+    
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-comment">#realiza un render a index</span>
+          <span class="ruby-keyword">def</span> <span class="ruby-constant">Index</span>
+            <span class="ruby-identifier ruby-title">render</span> <span class="ruby-string">&#39;index&#39;</span>
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">register</span>
+            <span class="ruby-ivar">@perfiles</span>=<span class="ruby-constant">Profile</span>.<span class="ruby-identifier">all</span>
+            <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;register&#39;</span>
+          <span class="ruby-keyword">end</span>
+<span class="ruby-comment">#edita datos de perfiles</span>
+          <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">edit</span>
+           <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;edit&#39;</span>
+          <span class="ruby-keyword">end</span>
+<span class="ruby-comment">#direcciona a la vvista show donde esta el simulador de creditos</span>
+          <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">show</span>
+            <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;show&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;home&#39;</span>
+          <span class="ruby-keyword">end</span>
+
+      
+
+          
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>direcciona a la vvista show donde esta el simulador de creditos</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/users_controller.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">show</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;show&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;home&#39;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           

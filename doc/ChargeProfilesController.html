@@ -136,7 +136,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 26</span>
+            <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 30</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create</span>
   <span class="ruby-ivar">@charge_profile</span> = <span class="ruby-constant">ChargeProfile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">charge_profile_params</span>)
 
@@ -147,6 +147,7 @@
     <span class="ruby-keyword">else</span>
       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:new</span> }
       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@charge_profile</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span> }
+      
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
@@ -179,7 +180,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 56</span>
+            <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 61</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy</span>
   <span class="ruby-ivar">@charge_profile</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
@@ -216,8 +217,9 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 21</span>
+            <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 24</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">edit</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;edit&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;homeEmpresa&#39;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -242,7 +244,10 @@
 
         <div class="method-description">
           
-          <p>GET /charge_profiles GET /charge_profiles.json</p>
+          <p>controlador de Perfil Cargo</p>
+
+<pre>GET /charge_profiles
+GET /charge_profiles.json</pre>
           
           
 
@@ -251,6 +256,7 @@
             <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 6</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
   <span class="ruby-ivar">@charge_profiles</span> = <span class="ruby-constant">ChargeProfile</span>.<span class="ruby-identifier">all</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;index&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;homeEmpresa&#39;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -281,9 +287,10 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 16</span>
+            <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 18</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">new</span>
   <span class="ruby-ivar">@charge_profile</span> = <span class="ruby-constant">ChargeProfile</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;new&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;homeEmpresa&#39;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -314,8 +321,9 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 12</span>
+            <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 13</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">show</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;show&#39;</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;homeEmpresa&#39;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -346,7 +354,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 42</span>
+            <pre><span class="ruby-comment"># File app/controllers/charge_profiles_controller.rb, line 47</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@charge_profile</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">charge_profile_params</span>)

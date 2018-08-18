@@ -1,32 +1,29 @@
-<%=Time.new.strftime"%b  %d, %Y"%>
+
 <!DOCTYPE html>
 <html lang="en">
-
+<%= wicked_pdf_image_tag '/img/pasos/lineOpus.png',  height: 300 ,width: 400 %>
 <head>
 <title>Certificado Laboral</title>
 </head>
 
 <body>
-<br/>
-<br/>
-<br/>
+
 
 <div class="container">
     <div class="card mx-auto mt-5">
      <div class="card-header"><h1 /><center />Certificado Laboral</div>
-       <div class="card-body">
+     
+      <div class="card-body">
           <div class="form-group">
                 <div class="form-row">
                     <div class="col-md-12">
                     <h1><center><b><%= @nombreUs %></b></center> </h1>
                     <br/>
                     <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
+                 
 
-Que el Sr. <b><%= @nombre %> </b> identificado con el documento No. <b><%= @id %></b>, laboro en nuestra  compañia a través de un contrato a Término <b><%= @tipoContrato %></b> con fecha de inicio <b><%= @fechaIngreso %> </b>y fecha de terminación <b><%= @fechaRetiro %></b>.
+
+Que el Sr. <b><%= @nombre %><%= @apellido %> </b> identificado con el documento No. <b><%= @id %></b>, laboro en nuestra  compañia a través de un contrato a Término <b><%= @tipoContrato %></b> con fecha de inicio <b><%= @fechaIngreso %> </b>y fecha de terminación <b><%= @fechaRetiro %></b>.
 Durante su vinculación desempeñó el cargo <b><%= @cargo %></b> como empleado de Planta.  <br/><br/>
 
 Su último salario básico mensual fue la suma de: <b>$<%= @salario %></b>. El ingreso promedio mensual fue la suma de <b>$<%= @salario %></b>. 
@@ -47,13 +44,11 @@ Atentamente,
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
+<%= wicked_pdf_image_tag '/img/pasos/firma.png',  height: 150 ,width: 300 %><p>
+
 Carlos Andres Valdes Home <p>
-Gerente General  <b><%= @nombreUs %></b>  NIT:  <b><%= @idEmpresa%></b>
+Gerente General  <b><%= @nombreUs %></b>  NIT:  <b><%= @nomEmpresa%></b>
 
 
                         </div>
