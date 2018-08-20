@@ -71,12 +71,12 @@ end
          render 'employee', layout: 'home'
      end
    else 
-       @mensaje = 'usuario y contraseña incorrecta'
+       @mensaje = 'usuario y/o contraseña incorrecta'
        @tipo ='error'
        render 'indexcompany'
    end
  end
-  #grava registros de perfiles   
+  #graba registros de perfiles   
 def save_register
   @perfiles = Profile.all
         mensaje = ""
