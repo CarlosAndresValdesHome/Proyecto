@@ -16,30 +16,38 @@
                   <th><strong>Telefono:</strong></th>
                   <th><strong>Email:</strong></th>
                   <th><strong>Id Empresa:</strong></th>
-                  <th><strong>Id Perfil:</strong></th>
-                  <th><strong>Id Perfil Cargo:</strong></th>
-                  <th><strong>Id Nómina:</strong></th>
-                  <th><strong>Pregunta Secreta:</strong></th>
-                  <th><strong>Contraseña:</strong></th>
-                  <th><strong>Id Contrato:</strong></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  <td><%= @user_modified.id_empresa %></td>
                   <td><%= @user_modified.id %></td>
                   <td><%= @user_modified.nombre %></td>
                   <td><%= @user_modified.apellido %></td>
                   <td><%= @user_modified.direccion %></td>
                   <td><%= @user_modified.telefono %></td>
                   <td><%= @user_modified.email %></td>
-                  <td><%= @user_modified.id_empresa %></td>
-                  <td><%= @user_modified.id_perfi %></td>
-                  <td><%= @user_modified.id_perfil_cargo %></td>
-                  <td><%= @user_modified.id_nomina %></td>
-                  <td><%= @user_modified.preguntaSecreta %></td>
-                  <td><%= @user_modified.contraseña %></td>
-                  <td><%= @user_modified.id_contrato %></td>
-                </tr>
+                </tr>  
+                </tbody>
+                <thead>
+                  <tr>
+                    <th><strong>Id Perfil:</strong></th>
+                    <th><strong>Id Perfil Cargo:</strong></th>
+                    <th><strong>Id Nómina:</strong></th>
+                    <th><strong>Pregunta Secreta:</strong></th>
+                    <th><strong>Contraseña:</strong></th>
+                    <th><strong>Id Contrato:</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><%= @user_modified.id_perfi %></td>
+                    <td><%= @user_modified.id_perfil_cargo %></td>
+                    <td><%= @user_modified.id_nomina %></td>
+                    <td><%= @user_modified.preguntaSecreta %></td>
+                    <td><%= @user_modified.contraseña %></td>
+                    <td><%= @user_modified.id_contrato %></td>
+                  </tr>
                 </tbody>
               </table>
           </div>
@@ -56,3 +64,7 @@
     </div>
   </div> 
 </div>
+
+
+
+                

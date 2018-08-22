@@ -7,12 +7,13 @@ Rails.application.routes.draw do
   resources :companies
   resources :charge_profiles
   resources :profiles
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 get "users" => "users#index"   
 get "users/Login"   
 get "homes" => "users#homes"  
-get "registro" => "users#registro" 
+get "register" => "users#register" 
 get "users/homes" 
 get "users/Index"
 get "users/employee"
@@ -22,9 +23,9 @@ post "/users/Login"  => "users#login"
 get "/users/loan"  => "users#loan" 
 
 get "users/indexcompany" => "users#indexcompany" 
-post "users/loginEmpresa" => "users#loginEmpresa" 
+post "users/loginEmpresa" => "users#loginEmpresa"
 get "users/company" 
-get "register" => "users#register"
+get "register" => "users#save_register"
 post "users/save_register"
 post "users/save_edit"
 get "edit" => "users#register"
