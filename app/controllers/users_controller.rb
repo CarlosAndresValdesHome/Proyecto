@@ -7,6 +7,15 @@ class UsersController < ApplicationController
   end
 
 
+  if id = nil 
+     @usercontra = session[:usercontra]
+     @usercontra.update(:contrasena=>params[:txtNuevaContra])
+     User.update(session[:usercontra])
+    
+     render "employee", layout: 'home'
+    
+  end
+  
 #Cargar vista Prestamos
  def loan
   if params[:txtvalorsolicitar] != nil and params[:txtNumeroCuotas] != nil
@@ -55,9 +64,13 @@ end
     
      user_session = User.select('nombre').where(:email=>params[:txtUser],:id=>params[:txtPassword]).first
      user_sessionA = User.select('apellido').where(:email=>params[:txtUser],:id=>params[:txtPassword]).first
+         userContra = User.select('contrasena').where(:email=>params[:txtUser],:id=>params[:txtPassword]).first
    
      session[:nombre] = user_session.nombre 
      session[:apellido] = user_sessionA.apellido
+         session[:usercontra] = userContra
+
+     
 
      
      session[:datos] = User.select('U.id, U.nombre, U.apellido, C.salario, C.cargo, C.tipo_contrato, C.fecha_ingreso, C.fecha_retiro, E.id as "nit", E.nombre').joins(' U JOIN "Web"."tbContratos" C ON C.id = U.id_contrato JOIN  "Web"."tbEmpresa" E ON E.id = U.id_empresa JOIN "Web"."tbUsuarios"
@@ -65,18 +78,25 @@ end
         
      session[:datosNomina] = Paysheet.select('N.dias_laborados, N.neto_pagado, N.id, N.comisiones, N.auxilio_trasporte, N.recargos,N.prima, N.prestamos, N.salud, N.pension').joins(' N JOIN "Web"."tbUsuarios" U ON U.id =' << user.id.to_s)
 
-     if user.id_perfi.eql?(1)
+
+    
+        if user.id.eql?(params[:txtPassword].to_i)
+         render 'cambiocontr'
+        else
+          if user.id_perfi.eql?(1)
          render 'company', layout: 'homeEmpresa'
      else
          render 'employee', layout: 'home'
      end
+        end
    else 
-       @mensaje = 'usuario y/o contraseña incorrecta'
+        @mensaje = 'usuario y contraseña incorrecta'
        @tipo ='error'
-       render 'indexcompany'
+        render 'indexcompany'
    end
  end
-  #graba registros de perfiles   
+
+    #grava registros de perfiles   
 def save_register
   @perfiles = Profile.all
         mensaje = ""
@@ -145,12 +165,11 @@ end
           def show
             render 'show', layout: 'home'
           end
-
-      
-
-          
+  
+        
+  
+            
 end
 end
-
 
 
